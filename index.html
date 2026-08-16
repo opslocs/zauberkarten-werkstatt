@@ -1,0 +1,1443 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Zauberkarten-Werkstatt</title>
+<style>
+  :root {
+    --bg: #23201c; --panel: #2e2a25; --panel2: #38332c; --ink: #e8e2d5; --muted: #a89f8d;
+    --accent: #c9a227; --line: #4a443b;
+    /* school colors (from example cards) */
+    --evocation: #b5342a; --abjuration: #d97e26; --necromancy: #6e6e70;
+    --transmutation: #d9a827; --conjuration: #3e8a44; --illusion: #3b6bb0;
+    --divination: #5da3a8; --enchantment: #b0509c;
+    --card-paper: #f0e0bd;
+  }
+  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Regular-sub.ttf"); font-weight: normal; font-style: normal; }
+  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Bold-sub.ttf"); font-weight: bold; font-style: normal; }
+  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Italic-sub.ttf"); font-weight: normal; font-style: italic; }
+  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-BoldItalic-sub.ttf"); font-weight: bold; font-style: italic; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { height: 100%; }
+  body { background: var(--bg); color: var(--ink); font: 14px/1.45 "Segoe UI", system-ui, sans-serif; display: flex; flex-direction: column; }
+
+  /* ---------- toolbar ---------- */
+  #toolbar { display: flex; gap: 8px; align-items: center; padding: 8px 12px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+  #toolbar h1 { font-size: 16px; color: var(--accent); margin-right: 12px; font-weight: 600; }
+  button, select, input[type=file]::file-selector-button {
+    background: var(--panel2); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
+    padding: 6px 12px; cursor: pointer; font-size: 13px;
+  }
+  button:hover { border-color: var(--accent); }
+  button.primary { background: var(--accent); color: #211c10; font-weight: 600; }
+  button.danger:hover { border-color: #c0392b; color: #e74c3c; }
+  .spacer { flex: 1; }
+  #langToggle .on { background: var(--accent); color: #211c10; }
+
+  /* ---------- layout ---------- */
+  #app { display: flex; flex: 1; min-height: 0; }
+  #sidebar { width: 320px; min-width: 260px; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; }
+  #filters { padding: 10px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
+  #filters input[type=search], #filters select { width: 100%; padding: 6px 8px; background: var(--panel2); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); }
+  #filters .row { display: flex; gap: 6px; }
+  #spellList { flex: 1; overflow-y: auto; }
+  .lvl-group { padding: 4px 10px 2px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: #29251f; position: sticky; top: 0; }
+  .spell-item { display: flex; align-items: center; gap: 8px; padding: 4px 10px; cursor: pointer; border-left: 3px solid transparent; }
+  .spell-item:hover { background: var(--panel2); }
+  .spell-item.active { background: var(--panel2); border-left-color: var(--accent); }
+  .spell-item .nm { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .spell-item .tag { font-size: 10px; color: var(--muted); }
+  .spell-item.custom .nm { color: #8fd18f; }
+  #listFoot { padding: 8px 10px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
+
+  #center { flex: 1; display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: 24px; background: repeating-conic-gradient(#26221d 0% 25%, #241f1b 0% 50%) 50%/24px 24px; }
+  #editor { width: 380px; min-width: 320px; background: var(--panel); border-left: 1px solid var(--line); overflow-y: auto; padding: 12px; }
+  #editor h2 { font-size: 14px; color: var(--accent); margin-bottom: 8px; }
+  #editor label { display: block; font-size: 11px; color: var(--muted); margin: 8px 0 2px; text-transform: uppercase; letter-spacing: .05em; }
+  #editor input[type=text], #editor textarea, #editor select { width: 100%; padding: 6px 8px; background: var(--panel2); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); font: 13px/1.4 "Segoe UI", sans-serif; }
+  #editor textarea { resize: vertical; min-height: 60px; }
+  #editor textarea.big { min-height: 160px; }
+  #editor .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
+  #editor .btnrow { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+  .hint { font-size: 11px; color: var(--muted); margin-top: 4px; }
+
+  /* ---------- card ---------- */
+  .card {
+    width: 63.5mm; height: 88.9mm; background: var(--card-paper); border-radius: 3.2mm;
+    color: #241d12; display: flex; flex-direction: column; overflow: hidden;
+    font-family: "FiraCondCard", "Segoe UI", "Noto Sans", sans-serif; position: relative;
+    box-shadow: 0 0 0 1mm #1a1713 inset;
+    padding: 1.25mm;
+  }
+  .card .inner { flex: 1; display: flex; flex-direction: column; min-height: 0; border-radius: 2mm; overflow: hidden; background: linear-gradient(#f3e6c6, #ecd9ae); }
+  .c-head { display: flex; align-items: center; gap: 1.5mm; padding: .7mm 1.8mm; color: #fff; min-height: 6mm; }
+  .c-head .glyph { width: 5mm; height: 5mm; border-radius: 50%; background: rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; font-size: 3.2mm; font-weight: 700; flex: none; }
+  .c-head h3 { font-size: 4.1mm; line-height: 1.05; font-weight: 700; text-shadow: 0 .3mm .5mm rgba(0,0,0,.5); letter-spacing: .01em; }
+  .c-head h3.long { font-size: 3.4mm; }
+  .c-sub { display: flex; justify-content: space-between; gap: 2mm; padding: .6mm 1.8mm; font-size: 2.15mm; color: #fff; background: rgba(0,0,0,.28); line-height: 1.2; }
+  .c-sub .cls { text-align: right; opacity: .92; }
+  .c-stats { display: grid; grid-template-columns: 1fr 1fr; gap: .2mm 1.8mm; padding: .7mm 1.8mm; background: rgba(255,255,255,.35); border-bottom: .3mm solid rgba(0,0,0,.25); }
+  .c-stat { font-size: 2.3mm; line-height: 1.18; }
+  .c-stat b { color: #5c4a23; }
+  .c-mat { grid-column: 1 / -1; font-size: 2mm; color: #6b5a33; font-style: italic; line-height: 1.18; }
+  .c-body { flex: 1; padding: 1mm 1.8mm; overflow: hidden; font-size: var(--body-size, 2.5mm); line-height: 1.23; text-align: justify; hyphens: auto; }
+  .c-body p { margin-bottom: .6em; }
+  .c-body p:last-child { margin-bottom: 0; }
+  .c-body table { width: 100%; border-collapse: collapse; font-size: .92em; margin-bottom: .8em; }
+  .c-body td { border-top: .2mm solid rgba(0,0,0,.2); padding: .3mm .5mm; vertical-align: top; }
+  .c-higher { padding: .9mm 1.8mm; font-size: 2.2mm; line-height: 1.28; color: #fff; }
+  .c-higher b { text-transform: uppercase; font-size: 1.9mm; letter-spacing: .04em; }
+  .c-foot { display: flex; justify-content: space-between; padding: .45mm 1.8mm .6mm; font-size: 1.9mm; color: #fff; background: rgba(0,0,0,.28); }
+  .c-foot .badges { display: flex; gap: 1mm; }
+  .badge { background: rgba(255,255,255,.25); border-radius: 1mm; padding: 0 .8mm; font-weight: 700; }
+  .overflow-warn { outline: 2px solid #e74c3c; }
+
+  /* school theming */
+  .s-Evocation      .c-head, .s-Evocation      .c-higher, .s-Evocation      .c-foot { background-color: var(--evocation); }
+  .s-Abjuration     .c-head, .s-Abjuration     .c-higher, .s-Abjuration     .c-foot { background-color: var(--abjuration); }
+  .s-Necromancy     .c-head, .s-Necromancy     .c-higher, .s-Necromancy     .c-foot { background-color: var(--necromancy); }
+  .s-Transmutation  .c-head, .s-Transmutation  .c-higher, .s-Transmutation  .c-foot { background-color: var(--transmutation); }
+  .s-Conjuration    .c-head, .s-Conjuration    .c-higher, .s-Conjuration    .c-foot { background-color: var(--conjuration); }
+  .s-Illusion       .c-head, .s-Illusion       .c-higher, .s-Illusion       .c-foot { background-color: var(--illusion); }
+  .s-Divination     .c-head, .s-Divination     .c-higher, .s-Divination     .c-foot { background-color: var(--divination); }
+  .s-Enchantment    .c-head, .s-Enchantment    .c-higher, .s-Enchantment    .c-foot { background-color: var(--enchantment); }
+  .c-sub, .c-foot { background-blend-mode: multiply; }
+
+  #cardWrap { transform-origin: top center; }
+  #previewNote { position: fixed; top: 60px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--accent); border-radius: 8px; padding: 6px 14px; font-size: 12px; color: var(--accent); display: none; z-index: 50; }
+
+  /* A4 sheet preview */
+  #sheetPreview { display: flex; flex-direction: column; align-items: center; gap: 6px; }
+  .sheet-screen { width: 210mm; height: 296mm; flex: none; background: #fff; position: relative;
+    display: grid; grid-template-columns: repeat(3, 63.5mm); grid-template-rows: repeat(3, 88.9mm);
+    justify-content: center; align-content: center; box-shadow: 0 6px 22px rgba(0,0,0,.55); }
+  .sheet-caption { color: var(--muted); font-size: 12px; margin-top: 10px; letter-spacing: .05em; }
+  .cutmark { position: absolute; background: #000; }
+  .cutmark.v { width: .15mm; height: 6mm; }
+  .cutmark.h { height: .15mm; width: 6mm; }
+  #sheetBtn.on { background: var(--accent); color: #211c10; }
+
+  /* appendix pages (browser print fallback) */
+  .appx-flow { display: none; }
+  @media print {
+    .appx-flow { display: block; background: #fff; color: #000; font-family: "FiraCondCard", sans-serif; font-size: 9.5pt; line-height: 1.35; padding: 14mm 16mm; page-break-before: always; }
+    .appx-flow h2 { font-size: 14pt; margin-bottom: 6mm; }
+    .appx-flow h3 { font-size: 11pt; margin: 5mm 0 1mm; }
+    .appx-flow .meta { font-style: italic; color: #444; margin-bottom: 2mm; }
+    .appx-flow p { margin-bottom: 2mm; text-align: justify; hyphens: auto; }
+  }
+  #zoomRow { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; display: flex; gap: 8px; align-items: center; font-size: 12px; }
+
+  /* ---------- print ---------- */
+  #printRoot { display: none; }
+  @media print {
+    body > *:not(#printRoot) { display: none !important; }
+    body { background: #fff; display: block; }
+    #printRoot { display: block; }
+    .sheet {
+      width: 210mm; height: 296mm; page-break-after: always; position: relative;
+      display: grid; grid-template-columns: repeat(3, 63.5mm); grid-template-rows: repeat(3, 88.9mm);
+      justify-content: center; align-content: center; gap: 0;
+    }
+    .sheet .card { border-radius: 0; box-shadow: none; outline: none; }
+  }
+  @page { size: A4 portrait; margin: 0; }
+</style>
+</head>
+<body>
+
+<div id="toolbar">
+  <h1>⚔ Zauberkarten-Editor <span style="font-size:11px;color:var(--muted)">SRD 5.2.1 (CC-BY-4.0)</span></h1>
+  <span id="langToggle">
+    <button id="langDe" class="on" onclick="setLang('de')">DE</button><button id="langEn" onclick="setLang('en')">EN</button>
+  </span>
+  <button onclick="newSpell()">+ Neue Karte</button>
+  <button onclick="duplicateSpell()">Duplizieren</button>
+  <button class="danger" onclick="deleteSpell()">Löschen</button>
+  <span class="spacer"></span>
+  <button id="sheetBtn" onclick="toggleSheetView()" title="Alle Karten als A4-Bögen anzeigen">📑 Bogenvorschau</button>
+  <button onclick="importJson()">Import JSON</button>
+  <button onclick="exportJson()">Export JSON</button>
+  <button class="danger" onclick="resetAll()" title="Lokale Änderungen verwerfen und SRD-Daten neu laden">Zurücksetzen</button>
+  <button onclick="printCards()" title="Über den Browser-Druckdialog drucken">🖨 Browser-Druck</button>
+  <button class="primary" onclick="exportPdf()">📄 PDF-Datei erstellen</button>
+</div>
+
+<div id="app">
+  <aside id="sidebar">
+    <div id="filters">
+      <input type="search" id="q" placeholder="Suche (DE/EN)…" oninput="renderList()">
+      <div class="row">
+        <select id="fLevel" onchange="renderList()">
+          <option value="">Grad: alle</option>
+          <option value="0">Zaubertrick</option>
+          <option>1</option><option>2</option><option>3</option><option>4</option>
+          <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
+        </select>
+        <select id="fClass" onchange="renderList()">
+          <option value="">Klasse: alle</option>
+        </select>
+      </div>
+      <div class="row">
+        <select id="fSchool" onchange="renderList()">
+          <option value="">Schule: alle</option>
+        </select>
+        <select id="fSrc" onchange="renderList()">
+          <option value="">Quelle: alle</option>
+        </select>
+      </div>
+      <div class="row">
+        <select id="fSel" onchange="renderList()">
+          <option value="">Auswahl: alle</option>
+          <option value="sel">nur ausgewählte</option>
+          <option value="custom">nur eigene</option>
+        </select>
+      </div>
+    </div>
+    <div id="spellList"></div>
+    <div id="listFoot">
+      <span id="counts"></span>
+      <span class="spacer"></span>
+      <button onclick="selectFiltered(true)" title="Alle gefilterten auswählen">☑ alle</button>
+      <button onclick="selectFiltered(false)" title="Auswahl aufheben">☐ keine</button>
+    </div>
+  </aside>
+
+  <main id="center">
+    <div id="cardWrap"><div id="cardHost"></div></div>
+    <div id="previewNote"></div>
+    <div id="zoomRow">
+      Zoom <input type="range" id="zoom" min="1" max="3.2" step="0.1" value="2" oninput="applyZoom()">
+      <span id="zoomVal">200%</span>
+    </div>
+  </main>
+
+  <aside id="editor">
+    <h2 id="edTitle">Karte bearbeiten</h2>
+    <div id="edForm"></div>
+  </aside>
+</div>
+
+<div id="printRoot"></div>
+
+<script src="spells.js"></script>
+<script src="jspdf.umd.min.js"></script>
+<script src="fonts.js"></script>
+<script src="hyph_de.js"></script>
+<script>
+"use strict";
+// ---------------- data ----------------
+const LS_KEY = "dnd-zauberkarten-db-v1";
+let db = null;          // { meta, spells: [...] }
+let lang = "de";        // card language
+let currentId = null;
+let selected = new Set();
+
+const SCHOOLS_EN = ["Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"];
+const SCHOOL_DE = { Abjuration:"Bannmagie", Conjuration:"Beschwörung", Divination:"Erkenntnismagie",
+  Enchantment:"Verzauberung", Evocation:"Hervorrufung", Illusion:"Illusion", Necromancy:"Nekromantie", Transmutation:"Verwandlung" };
+const SCHOOL_ZAUBER = { Bannmagie:"Bannzauber", Beschwörung:"Beschwörungszauber", Erkenntnismagie:"Erkenntniszauber",
+  Verzauberung:"Verzauberungszauber", Hervorrufung:"Hervorrufungszauber", Illusion:"Illusionszauber",
+  Nekromantie:"Nekromantiezauber", Verwandlung:"Verwandlungszauber" };
+const SCHOOL_TRICK = { Bannmagie:"Zaubertrick des Banns", Beschwörung:"Zaubertrick der Beschwörung",
+  Erkenntnismagie:"Zaubertrick der Erkenntnismagie", Verzauberung:"Zaubertrick der Verzauberung",
+  Hervorrufung:"Zaubertrick der Hervorrufung", Illusion:"Zaubertrick der Illusion",
+  Nekromantie:"Zaubertrick der Nekromantie", Verwandlung:"Zaubertrick der Verwandlung" };
+const SCHOOL_GLYPH = { Abjuration:"🛡", Conjuration:"✳", Divination:"👁", Enchantment:"♥",
+  Evocation:"🔥", Illusion:"◐", Necromancy:"☠", Transmutation:"⚙" };
+const CLASSES = ["Barde","Druide","Hexenmeister","Kleriker","Magier","Paladin","Waldläufer","Zauberer"];
+const CLASS_EN = { Barde:"Bard", Druide:"Druid", Hexenmeister:"Warlock", Kleriker:"Cleric",
+  Magier:"Wizard", Paladin:"Paladin", Waldläufer:"Ranger", Zauberer:"Sorcerer" };
+
+function loadDb() {
+  let stored = null;
+  try { stored = JSON.parse(localStorage.getItem(LS_KEY)); } catch (e) { console.warn("localStorage kaputt", e); }
+  db = stored || JSON.parse(JSON.stringify(window.SPELL_DB));
+  // pull in newly shipped spells without touching stored user edits
+  if (stored && window.SPELL_DB && Array.isArray(window.SPELL_DB.spells)) {
+    const have = new Set(db.spells.map(s => s.id));
+    let added = 0;
+    for (const s of window.SPELL_DB.spells) {
+      if (!have.has(s.id)) { db.spells.push(JSON.parse(JSON.stringify(s))); added++; }
+    }
+    if (added) saveDb();
+  }
+}
+function saveDb() { localStorage.setItem(LS_KEY, JSON.stringify(db)); }
+
+function spellById(id) { return db.spells.find(s => s.id === id); }
+
+// ---------------- helpers ----------------
+function esc(t) { return (t || "").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+// language accessor with EN fallback (PHB'24 spells have no German text)
+function TX(obj, lg) { return (obj && (obj[lg] || obj.en || obj.de)) || ""; }
+function txLang(obj, lg) { return (lg === "de" && obj && !obj.de && obj.en) ? "en" : lg; }
+
+// ---- German hyphenation (Liang's algorithm over hypher-format patterns) ----
+function buildHyphenator(langObj) {
+  const trie = Object.create(null);
+  let maxLen = 0;
+  for (const key in langObj.patterns) {
+    const k = +key, s = langObj.patterns[key];
+    for (let i = 0; i + k <= s.length; i += k) {
+      const chunk = s.substr(i, k);
+      const letters = chunk.replace(/\d/g, "");
+      const pts = new Array(letters.length + 1).fill(0);
+      let li = 0;
+      for (const ch of chunk) {
+        if (ch >= "0" && ch <= "9") pts[li] = +ch; else li++;
+      }
+      trie[letters] = pts;
+      if (letters.length > maxLen) maxLen = letters.length;
+    }
+  }
+  const cache = Object.create(null);
+  const leftmin = Math.max(langObj.leftmin || 2, 3), rightmin = Math.max(langObj.rightmin || 2, 3);
+  return function (word) {
+    const lw = word.toLowerCase();
+    if (cache[lw]) return cache[lw];
+    if (word.length < leftmin + rightmin + 2 || /[^a-zäöüß]/.test(lw)) return (cache[lw] = [word]);
+    const w = "." + lw + ".";
+    const pts = new Array(w.length + 1).fill(0);
+    for (let i = 0; i < w.length; i++) {
+      const lim = Math.min(maxLen, w.length - i);
+      for (let l = 1; l <= lim; l++) {
+        const p = trie[w.substr(i, l)];
+        if (p) for (let j = 0; j < p.length; j++) if (p[j] > pts[i + j]) pts[i + j] = p[j];
+      }
+    }
+    const parts = [];
+    let last = 0;
+    for (let i = 1; i < word.length; i++) {
+      if (i >= leftmin && i <= word.length - rightmin && pts[i + 1] % 2 === 1) {
+        parts.push(word.slice(last, i)); last = i;
+      }
+    }
+    parts.push(word.slice(last));
+    return (cache[lw] = parts);
+  };
+}
+const hyphDe = window.HYPH_DE ? buildHyphenator(window.HYPH_DE) : null;
+function hyphFor(lg) { return lg === "de" ? hyphDe : null; }
+
+// ---- auto-abbreviations, applied only when a card would overflow ----
+const ATTR_ABBR = { "Stärke": "STÄ", "Geschicklichkeits": "GES", "Konstitutions": "KON",
+                    "Intelligenz": "INT", "Weisheits": "WEI", "Charisma": "CHA" };
+const ABBREV = {
+  de: [
+    [/\bTrefferpunktemaximum\b/g, "TP-Maximum"],
+    [/\bTrefferpunkte?n?\b/g, "TP"],
+    [/\b(Stärke|Geschicklichkeits|Konstitutions|Intelligenz|Weisheits|Charisma)rettungsw[uü]rf(?:e|en|s)?\b/g,
+      (m, a) => ATTR_ABBR[a] + "-RW"],
+    [/\bRettungsw[uü]rf(?:e|en|s)?\b/g, "RW"],
+    [/\bRettungswurf\b/g, "RW"],
+    [/(\d(?:[.,]\d+)?)\s*Metern?\b/g, "$1 m"],
+    [/(\d+)\s*Zentimetern?\b/g, "$1 cm"],
+    [/(\d+(?:,\d+)?)\s*Kilometern?\b/g, "$1 km"],
+    [/(\d+)\s*Minuten?\b/g, "$1 Min."],
+    [/(\d+)\s*Stunden?\b/g, "$1 Std."],
+    [/\bbeispielsweise\b/g, "z. B."],
+    [/\bSchwierigkeitsgrad\b/g, "SG"],
+  ],
+  en: [
+    [/\bHit Points?\b/g, "HP"],
+    [/\bsaving throws\b/g, "saves"],
+    [/\bsaving throw\b/g, "save"],
+    [/(\d+)-foot\b/g, "$1-ft."],
+    [/(\d+) feet\b/g, "$1 ft."],
+  ],
+};
+function abbrevText(t, lg) {
+  let out = t || "";
+  for (const [re, rep] of (ABBREV[lg] || [])) out = out.replace(re, rep);
+  return out;
+}
+function abbrevSpell(s, lg) {
+  return { ...s,
+    description: { ...s.description, [lg]: abbrevText(TX(s.description, lg), txLang(s.description, lg)) },
+    higherLevels: { ...s.higherLevels, [lg]: abbrevText(TX(s.higherLevels, lg), txLang(s.higherLevels, lg)) },
+  };
+}
+function md(t) {
+  return esc(t)
+    .replace(/\*\*([^*]+)\*\*/g, "<b>$1</b>")
+    .replace(/\*([^*\n]+)\*/g, "<i>$1</i>");
+}
+function typeLine(s, lg) {
+  if (lg === "en") {
+    return s.level === 0 ? `${s.school.en} Cantrip` : `Level ${s.level} ${s.school.en}`;
+  }
+  const de = s.school.de || SCHOOL_DE[s.school.en] || s.school.en;
+  return s.level === 0 ? (SCHOOL_TRICK[de] || `Zaubertrick der ${de}`)
+                       : `${SCHOOL_ZAUBER[de] || de + "zauber"} ${s.level}. Grades`;
+}
+function classesLine(s, lg) { return (s.classes[lg] || []).join(", "); }
+
+// compact range display: abbreviated units + grid squares
+// DE: "45 Meter" -> "45 m (30 F)"   (1,5 m = 1 Feld)
+// EN: "150 feet" -> "150 ft (30 sq)" (5 ft = 1 square)
+function withSquares(r, lg) {
+  if (!r) return r;
+  if (lg === "de") {
+    r = r.replace(/([\d.]+(?:,\d+)?)\s*Metern?\b/g, "$1 m");
+    r = r.replace(/([\d.]+(?:,\d+)?)\s*Kilometern?\b/g, "$1 km");
+    return r.replace(/([\d.]+(?:,\d+)?) m\b/g, (m, num) => {
+      const n = parseFloat(num.replace(/\./g, "").replace(",", "."));
+      const sq = n / 1.5;
+      if (!isFinite(sq) || sq < 1 || Math.abs(sq - Math.round(sq)) > 0.01) return m;
+      return m + ` (${Math.round(sq)} F)`;
+    });
+  }
+  r = r.replace(/(\d+)[-\s]f(?:ee|oo)t\b/g, "$1 ft");
+  r = r.replace(/(\d+) miles?\b/g, "$1 mi");
+  return r.replace(/(\d+) ft(\s+\w+)?/g, (m, num, rest) => {
+    const sq = +num / 5;
+    if (sq < 1 || sq % 1) return m;
+    return `${num} ft${rest || ""} (${sq} sq)`;
+  });
+}
+
+function splitComponents(comp) {
+  // "V, G, M (Material)" -> ["V, G, M", "Material"]
+  const m = (comp || "").match(/^([^(]*?)\s*\((.*)\)\s*$/s);
+  return m ? [m[1].trim(), m[2].trim()] : [(comp || "").trim(), ""];
+}
+
+// ---------------- card rendering ----------------
+function cardLabels(s, lg) {
+  return lg === "de"
+    ? { time:"Zeit", range:"Reichweite", dur:"Dauer", comp:"Komp.", higher: s.level === 0 ? "Zaubertrick-Aufwertung" : "Höhere Grade", conc:"K", rit:"R" }
+    : { time:"Time", range:"Range", dur:"Duration", comp:"Comp.", higher: s.level === 0 ? "Cantrip Upgrade" : "Higher Levels", conc:"C", rit:"R" };
+}
+
+function partHtml(s, lg, parasHtml, opts) {
+  const { first = true, last = true, part = 1, parts = 1, appx = false } = opts || {};
+  const [compShort, material] = splitComponents(TX(s.components, lg));
+  const labels = cardLabels(s, lg);
+  const hl = TX(s.higherLevels, lg).trim();
+  const name = s.name[lg] || s.name.de || s.name.en;
+  const appxText = lg === "de" ? "→ Vollständiger Text im Anhang" : "→ Full text in the appendix";
+  return `
+  <div class="card s-${esc(s.school.en)}" data-id="${esc(s.id)}" lang="${lg}">
+    <div class="inner">
+      <div class="c-head">
+        <div class="glyph">${SCHOOL_GLYPH[s.school.en] || "✶"}</div>
+        <h3 class="${name.length > 22 ? "long" : ""}">${esc(name)}</h3>
+      </div>
+      <div class="c-sub">
+        <span>${esc(typeLine(s, lg))}</span>
+        <span class="cls">${esc(classesLine(s, lg))}</span>
+      </div>
+      ${first ? `<div class="c-stats">
+        <div class="c-stat"><b>${labels.time}:</b> ${esc(TX(s.castingTime, lg))}</div>
+        <div class="c-stat"><b>${labels.range}:</b> ${esc(withSquares(TX(s.range, lg), txLang(s.range, lg)))}</div>
+        <div class="c-stat"><b>${labels.dur}:</b> ${esc(TX(s.duration, lg))}</div>
+        <div class="c-stat"><b>${labels.comp}:</b> ${esc(compShort)}</div>
+        ${material ? `<div class="c-mat">M: ${esc(material)}</div>` : ""}
+      </div>` : ""}
+      <div class="c-body">${parasHtml}</div>
+      ${appx ? `<div class="c-higher"><b>${esc(appxText)}</b></div>`
+             : (last && hl ? `<div class="c-higher"><b>${labels.higher}:</b> ${md(hl)}</div>` : "")}
+      <div class="c-foot">
+        <span>${esc(s.source || "")}${s.custom ? " · eigene Karte" : ""}</span>
+        <span class="badges">
+          ${parts > 1 ? `<span class="badge">${part}/${parts}</span>` : ""}
+          ${s.concentration ? `<span class="badge" title="Konzentration">${labels.conc}</span>` : ""}
+          ${s.ritual ? `<span class="badge" title="Ritual">${labels.rit}</span>` : ""}
+          <span class="badge">${s.level === 0 ? "0" : s.level}</span>
+        </span>
+      </div>
+    </div>
+  </div>`;
+}
+
+function descParas(s, lg) {
+  return TX(s.description, lg).split(/\n\n+/).filter(p => p.trim()).map(p => `<p>${md(p)}</p>`);
+}
+
+let measureHost = null;
+function getMeasureHost() {
+  if (!measureHost) {
+    measureHost = document.createElement("div");
+    measureHost.style.cssText = "position:absolute;left:-9999px;top:0;";
+    document.body.appendChild(measureHost);
+  }
+  return measureHost;
+}
+function overflows(html, sizeMm) {
+  const host = getMeasureHost();
+  host.innerHTML = html;
+  const card = host.querySelector(".card");
+  card.style.setProperty("--body-size", sizeMm + "mm");
+  const body = card.querySelector(".c-body");
+  return body.scrollHeight > body.clientHeight + 1;
+}
+
+function splitSentences(pHtml) {
+  // split an oversized paragraph into sentence chunks (~3 sentences each)
+  const inner = pHtml.replace(/^<p>|<\/p>$/g, "");
+  const sentences = inner.split(/(?<=\.)\s+(?=[A-ZÄÖÜ<])/);
+  const chunks = [];
+  for (let i = 0; i < sentences.length; i += 3)
+    chunks.push("<p>" + sentences.slice(i, i + 3).join(" ") + "</p>");
+  return chunks;
+}
+
+const APPENDIX_MIN_PARTS = 3;  // spells needing this many cards go to the appendix instead
+
+function paginateHtml(s, lg) {
+  const SIZE = 2.12;
+  let paras = descParas(s, lg);
+  // pre-split any paragraph that alone overflows a continuation card
+  paras = paras.flatMap(p => overflows(partHtml(s, lg, p, { first: false, last: false }), SIZE) ? splitSentences(p) : [p]);
+  const groups = [];
+  let cur = [];
+  for (const p of paras) {
+    cur.push(p);
+    const first = groups.length === 0;
+    if (overflows(partHtml(s, lg, cur.join(""), { first, last: false }), SIZE)) {
+      cur.pop();
+      if (cur.length === 0) { cur = [p]; continue; }  // safety
+      groups.push(cur); cur = [p];
+    }
+  }
+  if (cur.length) groups.push(cur);
+  const hl = TX(s.higherLevels, lg).trim();
+  if (hl && overflows(partHtml(s, lg, groups[groups.length - 1].join(""), { first: groups.length === 1, last: true }), SIZE)) {
+    groups.push([]);
+  }
+  return groups;
+}
+
+// returns { cards: [html...], appendix?: spell, abbreviated?: bool }
+function cardsFor(s, lg) {
+  const single = partHtml(s, lg, descParas(s, lg).join(""), {});
+  if (!overflows(single, 1.83)) return { cards: [single] };
+  // 1st fallback: auto-abbreviations
+  const sa = abbrevSpell(s, lg);
+  const singleA = partHtml(sa, lg, descParas(sa, lg).join(""), {});
+  if (!overflows(singleA, 1.83)) return { cards: [singleA], abbreviated: true };
+  // 2nd: continuation cards
+  const groups = paginateHtml(sa, lg);
+  if (groups.length < APPENDIX_MIN_PARTS) {
+    return {
+      abbreviated: true,
+      cards: groups.map((g, i) => partHtml(sa, lg, g.join(""), {
+        first: i === 0, last: i === groups.length - 1, part: i + 1, parts: groups.length,
+      })),
+    };
+  }
+  // 3rd: really long -> teaser card + appendix (full, unabbreviated text)
+  const SIZE = 2.12;
+  const paras = descParas(sa, lg);
+  let k = paras.length;
+  while (k > 1 && overflows(partHtml(sa, lg, paras.slice(0, k).join(""), { appx: true }), SIZE)) k--;
+  return { cards: [partHtml(sa, lg, paras.slice(0, k).join(""), { appx: true })], appendix: s, abbreviated: true };
+}
+
+function cardsHtml(s, lg) { return cardsFor(s, lg).cards; }
+function cardHtml(s, lg) { return partHtml(s, lg, descParas(s, lg).join(""), {}); }
+
+function fitCard(cardEl) {
+  const body = cardEl.querySelector(".c-body");
+  if (!body) return;
+  let size = 2.55; // mm
+  cardEl.style.setProperty("--body-size", size + "mm");
+  let guard = 24;
+  while (body.scrollHeight > body.clientHeight + 1 && size > 1.45 && guard-- > 0) {
+    size -= 0.06;
+    cardEl.style.setProperty("--body-size", size.toFixed(2) + "mm");
+  }
+  cardEl.classList.toggle("overflow-warn", body.scrollHeight > body.clientHeight + 1);
+}
+
+// ---------------- A4 sheet preview ----------------
+let sheetView = false;
+function addCutmarks(sheetEl) {
+  const ox = (210 - 3 * 63.5) / 2, oy = (296 - 3 * 88.9) / 2;
+  for (let c = 0; c <= 3; c++) for (const y of [oy - 7, oy + 3 * 88.9 + 1]) {
+    const m = document.createElement("div");
+    m.className = "cutmark v"; m.style.left = (ox + c * 63.5) + "mm"; m.style.top = y + "mm";
+    sheetEl.appendChild(m);
+  }
+  for (let r = 0; r <= 3; r++) for (const x of [ox - 7, ox + 3 * 63.5 + 1]) {
+    const m = document.createElement("div");
+    m.className = "cutmark h"; m.style.top = (oy + r * 88.9) + "mm"; m.style.left = x + "mm";
+    sheetEl.appendChild(m);
+  }
+}
+function collectCards() {
+  let ids = [...selected];
+  if (!ids.length) ids = filteredSpells().map(s => s.id);
+  const cards = [], appx = [];
+  for (const id of ids) {
+    const s = spellById(id);
+    if (!s) continue;
+    const r = cardsFor(s, lang);
+    cards.push(...r.cards);
+    if (r.appendix) appx.push(r.appendix);
+  }
+  return { cards, appx };
+}
+function toggleSheetView() {
+  sheetView = !sheetView;
+  document.getElementById("sheetBtn").classList.toggle("on", sheetView);
+  document.getElementById("cardWrap").style.display = sheetView ? "none" : "";
+  document.getElementById("zoomRow").style.display = sheetView ? "none" : "";
+  if (!sheetView) {
+    document.getElementById("sheetPreview")?.remove();
+  }
+  renderPreview();
+}
+function renderSheetPreview() {
+  const center = document.getElementById("center");
+  let host = document.getElementById("sheetPreview");
+  if (!host) {
+    host = document.createElement("div");
+    host.id = "sheetPreview";
+    center.appendChild(host);
+  }
+  const { cards, appx } = collectCards();
+  const sheets = [];
+  for (let i = 0; i < cards.length; i += 9) sheets.push(cards.slice(i, i + 9));
+  host.innerHTML = sheets.map((cs, i) =>
+    `<div class="sheet-caption">Bogen ${i + 1} / ${sheets.length}</div>` +
+    `<div class="sheet-screen" lang="${lang}">${cs.join("")}</div>`
+  ).join("") || "<div style='color:var(--muted);padding:40px'>Keine Karten ausgewählt oder gefiltert.</div>";
+  host.querySelectorAll(".sheet-screen").forEach(addCutmarks);
+  host.querySelectorAll(".card").forEach(fitCard);
+  const note = document.getElementById("previewNote");
+  note.textContent = appx.length
+    ? `${cards.length} Karten auf ${sheets.length} Bögen · ${appx.length} sehr lange${appx.length === 1 ? "r" : ""} Zauber mit Anhang-Verweis`
+    : (sheets.length ? `${cards.length} Karten auf ${sheets.length} ${sheets.length === 1 ? "Bogen" : "Bögen"}` : "");
+  note.style.display = note.textContent ? "block" : "none";
+}
+
+function renderPreview() {
+  if (sheetView) { renderSheetPreview(); return; }
+  const host = document.getElementById("cardHost");
+  const note = document.getElementById("previewNote");
+  const s = spellById(currentId);
+  if (!s) { host.innerHTML = "<div style='color:#a89f8d;padding:40px'>Keine Karte ausgewählt</div>"; note.style.display = "none"; return; }
+  const res = cardsFor(s, lang);
+  host.innerHTML = res.cards.join("");
+  host.style.display = "flex"; host.style.gap = "6mm";
+  host.querySelectorAll(".card").forEach(fitCard);
+  const msgs = [];
+  if (lang === "de" && !s.description.de && s.description.en) msgs.push("Kein deutscher SRD-Text vorhanden — englische Fassung wird angezeigt.");
+  if (res.appendix) msgs.push("Sehr langer Zauber: Karte zeigt den Anfang, der vollständige Text landet im PDF-Anhang.");
+  else if (res.abbreviated) msgs.push("Text automatisch abgekürzt (RW, TP, m …), damit er auf die Karte passt.");
+  note.textContent = msgs.join(" ");
+  note.style.display = msgs.length ? "block" : "none";
+}
+
+function applyZoom() {
+  const z = parseFloat(document.getElementById("zoom").value);
+  document.getElementById("cardWrap").style.transform = `scale(${z})`;
+  document.getElementById("zoomVal").textContent = Math.round(z * 100) + "%";
+}
+
+// ---------------- list ----------------
+function initFilters() {
+  const fc = document.getElementById("fClass");
+  CLASSES.forEach(c => fc.append(new Option(c, c)));
+  const fs = document.getElementById("fSchool");
+  SCHOOLS_EN.forEach(sc => fs.append(new Option(SCHOOL_DE[sc] + " / " + sc, sc)));
+  const fq = document.getElementById("fSrc");
+  [...new Set(db.spells.map(s => s.source).filter(Boolean))].forEach(s => fq.append(new Option(s, s)));
+}
+
+function filteredSpells() {
+  const q = document.getElementById("q").value.trim().toLowerCase();
+  const fl = document.getElementById("fLevel").value;
+  const fc = document.getElementById("fClass").value;
+  const fs = document.getElementById("fSchool").value;
+  const fsel = document.getElementById("fSel").value;
+  const fq = document.getElementById("fSrc").value;
+  return db.spells.filter(s => {
+    if (q && !((s.name.de || "").toLowerCase().includes(q) || (s.name.en || "").toLowerCase().includes(q)
+        || (s.aka || "").toLowerCase().includes(q))) return false;
+    if (fl !== "" && s.level !== parseInt(fl)) return false;
+    if (fc && !(s.classes.de || []).includes(fc)) return false;
+    if (fs && s.school.en !== fs) return false;
+    if (fq && s.source !== fq) return false;
+    if (fsel === "sel" && !selected.has(s.id)) return false;
+    if (fsel === "custom" && !s.custom) return false;
+    return true;
+  });
+}
+
+function renderList() {
+  const list = document.getElementById("spellList");
+  const spells = filteredSpells();
+  let html = "", lastLvl = null;
+  for (const s of spells) {
+    if (s.level !== lastLvl) {
+      lastLvl = s.level;
+      html += `<div class="lvl-group">${s.level === 0 ? "Zaubertricks" : "Grad " + s.level}</div>`;
+    }
+    html += `
+    <div class="spell-item ${s.id === currentId ? "active" : ""} ${s.custom ? "custom" : ""}" data-id="${esc(s.id)}">
+      <input type="checkbox" ${selected.has(s.id) ? "checked" : ""} onclick="event.stopPropagation(); toggleSel('${esc(s.id)}', this.checked)">
+      <span class="nm">${esc(s.name[lang] || s.name.de || s.name.en)}</span>
+      <span class="tag">${esc((s.school.de || "").slice(0, 4))}</span>
+    </div>`;
+  }
+  list.innerHTML = html || "<div style='padding:16px;color:var(--muted)'>Keine Treffer</div>";
+  list.querySelectorAll(".spell-item").forEach(el => el.onclick = () => selectSpell(el.dataset.id));
+  document.getElementById("counts").textContent =
+    `${spells.length} Karten · ${selected.size} ausgewählt`;
+}
+
+function toggleSel(id, on) {
+  on ? selected.add(id) : selected.delete(id);
+  document.getElementById("counts").textContent =
+    `${filteredSpells().length} Karten · ${selected.size} ausgewählt`;
+  if (sheetView) renderPreview();
+}
+function selectFiltered(on) {
+  filteredSpells().forEach(s => on ? selected.add(s.id) : selected.delete(s.id));
+  renderList();
+  if (sheetView) renderPreview();
+}
+
+function selectSpell(id) {
+  currentId = id;
+  renderList(); renderPreview(); renderEditor();
+}
+
+// ---------------- editor ----------------
+function fld(label, id, val, big) {
+  return `<label>${label}</label><textarea id="${id}" class="${big ? "big" : ""}" oninput="fieldChanged()">${esc(val || "")}</textarea>`;
+}
+function fldInput(label, id, val) {
+  return `<label>${label}</label><input type="text" id="${id}" value="${esc(val || "")}" oninput="fieldChanged()">`;
+}
+
+function renderEditor() {
+  const ed = document.getElementById("edForm");
+  const s = spellById(currentId);
+  if (!s) { ed.innerHTML = "<p class='hint'>Karte in der Liste anklicken oder neue Karte anlegen.</p>"; return; }
+  document.getElementById("edTitle").textContent =
+    (s.custom ? "Eigene Karte: " : "Karte: ") + (s.name[lang] || s.name.de || s.name.en);
+  const clsBoxes = CLASSES.map(c =>
+    `<label style="display:inline-flex;align-items:center;gap:4px;margin:2px 8px 2px 0;text-transform:none;font-size:12px;color:var(--ink)">
+      <input type="checkbox" data-cls="${c}" ${(s.classes.de || []).includes(c) ? "checked" : ""} onchange="fieldChanged()">${c}</label>`).join("");
+  ed.innerHTML = `
+    <div class="grid2">
+      <div>${fldInput("Name (DE)", "e_name_de", s.name.de)}</div>
+      <div>${fldInput("Name (EN)", "e_name_en", s.name.en)}</div>
+    </div>
+    <div class="grid2">
+      <div>
+        <label>Grad</label>
+        <select id="e_level" onchange="fieldChanged()">
+          ${[0,1,2,3,4,5,6,7,8,9].map(l => `<option value="${l}" ${s.level === l ? "selected" : ""}>${l === 0 ? "Zaubertrick" : l}</option>`).join("")}
+        </select>
+      </div>
+      <div>
+        <label>Schule</label>
+        <select id="e_school" onchange="fieldChanged()">
+          ${SCHOOLS_EN.map(sc => `<option value="${sc}" ${s.school.en === sc ? "selected" : ""}>${SCHOOL_DE[sc]}</option>`).join("")}
+        </select>
+      </div>
+    </div>
+    <label>Klassen</label>
+    <div>${clsBoxes}</div>
+    <div class="grid2">
+      <div>${fldInput("Zeitaufwand (DE)", "e_time_de", s.castingTime.de)}</div>
+      <div>${fldInput("Casting Time (EN)", "e_time_en", s.castingTime.en)}</div>
+      <div>${fldInput("Reichweite (DE)", "e_range_de", s.range.de)}</div>
+      <div>${fldInput("Range (EN)", "e_range_en", s.range.en)}</div>
+      <div>${fldInput("Komponenten (DE)", "e_comp_de", s.components.de)}</div>
+      <div>${fldInput("Components (EN)", "e_comp_en", s.components.en)}</div>
+      <div>${fldInput("Wirkungsdauer (DE)", "e_dur_de", s.duration.de)}</div>
+      <div>${fldInput("Duration (EN)", "e_dur_en", s.duration.en)}</div>
+    </div>
+    ${fld("Beschreibung (DE) — **fett**, *kursiv*, Leerzeile = Absatz", "e_desc_de", s.description.de, true)}
+    ${fld("Description (EN)", "e_desc_en", s.description.en, true)}
+    ${fld("Höhere Grade / Aufwertung (DE)", "e_hl_de", s.higherLevels.de)}
+    ${fld("Higher Levels (EN)", "e_hl_en", s.higherLevels.en)}
+    ${fldInput("Quelle", "e_source", s.source)}
+    <p class="hint">Konzentration/Ritual werden automatisch aus Wirkungsdauer und Zeitaufwand erkannt. Leere DE-Felder fallen auf den englischen Text zurück.</p>
+  `;
+}
+
+let saveTimer = null;
+function fieldChanged() {
+  clearTimeout(saveTimer);
+  saveTimer = setTimeout(applyEditor, 250);
+}
+function applyEditor() {
+  const s = spellById(currentId);
+  if (!s) return;
+  const v = id => document.getElementById(id)?.value ?? "";
+  s.name.de = v("e_name_de"); s.name.en = v("e_name_en");
+  s.level = parseInt(v("e_level"));
+  const scEn = v("e_school");
+  s.school = { en: scEn, de: SCHOOL_DE[scEn] };
+  const cls = [...document.querySelectorAll("#edForm [data-cls]")].filter(c => c.checked).map(c => c.dataset.cls);
+  s.classes = { de: cls, en: cls.map(c => CLASS_EN[c]) };
+  s.castingTime = { de: v("e_time_de"), en: v("e_time_en") };
+  s.range = { de: v("e_range_de"), en: v("e_range_en") };
+  s.components = { de: v("e_comp_de"), en: v("e_comp_en") };
+  s.duration = { de: v("e_dur_de"), en: v("e_dur_en") };
+  s.description = { de: v("e_desc_de"), en: v("e_desc_en") };
+  s.higherLevels = { de: v("e_hl_de"), en: v("e_hl_en") };
+  s.source = v("e_source");
+  s.concentration = /^(Konzentration|Concentration)/i.test(s.duration.de + s.duration.en);
+  s.ritual = /Ritual/i.test(s.castingTime.de + " " + s.castingTime.en);
+  saveDb();
+  renderPreview();
+  renderList();
+}
+
+// ---------------- actions ----------------
+function newSpell() {
+  const id = "custom-" + Date.now().toString(36);
+  const s = {
+    id, name: { de: "Neuer Zauber", en: "New Spell" }, level: 1,
+    school: { de: "Hervorrufung", en: "Evocation" },
+    classes: { de: ["Magier"], en: ["Wizard"] },
+    castingTime: { de: "Aktion", en: "Action" },
+    range: { de: "18 Meter", en: "60 feet" },
+    components: { de: "V, G", en: "V, S" },
+    duration: { de: "Unmittelbar", en: "Instantaneous" },
+    description: { de: "Beschreibung …", en: "Description …" },
+    higherLevels: { de: "", en: "" },
+    ritual: false, concentration: false, source: "Homebrew", custom: true,
+  };
+  db.spells.push(s);
+  sortSpells(); saveDb();
+  selectSpell(id);
+}
+function duplicateSpell() {
+  const s = spellById(currentId);
+  if (!s) return alert("Erst eine Karte auswählen.");
+  const copy = JSON.parse(JSON.stringify(s));
+  copy.id = "custom-" + Date.now().toString(36);
+  copy.name.de += " (Kopie)"; copy.custom = true; copy.source = s.source || "Homebrew";
+  db.spells.push(copy);
+  sortSpells(); saveDb();
+  selectSpell(copy.id);
+}
+function deleteSpell() {
+  const s = spellById(currentId);
+  if (!s) return;
+  if (!s.custom) return alert("SRD-Karten können nicht gelöscht werden (nur eigene Karten). Nutze Filter, um sie auszublenden.");
+  if (!confirm(`„${s.name.de}“ wirklich löschen?`)) return;
+  db.spells = db.spells.filter(x => x.id !== s.id);
+  selected.delete(s.id);
+  currentId = null;
+  saveDb(); renderList(); renderPreview(); renderEditor();
+}
+function sortSpells() {
+  db.spells.sort((a, b) => a.level - b.level || (a.name[lang] || a.name.de || a.name.en).localeCompare(b.name[lang] || b.name.de || b.name.en, "de"));
+}
+function resetAll() {
+  if (!confirm("Alle lokalen Änderungen und eigenen Karten verwerfen und die SRD-Daten neu laden?")) return;
+  localStorage.removeItem(LS_KEY);
+  loadDb(); currentId = null; selected.clear();
+  sortSpells(); renderList(); renderPreview(); renderEditor();
+}
+
+function exportJson() {
+  const blob = new Blob([JSON.stringify(db, null, 1)], { type: "application/json" });
+  const a = document.createElement("a");
+  a.href = URL.createObjectURL(blob);
+  a.download = "spells.json";
+  a.click();
+  URL.revokeObjectURL(a.href);
+}
+function importJson() {
+  const inp = document.createElement("input");
+  inp.type = "file"; inp.accept = ".json,application/json";
+  inp.onchange = () => {
+    const f = inp.files[0];
+    if (!f) return;
+    f.text().then(t => {
+      try {
+        const data = JSON.parse(t);
+        if (!data.spells || !Array.isArray(data.spells)) throw new Error("Kein 'spells'-Array gefunden");
+        db = data;
+        sortSpells(); saveDb();
+        currentId = null; selected.clear();
+        renderList(); renderPreview(); renderEditor();
+        alert(`${db.spells.length} Karten importiert.`);
+      } catch (e) { alert("Import fehlgeschlagen: " + e.message); }
+    });
+  };
+  inp.click();
+}
+
+function setLang(l) {
+  lang = l;
+  document.getElementById("langDe").classList.toggle("on", l === "de");
+  document.getElementById("langEn").classList.toggle("on", l === "en");
+  sortSpells();
+  renderList(); renderPreview(); renderEditor();
+}
+
+// ---------------- print ----------------
+function printCards() {
+  let ids = [...selected];
+  if (!ids.length) ids = filteredSpells().map(s => s.id);
+  if (!ids.length) return alert("Keine Karten ausgewählt oder gefiltert.");
+  const spells = ids.map(spellById).filter(Boolean);
+  const allCards = [];
+  const appxSpells = [];
+  for (const s of spells) {
+    const res = cardsFor(s, lang);
+    allCards.push(...res.cards);
+    if (res.appendix) appxSpells.push(res.appendix);
+  }
+  const root = document.getElementById("printRoot");
+  root.innerHTML = "";
+  const perPage = 9;
+  for (let i = 0; i < allCards.length; i += perPage) {
+    const sheet = document.createElement("div");
+    sheet.className = "sheet";
+    sheet.innerHTML = allCards.slice(i, i + perPage).join("");
+    root.appendChild(sheet);
+  }
+  if (appxSpells.length) {
+    const appx = document.createElement("div");
+    appx.className = "appx-flow";
+    appx.setAttribute("lang", lang);
+    appx.innerHTML = `<h2>${lang === "de" ? "Anhang: Vollständige Zaubertexte" : "Appendix: Full Spell Texts"}</h2>` +
+      appxSpells.map(s => {
+        const labels = cardLabels(s, lang);
+        const hl = TX(s.higherLevels, lang).trim();
+        return `<h3>${esc(s.name[lang] || s.name.de || s.name.en)}</h3>
+          <div class="meta">${esc(typeLine(s, lang))} · ${esc(classesLine(s, lang))}<br>
+          ${labels.time}: ${esc(TX(s.castingTime, lang))} · ${labels.range}: ${esc(withSquares(TX(s.range, lang), txLang(s.range, lang)))} ·
+          ${labels.dur}: ${esc(TX(s.duration, lang))} · ${labels.comp}: ${esc(TX(s.components, lang))}</div>
+          ${descParas(s, lang).join("")}
+          ${hl ? `<p><b>${labels.higher}:</b> ${md(hl)}</p>` : ""}`;
+      }).join("");
+    root.appendChild(appx);
+  }
+  // cut marks at the grid frame (3x4 vertical, 4x3 horizontal grid line ends)
+  const ox = (210 - 3 * 63.5) / 2, oy = (296 - 3 * 88.9) / 2;
+  root.querySelectorAll(".sheet").forEach(sheet => {
+    for (let c = 0; c <= 3; c++) {
+      for (const y of [oy - 7, oy + 3 * 88.9 + 1]) {
+        const m = document.createElement("div");
+        m.className = "cutmark v";
+        m.style.left = (ox + c * 63.5) + "mm"; m.style.top = y + "mm";
+        sheet.appendChild(m);
+      }
+    }
+    for (let r = 0; r <= 3; r++) {
+      for (const x of [ox - 7, ox + 3 * 63.5 + 1]) {
+        const m = document.createElement("div");
+        m.className = "cutmark h";
+        m.style.top = (oy + r * 88.9) + "mm"; m.style.left = x + "mm";
+        sheet.appendChild(m);
+      }
+    }
+  });
+  // fit text after sheets are in DOM (must be displayed for measurement)
+  root.style.display = "block";
+  root.style.position = "absolute"; root.style.left = "-9999px"; root.style.top = "0"; root.style.background = "#fff";
+  requestAnimationFrame(() => {
+    root.querySelectorAll(".card").forEach(fitCard);
+    setTimeout(() => {
+      root.style.display = ""; root.style.position = ""; root.style.left = ""; root.style.top = "";
+      window.print();
+    }, 60);
+  });
+}
+
+// ---------------- PDF file export (jsPDF, vector text) ----------------
+const PDF = {
+  CARD_W: 63.5, CARD_H: 88.9, BORDER: 1.25,
+  PT: 0.3528,                       // pt -> mm
+  COLORS: {
+    Evocation: [181,52,42], Abjuration: [217,126,38], Necromancy: [110,110,112],
+    Transmutation: [217,168,39], Conjuration: [62,138,68], Illusion: [59,107,176],
+    Divination: [93,163,168], Enchantment: [176,80,156],
+  },
+  PAPER: [240,224,189], PAPER2: [246,236,212], INK: [36,29,18], LABEL: [92,74,35], DARK: [26,23,19],
+};
+function pdfDarken(c, f) { return c.map(v => Math.round(v * f)); }
+function pdfLighten(c, f) { return c.map(v => Math.round(v + (255 - v) * f)); }
+
+// render a school emoji to a transparent PNG (color emoji keep their colors,
+// monochrome glyphs are drawn white to sit on the dark circle)
+const emojiPngCache = {};
+function emojiDataUrl(ch) {
+  if (emojiPngCache[ch]) return emojiPngCache[ch];
+  const c = document.createElement("canvas");
+  c.width = c.height = 96;
+  const ctx = c.getContext("2d");
+  ctx.font = "72px 'Segoe UI Emoji','Apple Color Emoji','Noto Color Emoji','Segoe UI Symbol',sans-serif";
+  ctx.textAlign = "center";
+  ctx.textBaseline = "middle";
+  ctx.fillStyle = "#ffffff";
+  ctx.fillText(ch, 48, 54);
+  return (emojiPngCache[ch] = c.toDataURL("image/png"));
+}
+
+// tokenize "**bold** and *italic*" into styled words
+function pdfTokenize(text) {
+  const out = [];
+  let bold = false, italic = false;
+  for (const chunk of (text || "").split(/(\*\*|\*)/)) {
+    if (chunk === "**") { bold = !bold; continue; }
+    if (chunk === "*") { italic = !italic; continue; }
+    for (const w of chunk.split(/\s+/)) {
+      if (w) out.push({ t: w, b: bold, i: italic });
+    }
+  }
+  return out;
+}
+function pdfFont(doc, w, size) {
+  doc.setFont("FiraCond", w.b && w.i ? "bolditalic" : w.b ? "bold" : w.i ? "italic" : "normal");
+  doc.setFontSize(size);
+}
+// hyphenation break candidates for a token: [prefix-with-hyphen, rest], longest first
+function breakCandidates(t, hyph) {
+  const cands = [];
+  for (let i = t.length - 2; i > 0; i--) {
+    if (t[i] === "-") cands.push([t.slice(0, i + 1), t.slice(i + 1)]);
+  }
+  const m = t.match(/^([^A-Za-zÄÖÜäöüß]*)([A-Za-zÄÖÜäöüß]+)([^A-Za-zÄÖÜäöüß]*)$/);
+  if (m && m[2].length >= 6) {
+    const parts = hyph(m[2]);
+    for (let k = parts.length - 1; k >= 1; k--) {
+      cands.push([m[1] + parts.slice(0, k).join("") + "-", parts.slice(k).join("") + m[3]]);
+    }
+  }
+  cands.sort((a, b) => b[0].length - a[0].length);
+  return cands;
+}
+// wrap styled words to maxW (mm) at font size (pt); returns lines [{words:[{t,b,i,w}], width, spaceW, last}]
+function pdfWrap(doc, words, maxW, size, hyph) {
+  doc.setFontSize(size);
+  doc.setFont("FiraCond", "normal");
+  const spaceW = doc.getTextWidth(" ");
+  const lines = [];
+  let cur = [], curW = 0;
+  const push = () => { if (cur.length) { lines.push({ words: cur, width: curW, spaceW }); cur = []; curW = 0; } };
+  const queue = [...words];
+  let guard = 8000;
+  while (queue.length && guard-- > 0) {
+    let w = queue.shift();
+    pdfFont(doc, w, size);
+    let ww = doc.getTextWidth(w.t);
+    const gap = cur.length ? spaceW : 0;
+    if (curW + gap + ww > maxW) {
+      // fill the line with a hyphenated prefix if possible
+      let placed = false;
+      const room = maxW - curW - gap;
+      if (hyph && room > spaceW * 4) {
+        for (const [pre, rest] of breakCandidates(w.t, hyph)) {
+          const pw = doc.getTextWidth(pre);
+          if (pw <= room) {
+            cur.push({ t: pre, b: w.b, i: w.i, w: pw });
+            curW += gap + pw;
+            queue.unshift({ t: rest, b: w.b, i: w.i });
+            placed = true;
+            break;
+          }
+        }
+      }
+      push();
+      if (placed) continue;
+      if (ww > maxW) {  // hard-break monster words that exceed a whole line
+        let piece = "";
+        for (const ch of w.t) {
+          if (doc.getTextWidth(piece + ch) > maxW - 1 && piece) {
+            lines.push({ words: [{ t: piece, b: w.b, i: w.i, w: doc.getTextWidth(piece) }], width: doc.getTextWidth(piece), spaceW });
+            piece = "";
+          }
+          piece += ch;
+        }
+        w = { t: piece, b: w.b, i: w.i };
+        ww = doc.getTextWidth(piece);
+      }
+    }
+    cur.push({ ...w, w: ww });
+    curW += (cur.length > 1 ? spaceW : 0) + ww;
+  }
+  push();
+  if (lines.length) lines[lines.length - 1].last = true;
+  return lines;
+}
+// draw wrapped lines at (x,y), justified to maxW except last line; returns new y
+function pdfDrawLines(doc, lines, x, y, maxW, size, lh, color, justify) {
+  doc.setTextColor(...color);
+  for (const line of lines) {
+    let gap = line.spaceW;
+    if (justify && !line.last && line.words.length > 1) {
+      const extra = (maxW - line.width) / (line.words.length - 1);
+      if (extra > 0 && extra < line.spaceW * 2.2) gap = line.spaceW + extra;
+    }
+    let cx = x;
+    for (const w of line.words) {
+      pdfFont(doc, w, size);
+      doc.text(w.t, cx, y, { baseline: "top" });
+      cx += w.w + gap;
+    }
+    y += lh;
+  }
+  return y;
+}
+
+// pre-layout a spell: computes sizes/blocks; returns {size, subH, statsH, hlH, parts:[{items,first,last,appx?}], appendix?, abbreviated?}
+const PDF_APPX_H = 4.2;  // height of the "→ Anhang" bar
+function pdfLayoutSpell(doc, s, lg) {
+  const hyph = hyphFor(lg);
+  const innerW = PDF.CARD_W - 2 * PDF.BORDER;
+  const innerH = PDF.CARD_H - 2 * PDF.BORDER;
+  const contentW = innerW - 3.6;                        // 1.8mm side padding
+  const labels = cardLabels(s, lg);
+  const headH = 6.0, footH = 2.7, bodyPadV = 1.8;
+
+  // sub bar: type left, classes right
+  const typeStr = typeLine(s, lg), clsStr = classesLine(s, lg);
+  doc.setFont("FiraCond", "normal"); doc.setFontSize(5.4);
+  const typeW = doc.getTextWidth(typeStr);
+  const clsLines = pdfWrap(doc, pdfTokenize(clsStr), Math.max(contentW - typeW - 3, contentW * 0.42), 5.4);
+  const subRows = Math.max(1, clsLines.length);
+  const subH = subRows * 2.25 + 0.8;
+
+  // stats block (first card only), labels inline: "**Zeit:** Aktion"
+  const [compShort, material] = splitComponents(TX(s.components, lg));
+  const colW = contentW / 2 - 1;
+  const cells = [
+    [labels.time, TX(s.castingTime, lg)], [labels.range, withSquares(TX(s.range, lg), txLang(s.range, lg))],
+    [labels.dur, TX(s.duration, lg)], [labels.comp, compShort],
+  ].map(([lab, val]) => ({
+    lines: pdfWrap(doc, [{ t: lab + ":", b: true, i: false }, ...pdfTokenize(val)], colW, 5.4, hyph),
+  }));
+  const row1 = Math.max(cells[0].lines.length, cells[1].lines.length);
+  const row2 = Math.max(cells[2].lines.length, cells[3].lines.length);
+  const matLines = material ? pdfWrap(doc, pdfTokenize("M: " + material), contentW, 4.8, hyph) : [];
+  const statsH = 1.1 + row1 * 1.95 + 0.5 + row2 * 1.95 + (matLines.length ? matLines.length * 1.85 + 0.5 : 0) + 0.8;
+
+  const build = sx => {
+    const hlTxt = TX(sx.higherLevels, lg).trim();
+    const hlLines = hlTxt ? pdfWrap(doc, pdfTokenize("**" + labels.higher + ":** " + hlTxt), contentW, 5.2, hyph) : [];
+    const hlH = hlLines.length ? hlLines.length * 2.2 + 1.6 : 0;
+    const paras = TX(sx.description, lg).split(/\n\n+/).filter(p => p.trim());
+    return { hlLines, hlH, paras };
+  };
+  const capOf = (first, last, hlH, appx) =>
+    innerH - headH - subH - footH - bodyPadV - (first ? statsH : 0) - (last ? hlH : 0) - (appx ? PDF_APPX_H : 0);
+  const layoutAt = (paras, size) => {
+    const lh = size * PDF.PT * 1.24;
+    const pg = size * PDF.PT * 0.55;
+    const items = [];
+    paras.forEach((p, pi) => {
+      const lines = pdfWrap(doc, pdfTokenize(p), contentW, size, hyph);
+      lines.forEach((ln, li) => items.push({ ln, gapBefore: li === 0 && pi > 0 ? pg : 0, h: lh }));
+    });
+    return { items, lh };
+  };
+  const common = { subH, statsH, cells, matLines, clsLines, typeStr, headH, footH };
+
+  // 1) single card: raw text first, then abbreviated
+  for (const sx of [s, abbrevSpell(s, lg)]) {
+    const B = build(sx);
+    for (let size = 7.0; size >= 5.2; size -= 0.2) {
+      const { items, lh } = layoutAt(B.paras, size);
+      const h = items.reduce((a, it) => a + it.h + it.gapBefore, 0);
+      if (h <= capOf(true, true, B.hlH, false)) {
+        return { ...common, size, lh, hlLines: B.hlLines, hlH: B.hlH, abbreviated: sx !== s,
+                 parts: [{ items, first: true, last: true }] };
+      }
+    }
+  }
+  // 2) continuation cards (abbreviated text)
+  const sa = abbrevSpell(s, lg);
+  const B = build(sa);
+  const size = 6.0;
+  const { items, lh } = layoutAt(B.paras, size);
+  const parts = [];
+  let cur = [], curH = 0;
+  for (const it of items) {
+    const first = parts.length === 0;
+    const cap = capOf(first, false, 0, false);
+    const add = it.h + (cur.length ? it.gapBefore : 0);
+    if (curH + add > cap && cur.length) { parts.push({ items: cur, first, last: false }); cur = []; curH = 0; }
+    cur.push(it); curH += cur.length === 1 ? it.h : add;
+  }
+  if (cur.length) parts.push({ items: cur, first: parts.length === 0, last: false });
+  const lastCap = capOf(parts.length === 1, true, B.hlH, false);
+  const lastH = parts[parts.length - 1].items.reduce((a, it, i) => a + it.h + (i ? it.gapBefore : 0), 0);
+  if (B.hlH && lastH > lastCap) parts.push({ items: [], first: false, last: true });
+  parts[parts.length - 1].last = true;
+  if (parts.length < APPENDIX_MIN_PARTS) {
+    return { ...common, size, lh, hlLines: B.hlLines, hlH: B.hlH, abbreviated: true, parts };
+  }
+  // 3) really long: teaser card + full text in the appendix
+  const cap = capOf(true, false, 0, true);
+  const teaser = [];
+  let th = 0;
+  for (const it of items) {
+    const add = it.h + (teaser.length ? it.gapBefore : 0);
+    if (th + add > cap) break;
+    teaser.push(it); th += add;
+  }
+  return { ...common, size, lh, hlLines: [], hlH: 0, abbreviated: true, appendix: true,
+           parts: [{ items: teaser, first: true, last: false, appx: true }] };
+}
+
+function pdfDrawCard(doc, s, lg, L, part, partIdx, x, y) {
+  const col = PDF.COLORS[s.school.en] || [100,100,100];
+  const colDark = pdfDarken(col, 0.72);
+  const labels = cardLabels(s, lg);
+  const bx = x + PDF.BORDER, by = y + PDF.BORDER;
+  const innerW = PDF.CARD_W - 2 * PDF.BORDER, innerH = PDF.CARD_H - 2 * PDF.BORDER;
+  const cx = bx + 2, contentW = innerW - 4;
+
+  // frame + paper
+  doc.setFillColor(...PDF.DARK);
+  doc.roundedRect(x, y, PDF.CARD_W, PDF.CARD_H, 3.2, 3.2, "F");
+  doc.setFillColor(...PDF.PAPER);
+  doc.roundedRect(bx, by, innerW, innerH, 2, 2, "F");
+
+  // header
+  doc.setFillColor(...col);
+  doc.roundedRect(bx, by, innerW, L.headH + 2, 2, 2, "F");
+  doc.rect(bx, by + L.headH - 1, innerW, 1, "F"); // square off bottom
+  doc.setFillColor(...pdfDarken(col, 0.55));
+  doc.circle(bx + 4.4, by + L.headH / 2, 2.2, "F");
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("FiraCond", "bold");
+  doc.setFontSize(8);
+  try {
+    doc.addImage(emojiDataUrl(SCHOOL_GLYPH[s.school.en] || "✶"), "PNG",
+                 bx + 4.4 - 1.75, by + L.headH / 2 - 1.75, 3.5, 3.5);
+  } catch (e) {  // fallback: school initial
+    doc.text((s.school.en || "?")[0], bx + 4.4, by + L.headH / 2, { align: "center", baseline: "middle" });
+  }
+  const name = s.name[lg] || s.name.de;
+  let nameSize = 11.5;
+  doc.setFontSize(nameSize);
+  while (doc.getTextWidth(name) > contentW - 8 && nameSize > 6.5) { nameSize -= 0.5; doc.setFontSize(nameSize); }
+  doc.text(name, bx + 7.8, by + L.headH / 2, { baseline: "middle" });
+
+  let cy = by + L.headH;
+  // sub bar
+  doc.setFillColor(...colDark);
+  doc.rect(bx, cy, innerW, L.subH, "F");
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("FiraCond", "normal"); doc.setFontSize(5.4);
+  doc.text(L.typeStr, cx, cy + 0.6, { baseline: "top" });
+  let ry = cy + 0.6;
+  for (const ln of L.clsLines) {
+    const str = ln.words.map(w => w.t).join(" ");
+    doc.text(str, bx + innerW - 1.8, ry, { align: "right", baseline: "top" });
+    ry += 2.25;
+  }
+  cy += L.subH;
+
+  // stats (first card) — inline bold labels
+  if (part.first) {
+    doc.setFillColor(...PDF.PAPER2);
+    doc.rect(bx, cy, innerW, L.statsH, "F");
+    doc.setDrawColor(120, 105, 70); doc.setLineWidth(0.15);
+    doc.line(bx, cy + L.statsH, bx + innerW, cy + L.statsH);
+    const colW = contentW / 2 - 1;
+    let sy = cy + 1.1;
+    for (const rowIdx of [0, 1]) {
+      const rowCells = L.cells.slice(rowIdx * 2, rowIdx * 2 + 2);
+      let rowH = 0;
+      rowCells.forEach((cell, ci) => {
+        const cxx = cx + ci * (colW + 2);
+        const yAfter = pdfDrawLines(doc, cell.lines, cxx, sy, colW, 5.4, 1.95, PDF.INK, false);
+        rowH = Math.max(rowH, yAfter - sy);
+      });
+      sy += rowH + 0.5;
+    }
+    if (L.matLines.length) {
+      pdfDrawLines(doc, L.matLines, cx, sy, contentW, 4.8, 1.85, [107, 90, 51], false);
+    }
+    cy += L.statsH;
+  }
+
+  // body
+  let byy = cy + 1.0;
+  for (const it of part.items) {
+    byy += it.gapBefore;
+    byy = pdfDrawLines(doc, [it.ln], cx, byy, contentW, L.size, L.lh, PDF.INK, true);
+  }
+
+  // higher levels / appendix bar (last card), anchored above foot
+  const footY = y + PDF.CARD_H - PDF.BORDER - L.footH;
+  if (part.appx) {
+    const abY = footY - PDF_APPX_H;
+    doc.setFillColor(...col);
+    doc.rect(bx, abY, innerW, PDF_APPX_H, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.setFont("FiraCond", "bold"); doc.setFontSize(5.4);
+    const txt = (lg === "de" ? "→ Vollständiger Text: Anhang" : "→ Full text: appendix")
+      + (L.appxPage ? (lg === "de" ? `, S. ${L.appxPage}` : `, p. ${L.appxPage}`) : "");
+    doc.text(txt, cx, abY + PDF_APPX_H / 2, { baseline: "middle" });
+  } else if (part.last && L.hlH) {
+    const hlY = footY - L.hlH;
+    doc.setFillColor(...col);
+    doc.rect(bx, hlY, innerW, L.hlH, "F");
+    pdfDrawLines(doc, L.hlLines, cx, hlY + 0.85, contentW, 5.2, 2.2, [255, 255, 255], false);
+  }
+
+  // foot
+  doc.setFillColor(...colDark);
+  doc.rect(bx, footY, innerW, L.footH, "F");
+  doc.rect(bx, footY + L.footH - 2, innerW, 2, "F");
+  doc.setFillColor(...PDF.DARK);  // re-round bottom corners
+  doc.setTextColor(255, 255, 255);
+  doc.setFont("FiraCond", "normal"); doc.setFontSize(4.6);
+  doc.text((s.source || "") + (s.custom ? " · eigene Karte" : ""), cx, footY + L.footH / 2, { baseline: "middle" });
+  // badges right
+  const badges = [];
+  if (L.parts.length > 1) badges.push(`${partIdx + 1}/${L.parts.length}`);
+  if (s.concentration) badges.push(lg === "de" ? "K" : "C");
+  if (s.ritual) badges.push("R");
+  badges.push(String(s.level));
+  let bxr = bx + innerW - 2;
+  doc.setFont("FiraCond", "bold"); doc.setFontSize(4.8);
+  for (const b of badges.reverse()) {
+    const bw = Math.max(doc.getTextWidth(b) + 1.6, 3);
+    bxr -= bw;
+    doc.setFillColor(...pdfLighten(colDark, 0.25));
+    doc.roundedRect(bxr, footY + 0.55, bw, L.footH - 1.6, 0.8, 0.8, "F");
+    doc.setTextColor(255, 255, 255);
+    doc.text(b, bxr + bw / 2, footY + L.footH / 2 - 0.25, { align: "center", baseline: "middle" });
+    bxr -= 1;
+  }
+}
+
+// lay out appendix (full spell texts) in 2-column A4 pages; assigns L.appxPage
+function pdfLayoutAppendix(doc, appxList, lg, cardPages) {
+  const hyph = hyphFor(lg);
+  const M = 14, colGap = 7, colW = (210 - 2 * M - colGap) / 2;
+  const top = 16, bottom = 283;
+  const items = [];  // {page, draw(doc)}
+  let page = 0, col = 0, y = 24;  // page 0 leaves room for the title
+  const colX = () => M + col * (colW + colGap);
+  const advance = h => {
+    if (y + h > bottom) {
+      col++;
+      if (col > 1) { col = 0; page++; }
+      y = page === 0 ? 24 : top;
+    }
+  };
+  items.push({ page: 0, draw: d => {
+    d.setTextColor(0, 0, 0); d.setFont("FiraCond", "bold"); d.setFontSize(13);
+    d.text(lg === "de" ? "Anhang: Vollständige Zaubertexte" : "Appendix: Full Spell Texts", M, top, { baseline: "top" });
+  }});
+  for (const { s, L } of appxList) {
+    const labels = cardLabels(s, lg);
+    const metaStr = typeLine(s, lg) + " · " + classesLine(s, lg);
+    const statsStr = `${labels.time}: ${TX(s.castingTime, lg)} · ${labels.range}: ${withSquares(TX(s.range, lg), txLang(s.range, lg))} · ` +
+                     `${labels.dur}: ${TX(s.duration, lg)} · ${labels.comp}: ${TX(s.components, lg)}`;
+    const metaLines = pdfWrap(doc, pdfTokenize(metaStr), colW, 7.2, hyph);
+    const statsLines = pdfWrap(doc, pdfTokenize(statsStr), colW, 7.2, hyph);
+    const headH = 5 + (metaLines.length + statsLines.length) * 2.9 + 1.5;
+    advance(headH + 8);  // keep title with some body
+    L.appxPage = cardPages + 1 + page;
+    const hx = colX(), hy = y;
+    items.push({ page, draw: d => {
+      d.setTextColor(0, 0, 0); d.setFont("FiraCond", "bold"); d.setFontSize(10.5);
+      d.text(s.name[lg] || s.name.de, hx, hy, { baseline: "top" });
+      let yy = hy + 5;
+      for (const ln of metaLines) {
+        d.setFont("FiraCond", "italic"); d.setFontSize(7.2); d.setTextColor(80, 80, 80);
+        d.text(ln.words.map(w => w.t).join(" "), hx, yy, { baseline: "top" });
+        yy += 2.9;
+      }
+      yy = pdfDrawLines(d, statsLines, hx, yy, colW, 7.2, 2.9, [50, 50, 50], false);
+    }});
+    y += headH;
+    const size = 8.2, lh = size * PDF.PT * 1.3, pg = 1.6;
+    const paras = TX(s.description, lg).split(/\n\n+/).filter(p => p.trim());
+    const hl = TX(s.higherLevels, lg).trim();
+    if (hl) paras.push("**" + labels.higher + ":** " + hl);
+    paras.forEach((p, pi) => {
+      if (pi > 0) y += pg;
+      const lines = pdfWrap(doc, pdfTokenize(p), colW, size, hyph);
+      for (const ln of lines) {
+        advance(lh);
+        const lx = colX(), ly = y;
+        items.push({ page, draw: d => pdfDrawLines(d, [ln], lx, ly, colW, size, lh, [0, 0, 0], true) });
+        y += lh;
+      }
+    });
+    y += 4;
+  }
+  return { items, pages: page + 1 };
+}
+
+function exportPdf() {
+  let ids = [...selected];
+  if (!ids.length) ids = filteredSpells().map(s => s.id);
+  if (!ids.length) return alert("Keine Karten ausgewählt oder gefiltert.");
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ unit: "mm", format: "a4", compress: true });
+  window.registerCardFonts(doc);
+
+  // pass 1: layout all spells, collect appendix spells
+  const flat = [], appxList = [];
+  for (const id of ids) {
+    const s = spellById(id);
+    if (!s) continue;
+    const L = pdfLayoutSpell(doc, s, lang);
+    if (L.appendix) appxList.push({ s, L });
+    L.parts.forEach((part, i) => flat.push({ s, L, part, i }));
+  }
+  const cardPages = Math.max(1, Math.ceil(flat.length / 9));
+
+  // pass 2: appendix layout (assigns page numbers used on the teaser cards)
+  let appx = { items: [], pages: 0 };
+  if (appxList.length) appx = pdfLayoutAppendix(doc, appxList, lang, cardPages);
+
+  // pass 3: draw card sheets
+  const ox = (210 - 3 * PDF.CARD_W) / 2, oy = (297 - 3 * PDF.CARD_H) / 2;
+  flat.forEach((item, idx) => {
+    const pos = idx % 9;
+    if (idx > 0 && pos === 0) doc.addPage();
+    if (pos === 0) {
+      doc.setDrawColor(0, 0, 0); doc.setLineWidth(0.12);
+      for (let c = 0; c <= 3; c++) {
+        const mx = ox + c * PDF.CARD_W;
+        doc.line(mx, oy - 7, mx, oy - 2);
+        doc.line(mx, oy + 3 * PDF.CARD_H + 2, mx, oy + 3 * PDF.CARD_H + 7);
+      }
+      for (let r = 0; r <= 3; r++) {
+        const my = oy + r * PDF.CARD_H;
+        doc.line(ox - 7, my, ox - 2, my);
+        doc.line(ox + 3 * PDF.CARD_W + 2, my, ox + 3 * PDF.CARD_W + 7, my);
+      }
+    }
+    const gx = ox + (pos % 3) * PDF.CARD_W, gy = oy + Math.floor(pos / 3) * PDF.CARD_H;
+    pdfDrawCard(doc, item.s, lang, item.L, item.part, item.i, gx, gy);
+  });
+
+  // pass 4: appendix pages
+  let curAppxPage = -1;
+  for (const it of appx.items) {
+    while (curAppxPage < it.page) { doc.addPage(); curAppxPage++; }
+    doc.setPage(cardPages + 1 + it.page);
+    it.draw(doc);
+  }
+
+  const date = new Date().toISOString().slice(0, 10);
+  doc.save(`zauberkarten-${date}.pdf`);
+}
+
+// ---------------- init ----------------
+loadDb();
+initFilters();
+sortSpells();
+renderList();
+applyZoom();
+if (db.spells.length) selectSpell(db.spells[0].id);
+// re-measure once the card font is loaded (pagination depends on real metrics)
+if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderPreview());
+</script>
+</body>
+</html>
