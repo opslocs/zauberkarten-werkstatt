@@ -1,9 +1,9 @@
 {
  "meta": {
-  "title": "PHB 2024 Cantrips, Level 1, Level 2, and Level 3 Spells Missing from spells.json",
+  "title": "PHB 2024 Cantrips, Level 1, Level 2, Level 3, and Level 4 Spells Missing from spells.json",
   "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
   "generated": "2026-08-15",
-  "count": 31
+  "count": 43
  },
  "spells": [
   {
@@ -1543,6 +1543,590 @@
    "description": {
     "de": "Du rufst den Geist eines Untoten herbei. Er erscheint in einem unbesetzten Bereich, den du innerhalb der Reichweite sehen kannst. Der Geist nimmt eine von drei Erscheinungsformen an: Geist, skelettartig oder als Leibchen, basierend auf deiner Wahl. Die Statistiken der Kreatur stehen in den Werten des Untoten-Geistes, der von deiner Wahl der Erscheinungsform abhängt.\nDie Kreatur verschwindet, wenn sie 0 Trefferpunkte hat oder der Zauber endet. Die Kreatur ist dir und deinen Verbündeten freundlich gesonnen. Im Kampf teilt sich die Kreatur deinen Initiativezähler und handelt direkt nach dir. Sie gehorcht deinen mündlichen Befehlen (keine Aktion erforderlich). Wenn du ihr keine Befehle gibst, führt sie die Ausweichaktion aus und bewegt sich, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
     "en": "You call forth an undead spirit. It manifests in an unoccupied space that you can see within range. The spirit takes one of three forms of your choice: a ghostly form, a skeletal form, or a zombie-like form. The creature's statistics are in the stat block of the undead spirit you choose.\nThe creature vanishes when it drops to 0 Hit Points or when the spell ends. The creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-aura-of-purity",
+   "name": {
+    "de": "Aura der Reinheit",
+    "en": "Aura of Purity"
+   },
+   "level": 4,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Kleriker",
+     "Paladin"
+    ],
+    "en": [
+     "Cleric",
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Emanation mit 9 Metern Radius)",
+    "en": "Self (9-meter Emanation)"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 10 Minuten",
+    "en": "Concentration, up to 10 minutes"
+   },
+   "description": {
+    "de": "Reinigende Energie strahlt von dir aus und erschafft eine Aura mit 9 m Radius. Bis der Zauber endet, bewegt sich die Aura mit dir als Mittelpunkt fort. Alle nicht feindlichen Kreaturen innerhalb der Aura (inklusive dir selbst) können nicht krank werden, erhalten eine Resistenz gegen Giftschaden und sind im Vorteil bei Rettungswürfen gegen Effekte, die folgende Zustände auslösen: betäubt, bezaubert, blind, gelähmt, taub, verängstigt und vergiftet.",
+    "en": "Purifying energy radiates from you in a 9-meter Emanation and persists for the duration. The aura moves with you, centered on you. While in the aura, each nonhostile creature (including you) can't become diseased, has Resistance to Poison damage, and has Advantage on saving throws against effects that cause the following conditions: Blinded, Charmed, Deafened, Frightened, Paralyzed, Poisoned, and Stunned."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-evards-black-tentacles",
+   "name": {
+    "de": "Evard's Schwarze Tentakel",
+    "en": "Evard's Black Tentacles"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein Stück eines Tentakels von einem riesigen Oktopus oder Riesenkalmars)",
+    "en": "V, S, M (a piece of a tentacle from a giant octopus or giant squid)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Zuckende nachtschwarze Tentakel winden sich aus dem Boden in einem quadratischen Bereich mit 6 m Seitenlänge, der sich in Reichweite befindet und den du sehen kannst. Für die Wirkungsdauer verwandeln diese Tentakel den Boden in schwieriges Gelände.\nWenn eine Kreatur das erste Mal in einem Zug den betroffenen Bereich betritt oder ihren Zug dort beginnt, muss ihr ein Geschicklichkeitsrettungswurf gelingen, um nicht 3W6 Wuchtschaden zu erleiden und bis zum Ende des Zaubers von den Tentakeln festgesetzt zu werden. Eine Kreatur, die ihren Zug in diesem Bereich beginnt und bereits von den Tentakeln festgesetzt ist, erleidet 3W6 Wuchtschaden.\nIst eine Kreatur von den Tentakeln festgesetzt, darf sie einen Stärke- oder Geschicklichkeitswurf (ihre Wahl) gegen den SG zum Widerstehen deiner Zauber ablegen. Bei einem Erfolg kann sie sich befreien.",
+    "en": "Squirming, ebony tentacles fill a 6-meter Square on the ground that you can see within range. For the duration, these tentacles turn the ground in the area into Difficult Terrain.\nWhen a creature enters the affected area for the first time on a turn or starts its turn there, the creature must succeed on a Dexterity saving throw or take 3d6 Bludgeoning damage and be Restrained by the tentacles until the spell ends. A creature that starts its turn in the area and is already Restrained by the tentacles takes 3d6 Bludgeoning damage.\nA creature Restrained by the tentacles can make a Strength or Dexterity saving throw (its choice) against your spell save DC to end the Restrained condition on itself. On a success, the creature is no longer Restrained."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-fount-of-moonlight",
+   "name": {
+    "de": "Quell des Mondlichts",
+    "en": "Fount of Moonlight"
+   },
+   "level": 4,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Druide"
+    ],
+    "en": [
+     "Druid"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 10 Minuten",
+    "en": "Concentration, up to 10 minutes"
+   },
+   "description": {
+    "de": "Für die Wirkungsdauer umgibt kühles Licht deinen Körper und spendet in einem Radius von sechs Metern helles Licht und in einem Radius von weiteren sechs Metern dämmriges Licht.\nFür die Wirkungsdauer bist du gegen gleißenden Schaden resistent, und deine Nahkampfangriffe bewirken bei einem Treffer zusätzlich 2W6 gleißenden Schaden. Außerdem kannst du sofort, nachdem du Schaden durch eine Kreatur im Abstand von bis zu 18 Metern von dir erlitten hast, die du sehen kannst, eine Reaktion ausführen um die Kreatur zu einem Konstitutionsrettungswurf zu zwingen. Scheitert der Wurf, so ist die Kreatur bis zum Ende deines nächsten Zugs blind.",
+    "en": "For the duration, cool light surrounds you, shedding Bright Light in a 6-meter radius and Dim Light for an additional 6 meters.\nFor the duration, you have Resistance to Radiant damage, and your melee weapon attacks deal an extra 2d6 Radiant damage on a hit. In addition, immediately after a creature within 18 meters of you that you can see deals damage to you, you can take a Reaction to force that creature to make a Constitution saving throw. On a failed save, the creature is blinded until the end of your next turn."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-grasping-vine",
+   "name": {
+    "de": "Schlingranke",
+    "en": "Grasping Vine"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Druide"
+    ],
+    "en": [
+     "Druid"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du beschwörst eine Ranke, die aus dem Boden in einem nicht besetzten Bereich deiner Wahl wächst, der sich in Reichweite befindet und den du sehen kannst. Wenn du diesen Zauber wirkst, kannst du die Ranke eine Kreatur innerhalb von 9 m um sie angreifen lassen. Du musst die Kreatur sehen können, Dem Ziel muss ein Geschicklichkeitsrettungswurf gelingen, um nicht 6 m in Richtung der Ranke gezogen zu werden. Bis der Zauber endet, kannst du in jedem deiner Züge als Bonusaktion die Ranke dieselbe Kreatur oder eine andere angreifen lassen.",
+    "en": "You conjure a vine that sprouts from the ground in an unoccupied space of your choice that you can see within range. When you cast the spell, you can cause the vine to lash out at a creature within 9 meters of it. You must be able to see the target. The target must succeed on a Dexterity saving throw or be pulled 6 meters toward the vine. Until the spell ends, you can use a Bonus Action on each of your turns to have the vine lash out at the same creature or a different one."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-leomunds-secret-chest",
+   "name": {
+    "de": "Leomunds geheime Truhe",
+    "en": "Leomund's Secret Chest"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "V, G, M (eine exquisite Truhe, 90 x 60 x 60 cm, erschaffen aus seltenen Materialien im Wert von mindestens 5.000 GM und eine sehr kleine Replik der Truhe aus den gleichen Materialien im Wert von 50 GM)",
+    "en": "V, S, M (an exquisite chest, 3 x 2 x 2 feet, constructed from rare materials worth at least 5,000 gp, and a tiny replica of the chest made from the same materials worth 50 gp)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du verbirgst eine Truhe und ihren gesamten Inhalt auf der Ätherebene. Beim Wirken des Zaubers musst du die Truhe und die Replik berühren, die als Materialkomponenten dienen. Die Truhe kann bis zu 0,324 Kubikmeter nicht lebender Materie aufnehmen (90 x 60 x 60 cm). Solange sich die Truhe auf der Ätherebene befindet, kannst du als Aktion die Replik berühren, um die Truhe herbeizurufen. Sie erscheint in einem nicht besetzten Bereich auf dem Boden innerhalb von 1,50 Metern. Du kannst die Truhe zurück auf die Ätherebene schicken, indem du als Aktion sowohl die Truhe als auch die Replik berührst.\nNach 60 Tagen besteht eine kumulative Chance von 5 % pro Tag, dass der Zauber endet. Er endet ebenfalls, wenn du ihn erneut wirkst, die kleine Repliktruhe zerstört wird oder du den Zauber als Aktion aufhebst. Wenn der Zauber endet, während sich die größere Truhe auf der Ätherebene befindet, ist sie unwiederbringlich verloren.",
+    "en": "You hide a chest and all its contents on the Ethereal Plane. You must touch the chest and the miniature replica that serves as the material component for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet). While the chest remains on the Ethereal Plane, you can use an action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by using an action to touch both the chest and the replica.\nAfter 60 days, there is a cumulative 5 percent chance per day that the spell ends. This effect is cumulative if you cast this spell on the same chest more than once. If the spell ends while the larger chest is on the Ethereal Plane, the chest is lost forever."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-mordenkainens-faithful-hound",
+   "name": {
+    "de": "Mordenkainens treuer Hund",
+    "en": "Mordenkainen's Faithful Hound"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G, M (eine winzige Silberpfeife, ein Stück Knochen und ein Faden)",
+    "en": "V, S, M (a tiny silver whistle, a bit of bone, and a thread)"
+   },
+   "duration": {
+    "de": "8 Stunden",
+    "en": "8 hours"
+   },
+   "description": {
+    "de": "Du beschwörst einen geisterhaften Wachhund in einem nicht besetzten Bereich, der sich in Reichweite befindet und den du sehen kannst. Der Wachhund bleibt bestehen, bis du eine Aktion verwendest, um ihn fortzuschicken, oder du dich mehr als 30 m von ihm entfernst.\nDer Hund ist unsichtbar für alle Kreaturen mit Ausnahme von dir selbst und kann keinen Schaden erleiden. Wenn sich eine Kreatur der Größenkategorie klein oder größer dem Hund auf 9 m nähert, ohne das Passwort auszusprechen, das du beim Wirken des Zaubers festgelegt hast, beginnt der Hund laut zu bellen. Er sieht unsichtbare Kreaturen, kann auf die Ätherebene blicken und ignoriert Illusionen.\nZu Beginn eines jeden deiner Züge versucht der Hund, eine Kreatur im Umkreis von 1,50 m um sich zu beißen, die dir feindlich gesonnen ist. Der Angriffsbonus des Hundes entspricht dem Modifikator deines zum Zaubern relevanten Attributs + deinem Übungsbonus. Bei einem Treffer verursacht er 4W8 Stichschaden.",
+    "en": "You conjure a phantom watchdog in an unoccupied space that you can see within range, where it remains for the duration until you dismiss it as an action or move more than 30 meters away from it.\nThe hound is invisible to all creatures except you and can't be harmed. When a Small or larger creature comes within 9 meters of it without first speaking the password that you choose when you cast this spell, the hound starts barking loudly. The hound sees Invisible creatures and can see into the Ethereal Plane. It ignores Illusions.\nAt the start of each of your turns, the hound attempts to bite one creature within 1.5 meters of it that is hostile to you. The hound's attack bonus is equal to your spellcasting ability modifier plus your Proficiency Bonus. On a hit, it deals 4d8 Piercing damage."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-mordenkainens-private-sanctum",
+   "name": {
+    "de": "Mordenkainens privates Heiligtum",
+    "en": "Mordenkainen's Private Sanctum"
+   },
+   "level": 4,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "10 Minuten",
+    "en": "10 Minutes"
+   },
+   "range": {
+    "de": "36 Meter",
+    "en": "120 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein dünnes Blech aus Blei, ein Stück undurchsichtiges Glas, ein Bausch Baumwolle oder Stoff und zerstoßener Crysolith)",
+    "en": "V, S, M (a thin sheet of lead, a piece of opaque glass, a wad of cotton or cloth, and powdered chrysolite)"
+   },
+   "duration": {
+    "de": "24 Stunden",
+    "en": "24 hours"
+   },
+   "description": {
+    "de": "Du machst einen Bereich in Reichweite auf magische Weise sicher. Der Bereich ist ein Würfel, der eine Kantenlänge zwischen 1,50 m und 30 m haben darf. Der Zauber bleibt für die Wirkungsdauer bestehen, wenn du keine Aktion verwendest, um ihn aufzuheben. Beim Wirken des Zaubers entscheidest du, welche Art von Sicherheit er bietet, wobei du beliebig viele der folgenden Eigenschaften auswählen kannst:\n\n- Geräusche können nicht durch die Barriere am Rand des geschützten Bereichs dringen.\n- Die Barriere des geschützten Bereichs erscheint dunkel und nebelig, sodass sie nicht mit Blicken durchdrungen werden kann (auch nicht mit Dunkelsicht).\n- Sensoren, die von Erkenntniszaubern erschaffen werden, können nicht im geschützten Bereich erscheinen oder die Barriere an ihrem äußeren Rand passieren.\n- Kreaturen in dem Bereich können nicht Ziel von Erkenntniszaubern werden.\n- Nichts kann in den geschützten Bereich hinein oder hinaus teleportiert werden.\n- Ebenenreisen sind innerhalb des geschützten Bereichs nicht möglich.\n\nWirkst du den Zauber für 1 Jahr jeden Tag an demselben Ort, wird der Effekt permanent.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 5. oder eines höheren Grades wirkst, vergrößert sich die Kantenlänge des Würfels um 30 m für jeden Grad über den 4. hinaus. Somit könntest du einen Würfel mit einer Kantenlänge von 60 m beschützen, wenn du ein Zauberplatz des 5. Grades verbrauchst.",
+    "en": "You make an area within range magically secure. The area is a Cube that can be as small as 1.5 meters or as large as 30 meters on a side. The spell lasts for the duration unless you use an action to dismiss it.\nWhen you cast the spell, you can choose any number of the following properties for the area:\n\n- Sound can't pass through the barrier at the edge of the area.\n- The barrier of the area appears dark and foggy, preventing vision (including Darkvision) from penetrating it.\n- Sensors created by Divination spells can't appear within the area or pass through the barrier at its perimeter.\n- Creatures in the area can't be targeted by Divination spells.\n- Nothing can teleport into or out of the area.\n- Planar travel is blocked within the area.\n\nCasting this spell on the same spot every day for a year makes its effect permanent.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 5 or higher, the side length of the Cube increases by 30 meters for each slot level above 4. Thus, you could protect a Cube with a side length of 60 meters when using a level 5 spell slot."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-otilukes-resilient-sphere",
+   "name": {
+    "de": "Otilukes unverwüstliche Sphäre",
+    "en": "Otiluke's Resilient Sphere"
+   },
+   "level": 4,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein halbkreisförmiges Stück klaren Kristalls und eine entsprechende Halbkugel aus Gummiarabikum)",
+    "en": "V, S, M (a hemispherical piece of clear crystal and a matching hemispherical piece of gum arabic)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Eine Sphäre aus schimmernder Energie umschließt eine Kreatur oder einen Gegenstand der Größenkategorie groß oder kleiner in Reichweite. Eine unwillige Kreatur muss einen erfolgreichen Geschicklichkeitsrettungswurf ablegen, um nicht für die Wirkungsdauer von der Sphäre umschlossen zu werden.\nWeder physische Gegenstände noch magische Energie oder andere Zaubereffekte vermögen die Barriere zu durchdringen, nicht von außen und auch nicht von innen, eine Kreatur in der Sphäre kann jedoch normal atmen. Die Sphäre ist immun gegen alle Arten von Schaden, und Kreaturen oder Gegenstände in ihrem Inneren können von Angriffen oder Effekten, die von außerhalb kommen, nicht betroffen werden. Ebensowenig ist es der Kreatur im Inneren der Sphäre möglich, etwas außerhalb zu beeinflussen.\nDie Sphäre ist gewichtslos und gerade groß genug, um die Kreatur oder den Gegenstand aufzunehmen. Eine umschlossene Kreatur kann ihre Aktion verwenden, um sich gegen die Wand der Sphäre zu drücken und sich so mit ihrer halben Bewegungsrate rollend fortzubewegen. Gleichermaßen kann die Sphäre von anderen Kreaturen ins Rollen gebracht und bewegt werden, die sich außerhalb befinden.\nWird der Zauber Auflösen auf die Sphäre gewirkt, zerstört er sie, ohne etwas im Inneren zu beschädigen.",
+    "en": "A sphere of shimmering force encloses a creature or object of Large size or smaller within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed by the sphere for the duration.\nNothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside damage anything outside.\nThe sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can use its action to push against the sphere's walls, rolling the sphere at up to half the creature's Speed. Similarly, the globe can be picked up and moved by other creatures.\nA Dispel Magic spell cast on the sphere destroys it without harming anything inside it."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-staggering-smite",
+   "name": {
+    "de": "Wankendmachendes Niederstrecken",
+    "en": "Staggering Smite"
+   },
+   "level": 4,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einer Nahkampfwaffe triffst, durchstößt deine Waffe nicht nur den Körper, sondern auch die Seele, und verursacht zusätzlich 4W6 psychischen Schaden. Das Ziel muss einen Weisheitsrettungswurf ablegen. Bei einem Misserfolg ist es bis zum Ende des nächsten Zuges im Nachteil bei Angriffs- und Attributswürfen und kann keine Reaktionen ausführen.",
+    "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon pierces both body and mind, and the attack deals an extra 4d6 Psychic damage to the target. The target must make a Wisdom saving throw. On a failed save, it has Disadvantage on attack rolls and ability checks until the end of its next turn and can't take Reactions."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-aberrant",
+   "name": {
+    "de": "Aberration herbeirufen",
+    "en": "Summon Aberrant"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Kleriker",
+     "Zauberer"
+    ],
+    "en": [
+     "Cleric",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein eingelegtes Tentakel und Wert von mindestens 400 GM)",
+    "en": "V, S, M (a pickled tentacle and at least 400 gp worth of components)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst eine geisterhafte Aberration herbei und sie erscheint in einem freien Bereich in Reichweite, den du sehen kannst. Wenn du den Zauber wirkst, wähle zwischen Betrachter, Gedankenschinder oder Slaad aus. Die Kreatur sieht aus wie eine Aberration dieser Art. Einige Details im Wertekasten werden dadurch bestimmt. Die Kreatur verschwindet, wenn ihre Trefferpunkte auf 0 sinken oder der Zauber endet.\nDie Kreatur ist mit dir und deinen Verbündeten verbündet. Im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweich-Aktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
+    "en": "You call forth an aberration spirit. It manifests in an unoccupied space that you can see within range. When you cast this spell, choose Beholder, Mind Flayer, or Slaad. The creature looks like an aberration of that kind, which determines some details in its stat block. The creature vanishes when it drops to 0 Hit Points or when the spell ends.\nThe creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-construct",
+   "name": {
+    "de": "Konstrukt herbeirufen",
+    "en": "Summon Construct"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Kleriker",
+     "Zauberer"
+    ],
+    "en": [
+     "Cleric",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (eine Schatulle im Wert von mindestens 400 GM)",
+    "en": "V, S, M (a box worth at least 400 gp)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst den Geist eines Konstrukts in einem freien Bereich in Reichweite, den du sehen kannst, herbei. Wenn du den Zauber wirkst, entscheidest du dich für ein Material: Lehm, Eisen oder Stein. Die Kreatur sieht aus wie eine belebte Statue (du bestimmst das Erscheinungsbild aus dem ausgewählten Material, durch welches einige Details im Wertekasten bestimmt werden. Die Kreatur verschwindet, wenn ihre Trefferpunkte auf 0 sinken oder der Zauber endet.\nDie Kreatur ist mit dir und deinen Verbündeten verbündet. Im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweichaktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
+    "en": "You call forth a construct spirit. It manifests in an unoccupied space that you can see within range. When you cast this spell, choose Clay, Iron, or Stone. The creature looks like an animated statue (you determine its appearance based on the chosen material), which determines some details in its stat block. The creature vanishes when it drops to 0 Hit Points or when the spell ends.\nThe creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-elemental",
+   "name": {
+    "de": "Elementar beschwören",
+    "en": "Summon Elemental"
+   },
+   "level": 4,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Zauberer"
+    ],
+    "en": [
+     "Druid",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (brennender Weihrauch für Luft, weicher Lehm für Erde, Schwefel und Phosphor für Feuer oder Wasser und Sand für Wasser)",
+    "en": "V, S, M (burning incense for Air, soft clay for Earth, sulfur and phosphorus for Fire, or water and sand for Water)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst einen elementaren Diener herbei. Wähle einen Bereich von Luft, Erde, Feuer oder Wasser in Reichweite, der einen Würfel mit 3 m Kantenlänge füllt. Ein Elementar mit Herausforderungsgrad 5 oder niedriger, welcher der Art des gewählten Bereichs entspricht, erscheint an einer nicht besetzten Stelle im Umkreis von 3 m zu diesem Bereich. Beispielsweise könnte ein Feuerelementar aus einem Freudenfeuer hervortreten oder ein Erd_elementar aus dem Boden aufsteigen. Der Elementar verschwindet, wenn seine Trefferpunkte auf 0 reduziert werden oder der Zauber endet.\nDer Elementar ist für die Wirkungsdauer mit dir und deinen Gefährten verbündet. Würfle die Initiative für den Elementar, da er eigene Züge ausführt. Dein elementarer Diener folgt allen verbalen Befehlen, die du ihm erteilst (dazu musst du keine Aktion aufwenden). Ohne Befehl verteidigt er sich gegen feindliche Kreaturen, führt aber ansonsten keine Aktionen aus.\nWenn deine Konzentration unterbrochen wird, verschwindet der Elementar nicht, sondern du verlierst die Kontrolle über ihn. Er wird dir und deinen Gefährten gegenüber feindlich und könnte angreifen. Ein unkontrollierter Elementar kann von dir nicht fortgeschickt werden und verschwindet 1 Stunde, nachdem du ihn beschworen hast. Der SL hat die Spielwerte des Elementars zur Verfügung.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 6. oder eines höheren Grades wirkst, steigt der Herausforderungsgrad des Elementars für jeden Grad über den 5. hinaus um 1.",
+    "en": "You call forth an elemental servant. Choose an area of Air, Earth, Fire, or Water that fills a 3-meter Cube within range. An elemental of Challenge Rating 5 or lower that is appropriate to the area you chose appears in an unoccupied space within 3 meters of it. For example, a fire elemental might emerge from a bonfire, and an earth elemental might rise up from the ground. The elemental vanishes when it drops to 0 Hit Points or when the spell ends.\nThe elemental is friendly to you and your companions for the duration. Roll Initiative for the elemental, which has its own turns. Your elemental servant obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands, it defends itself from hostile creatures but otherwise takes no actions.\nIf your Concentration is broken, the elemental doesn't vanish. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it. The DM has the elemental's statistics.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 6 or higher, the Challenge Rating increases by 1 for each slot level above 5."
    },
    "higherLevels": {
     "de": "",
