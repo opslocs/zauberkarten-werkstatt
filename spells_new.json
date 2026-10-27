@@ -1,9 +1,9 @@
 {
  "meta": {
-  "title": "PHB 2024 Cantrips, Level 1, and Level 2 Spells Missing from spells.json",
+  "title": "PHB 2024 Cantrips, Level 1, Level 2, and Level 3 Spells Missing from spells.json",
   "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
   "generated": "2026-08-15",
-  "count": 20
+  "count": 31
  },
  "spells": [
   {
@@ -1000,6 +1000,549 @@
    "description": {
     "de": "Du rufst einen Tiergeist herbei und er erscheint in einem freien Bereich in Reichweite, den du sehen kannst. Wenn du den Zauber wirkst, wähle eine der folgenden Umgebungen aus: Land, Luft oder Wasser.\nDie Kreatur sieht aus wie ein Tier, das in dieser Umgebung zu Hause ist, wodurch einige Details im Wertekasten bestimmt werden. Die Kreatur verschwindet wenn ihre Trefferpunkte auf 0 sinken oder der Zauber endet.\nDie Kreatur ist mit dir und deinen Verbündeten verbündet. Im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweichaktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
     "en": "You summon a beast spirit that appears in an unoccupied space you can see within range. When you cast the spell, choose one of the following environments: Land, Air, or Water.\nThe creature looks like a beast native to that environment, which determines some details in its stat block. The creature vanishes when it drops to 0 Hit Points or when the spell ends.\nThe creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-aura-of-vitality",
+   "name": {
+    "de": "Aura der Vitalität",
+    "en": "Aura of Vitality"
+   },
+   "level": 3,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Kleriker"
+    ],
+    "en": [
+     "Cleric"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Emanation mit 9 Metern Radius)",
+    "en": "Self (9-meter Emanation)"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Eine heilende Aura strahlt in einem Umkreis von 9 Metern um dich herum aus und hält für die Wirkungsdauer an. Wenn du die Aura erschaffst und zu Beginn jedes deiner Züge, während sie besteht, kannst du eine Kreatur in der Aura um 2W6 Trefferpunkte heilen.",
+    "en": "A healing aura radiates from you in a 9-meter Emanation and persists for the duration. When you create the aura, and at the start of each of your turns while it persists, you can restore 2d6 Hit Points to one creature in it."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-blinding-smite",
+   "name": {
+    "de": "Blendendes Niederstrecken",
+    "en": "Blinding Smite"
+   },
+   "level": 3,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einer Nahkampfwaffe triffst, lodert deine Waffe in hellem Licht auf und verursacht beim Ziel zusätzlich 3W8 gleißenden Schaden. Außerdem muss das Ziel einen Konstitutionsrettungswurf bestehen, um nicht für die Wirkungsdauer zu erblinden. Eine durch diesen Zauber geblendete Kreatur darf am Ende jedes ihrer Züge einen weiteren Konstitutionsrettungswurf ablegen. Bei einem Erfolg verliert sie den Zustand blind.",
+    "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon flares with bright light and the attack deals an extra 3d8 Radiant damage to the target. Additionally, the target must succeed on a Constitution saving throw or be blinded for the duration. A creature blinded by this spell can make another Constitution saving throw at the end of each of its turns. On a success, it loses the blinded condition."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-conjure-barrage",
+   "name": {
+    "de": "Schusshagel beschwören",
+    "en": "Conjure Barrage"
+   },
+   "level": 3,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Kegel von 18 Metern)",
+    "en": "Self (18-meter Cone)"
+   },
+   "components": {
+    "de": "V, G, M (ein Geschoss oder eine Wurfwaffe)",
+    "en": "V, S, M (one piece of ammunition or a thrown weapon)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du wirfst eine nicht-magische Waffe oder feuerst ein nicht-magisches Geschoss ab und erschaffst auf magische Weise eine Vielzahl identischer Waffen, die in einem Kegel nach vorn schießen und dann verschwinden. Alle Kreaturen innerhalb eines Kegels von 18 Metern müssen einen Geschicklichkeitsrettungswurf ablegen. Bei einem Misserfolg erleidet eine Kreatur 3W8 Schaden oder halb so viel Schaden bei einem erfolgreichen Rettungswurf. Der Schadenstyp entspricht dem des als Komponente verwendeten Gegenstandes.",
+    "en": "You throw a nonmagical weapon or fire a piece of nonmagical ammunition and magically create a volley of identical weapons that shoot forward and then vanish. Each creature in an 18-meter Cone must make a Dexterity saving throw. On a failed save, a creature takes 3d8 damage, or half as much damage on a successful save. The damage type is that of the weapon or piece of ammunition used as a component."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-crusaders-mantle",
+   "name": {
+    "de": "Kreuzfahrermantel",
+    "en": "Crusader's Mantle"
+   },
+   "level": 3,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Emanation mit 9 Metern Radius)",
+    "en": "Self (9-meter Emanation)"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Heilige Macht strahlt von dir aus und verleiht dir eine Aura mit einem Radius von 9 Metern, die verbündete Kreaturen mit Wagemut erfüllt. Bis der Zauber endet, bewegt sich die Aura mit dir als Mittelpunkt fort. Solange sich eine nicht feindliche Kreatur in der Aura aufhält (inklusive dir), verursacht sie bei Treffern mit einer Waffe zusätzlich 1W4 gleißenden Schaden.",
+    "en": "Holy power radiates from you in an aura with a 9-meter radius, filling friendly creatures with courage. Until the spell ends, the aura moves with you, centered on you. While in the aura, each nonhostile creature (including you) deals an extra 1d4 Radiant damage when it hits with a weapon attack."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-elemental-weapon",
+   "name": {
+    "de": "Elementare Waffe",
+    "en": "Elemental Weapon"
+   },
+   "level": 3,
+   "school": {
+    "en": "Transmutation",
+    "de": "Verwandlung"
+   },
+   "classes": {
+    "de": [
+     "Paladin",
+     "Zauberer"
+    ],
+    "en": [
+     "Paladin",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to to 1 hour"
+   },
+   "description": {
+    "de": "Eine nicht-magische Waffe, die du berührst, wird zu einer magischen Waffe. Wähle eine der folgenden Schadensarten: Blitz, Feuer, Kälte, Säure oder Schall. Für die Wirkungsdauer erhält die Waffe einen Bonus von +1 auf Angriffswürfe und fügt bei einem Treffer zusätzlich 1W4 Punkte Schaden des gewählten Typs zu.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 5. oder 6. Grades wirkst, steigen der Angriffsbonus und der Zusatzschaden auf +2 und 2W4, bei einem des 7. oder eines höheren Grades auf +3 und 3W4.",
+    "en": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. For the duration, the weapon has a bonus of +1 to attack rolls and deals an extra 1d4 damage of the chosen type when it hits.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 5 or 6, the bonus and extra damage increase to +2 and 2d4. When you use a spell slot of level 7 or higher, the bonus and extra damage increase to +3 and 3d4."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-feign-death",
+   "name": {
+    "de": "Tod vortäuschen",
+    "en": "Feign Death"
+   },
+   "level": 3,
+   "school": {
+    "en": "Necromancy",
+    "de": "Nekromantie"
+   },
+   "classes": {
+    "de": [
+     "Barden",
+     "Kleriker",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Cleric",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "V, G, M (eine Prise Rinden- oder Blattmehl)",
+    "en": "V, S, M (a pinch of bark or leaf mold)"
+   },
+   "duration": {
+    "de": "1 Stunde",
+    "en": "1 hour"
+   },
+   "description": {
+    "de": "Du berührst eine willige Kreatur und versetzt sie in einen katatonischen Zustand, der dem Tod ähnelt. Für die Wirkungsdauer erscheint das Ziel wie tot für alle äußeren Untersuchungen und für Zauber, die den Status der Kreatur bestimmen. Das Ziel ist blind und unfähig, sich zu bewegen. Es hat Widerstand gegen alle Schäden, außer psychischer Schaden. Die Krankheit und Gifte haben keine Wirkung, obwohl bereits bestehende Krankheiten oder Gifte ihre Wirkungen aussetzen, nicht unterdrücken.\nDer Zauber endet, wenn du ihn erneut wirkst oder wenn du eine Aktion verwendest, um ihn zu beenden.",
+    "en": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death. For the duration, the target appears dead to all outward inspection and to spells used to determine the target's status. The target is blinded and incapacitated, and its speed drops to 0. The target has resistance to all damage except Psychic damage. If the target is diseased or poisoned when you cast the spell, or becomes diseased or poisoned while under the spell's effect, the disease or poison has no effect until the spell ends.\nThe spell ends if you cast it again or if you use an action to dismiss it."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": true,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-hunger-of-hadar",
+   "name": {
+    "de": "Hunger von Hadar",
+    "en": "Hunger of Hadar"
+   },
+   "level": 3,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "45 Meter",
+    "en": "150 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein eingelegter Oktopustentakel)",
+    "en": "V, S, M (a pickled octopus tentacle)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du öffnest ein Tor zur Dunkelheit zwischen den Sternen, ein Gebiet, das von unbekannten Schrecken erfüllt ist. Eine Sphäre aus Schwärze und bitterer Kälte mit einem Radius von 6 Metern erscheint, zentriert an einem Punkt in Reichweite, und bleibt für die Wirkungsdauer bestehen. Diese Leere ist von einer Kakophonie leisen Flüsterns und schmatzender Geräusche erfüllt, die auf eine Entfernung von bis zu 9 Metern hörbar sind. Kein Licht, ob magischen oder natürlichen Ursprungs, vermag den Bereich der Sphäre zu erhellen, und Kreaturen, die sich vollständig in diesem aufhalten, sind blind.\nDie Leere erzeugt eine Verzerrung in der Struktur des Raums und der Bereich gilt als schwieriges Gelände. Alle Kreaturen, die ihren Zug in dem Bereich beginnen, erleiden 2W6 Kälteschaden. Alle Kreaturen, die ihren Zug in dem Bereich beenden, müssen einen erfolgreichen Geschicklichkeitsrettungswurf ablegen, um nicht 2W6 Säureschaden zu erleiden, da sie von milchigen, unweltlichen Tentakeln berührt werden.",
+    "en": "You open a gateway to the dark between the stars, a region infested with unknown horrors. A sphere of blackness and bitter cold, 6 meters in radius, appears centered on a point of your choice within range and persists for the duration. This void is filled with a cacophony of soft whispers and slurping noises that can be heard up to 9 meters away. No light, magical or otherwise, can illuminate the area, and creatures fully within the area are blinded.\nThe void creates a distortion in the fabric of space, and the area is Difficult Terrain. Any creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn in the area must succeed on a Dexterity saving throw or take 2d6 Acid damage as milky, otherworldly tentacles rub against it."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-leomunds-tiny-hut",
+   "name": {
+    "de": "Leomunds winzige Hütte",
+    "en": "Leomund's Tiny Hut"
+   },
+   "level": 3,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Barden",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Minute",
+    "en": "1 Minute"
+   },
+   "range": {
+    "de": "Selbst (Halbkugel mit 3 Metern Radius)",
+    "en": "Self (3-meter Hemisphere)"
+   },
+   "components": {
+    "de": "V, G, M (eine kleine Kristallperle)",
+    "en": "V, S, M (a small crystal bead)"
+   },
+   "duration": {
+    "de": "8 Stunden",
+    "en": "8 hours"
+   },
+   "description": {
+    "de": "Eine unbewegliche Kuppel aus Energie mit einem Radius von 3 Metern entsteht um dich herum und bleibt für die Wirkungsdauer an ihrem Standort. Der Zauber endet, wenn du den Bereich verlässt. Außer dir passen neun mittelgroße oder kleinere Kreaturen in die Kuppel. Der Zauber schlägt fehl, wenn der Bereich eine größere Kreatur oder mehr als neun beinhaltet. Kreaturen und Gegenstände, die sich beim Wirken des Zaubers in der Kuppel aufhalten, können sich frei durch sie bewegen. Allen anderen Kreaturen und Gegenständen ist es nicht möglich, sie zu durchschreiten. Zauber und andere magische Effekte können weder in die Kuppel eindringen noch durch sie hindurch gesprochen werden. Die Atmosphäre innerhalb des Bereichs ist angenehm und trocken, ungeachtet des Wetters außerhalb.\nBis der Zauber endet, kannst du bestimmen, ob das Innere der Kuppel dämmrig beleuchtet oder dunkel sein soll. Die Kuppel ist von außen undurchsichtig und hat eine Farbe deiner Wahl, von innen aber ist sie transparent.",
+    "en": "An immobile dome of force springs into existence around and above you and remains for the duration. The spell ends if you leave its area. Nine creatures of Medium size or smaller can fit inside the dome with you. The spell fails if its area includes a larger creature or more than nine creatures. Creatures and objects within the dome when you cast this spell can move through it freely. All other creatures and objects are barred from passing through it. Spells and other magical effects can't extend through the dome or be cast through it. The atmosphere inside the space is comfortable and dry, regardless of the weather outside.\nUntil the spell ends, you can command the interior to become dimly lit or dark. The dome is opaque from the outside, of any color you choose, but it is transparent from the inside."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": true,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-lightning-arrow",
+   "name": {
+    "de": "Blitzpfeil",
+    "en": "Lightning Arrow"
+   },
+   "level": 3,
+   "school": {
+    "en": "Transmutation",
+    "de": "Verwandlung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einer Fernkampfwaffe angreifst, verwandelt sich das Geschoss oder die Waffe selbst (im Falle einer Wurfwaffe) in einen Blitz. Führe einen normalen Angriffswurf aus. Das Ziel erleidet bei einem Treffer 4W8 Blitzschaden oder halb so viel Schaden, wenn du verfehlst. Dies ersetzt den Waffenschaden.\nGleichgültig ob du triffst oder verfehlst, muss jede Kreatur innerhalb von 3 Metern um das Ziel einen Geschicklichkeitsrettungswurf ablegen. Bei einem Misserfolg erleidet die entsprechende Kreatur 2W8 Blitzschaden oder halb so viel Schaden bei einem erfolgreichen Rettungswurf. Das Geschoss oder die Waffe nimmt anschließend wieder seine ursprüngliche Form an.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 4. oder eines höheren Grades wirkst, steigt der Schaden beider Zaubereffekte für jeden Grad über den 3. hinaus um 1W8.",
+    "en": "The next time you hit a creature with a ranged weapon attack during this spell's duration, the missile or weapon itself (if it is a thrown weapon) turns into a bolt of lightning. Make a normal attack roll. The target takes 4d8 Lightning damage on a hit, or half as much damage on a miss, instead of the weapon's normal damage.\nWhether you hit or miss, each creature within 3 meters of the target must make a Dexterity saving throw. Each creature takes 2d8 Lightning damage on a failed save, or half as much damage on a successful one. The missile or weapon then reverts to its normal form.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 4 or higher, both types of damage increase by 1d8 for each slot level above 3."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-fey",
+   "name": {
+    "de": "Feenwesen herbeirufen",
+    "en": "Summon Fey"
+   },
+   "level": 3,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Waldläufer"
+    ],
+    "en": [
+     "Druid",
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (eine vergoldete Blume im Wert von mindestens 300 GM)",
+    "en": "V, S, M (a gold-plated flower worth at least 300 gp)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst den Geist einer Fee in einem freien Bereich in Reichweite herbei, den du sehen kannst. Wenn du den Zauber wirkst, entscheidest du dich für eine Stimmung *Heiter*, *Trickreich* oder *Wütend*. Die Kreatur sieht aus wie ein Feenwesen deiner Wahl, das die entsprechende Stimmung verkörpert, wodurch einige Details im Wertekasten bestimmt werden. Die Kreatur verschwindet, wenn ihre Trefferpunkte auf 0 sinken oder der Zauber endet. Die Kreatur ist mit dir und deinen Verbündeten verbündet. Im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweichaktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
+    "en": "You summon a fey creature that appears in an unoccupied space you can see within range. When you cast the spell, choose a mood: Cheerful, Mischievous, or Furious. The creature looks like a fey creature of your choice that embodies that mood, which determines some details in its stat block. The creature vanishes when it drops to 0 Hit Points or when the spell ends.\nThe creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-undead",
+   "name": {
+    "de": "Untote herbeirufen",
+    "en": "Summon Undead"
+   },
+   "level": 3,
+   "school": {
+    "en": "Necromancy",
+    "de": "Nekromantie"
+   },
+   "classes": {
+    "de": [
+     "Kleriker",
+     "Hexenmeister"
+    ],
+    "en": [
+     "Cleric",
+     "Warlock"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein Splitter von einem Knochen oder einem Stück Leichentuch)",
+    "en": "V, S, M (a splinter from a bone or a piece of a gravecloth)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst den Geist eines Untoten herbei. Er erscheint in einem unbesetzten Bereich, den du innerhalb der Reichweite sehen kannst. Der Geist nimmt eine von drei Erscheinungsformen an: Geist, skelettartig oder als Leibchen, basierend auf deiner Wahl. Die Statistiken der Kreatur stehen in den Werten des Untoten-Geistes, der von deiner Wahl der Erscheinungsform abhängt.\nDie Kreatur verschwindet, wenn sie 0 Trefferpunkte hat oder der Zauber endet. Die Kreatur ist dir und deinen Verbündeten freundlich gesonnen. Im Kampf teilt sich die Kreatur deinen Initiativezähler und handelt direkt nach dir. Sie gehorcht deinen mündlichen Befehlen (keine Aktion erforderlich). Wenn du ihr keine Befehle gibst, führt sie die Ausweichaktion aus und bewegt sich, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
+    "en": "You call forth an undead spirit. It manifests in an unoccupied space that you can see within range. The spirit takes one of three forms of your choice: a ghostly form, a skeletal form, or a zombie-like form. The creature's statistics are in the stat block of the undead spirit you choose.\nThe creature vanishes when it drops to 0 Hit Points or when the spell ends. The creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
    },
    "higherLevels": {
     "de": "",
