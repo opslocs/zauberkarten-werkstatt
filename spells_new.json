@@ -1,9 +1,9 @@
 {
  "meta": {
-  "title": "PHB 2024 Cantrips, Level 1, Level 2, Level 3, and Level 4 Spells Missing from spells.json",
+  "title": "PHB 2024 Cantrips, Level 1, Level 2, Level 3, Level 4, and Level 5 Spells Missing from spells.json",
   "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
   "generated": "2026-08-15",
-  "count": 43
+  "count": 55
  },
  "spells": [
   {
@@ -2127,6 +2127,594 @@
    "description": {
     "de": "Du rufst einen elementaren Diener herbei. Wähle einen Bereich von Luft, Erde, Feuer oder Wasser in Reichweite, der einen Würfel mit 3 m Kantenlänge füllt. Ein Elementar mit Herausforderungsgrad 5 oder niedriger, welcher der Art des gewählten Bereichs entspricht, erscheint an einer nicht besetzten Stelle im Umkreis von 3 m zu diesem Bereich. Beispielsweise könnte ein Feuerelementar aus einem Freudenfeuer hervortreten oder ein Erd_elementar aus dem Boden aufsteigen. Der Elementar verschwindet, wenn seine Trefferpunkte auf 0 reduziert werden oder der Zauber endet.\nDer Elementar ist für die Wirkungsdauer mit dir und deinen Gefährten verbündet. Würfle die Initiative für den Elementar, da er eigene Züge ausführt. Dein elementarer Diener folgt allen verbalen Befehlen, die du ihm erteilst (dazu musst du keine Aktion aufwenden). Ohne Befehl verteidigt er sich gegen feindliche Kreaturen, führt aber ansonsten keine Aktionen aus.\nWenn deine Konzentration unterbrochen wird, verschwindet der Elementar nicht, sondern du verlierst die Kontrolle über ihn. Er wird dir und deinen Gefährten gegenüber feindlich und könnte angreifen. Ein unkontrollierter Elementar kann von dir nicht fortgeschickt werden und verschwindet 1 Stunde, nachdem du ihn beschworen hast. Der SL hat die Spielwerte des Elementars zur Verfügung.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 6. oder eines höheren Grades wirkst, steigt der Herausforderungsgrad des Elementars für jeden Grad über den 5. hinaus um 1.",
     "en": "You call forth an elemental servant. Choose an area of Air, Earth, Fire, or Water that fills a 3-meter Cube within range. An elemental of Challenge Rating 5 or lower that is appropriate to the area you chose appears in an unoccupied space within 3 meters of it. For example, a fire elemental might emerge from a bonfire, and an earth elemental might rise up from the ground. The elemental vanishes when it drops to 0 Hit Points or when the spell ends.\nThe elemental is friendly to you and your companions for the duration. Roll Initiative for the elemental, which has its own turns. Your elemental servant obeys any verbal commands that you issue to it (no action required by you). If you don't issue any commands, it defends itself from hostile creatures but otherwise takes no actions.\nIf your Concentration is broken, the elemental doesn't vanish. Instead, you lose control of the elemental, it becomes hostile toward you and your companions, and it might attack. An uncontrolled elemental can't be dismissed by you, and it disappears 1 hour after you summoned it. The DM has the elemental's statistics.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 6 or higher, the Challenge Rating increases by 1 for each slot level above 5."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-banishing-smite",
+   "name": {
+    "de": "Verbannendes Niederstrecken",
+    "en": "Banishing Smite"
+   },
+   "level": 5,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einer Nahkampfwaffe triffst, knistert deine Waffe vor magischer Energie und verursacht zusätzlich 5W10 Energieschaden. Sollte dieser Angriff das Ziel auf 50 Trefferpunkte oder weniger reduzieren, wird es verbannt. Ist das Ziel auf einer anderen Existenzebene heimisch als der, auf der du dich gerade befindest, kehrt es auf seine Heimatebene zurück. Wenn es hingegen auf der Ebene heimisch ist, auf der du dich befindest, verschwindet die Kreatur auf eine ungefährliche Halbebene. Das Ziel verbleibt dort und ist kampfunfähig, bis der Zauber endet. Anschließend erscheint es in dem Bereich, den es verlassen hat, oder im nächsten freien Bereich, falls dieser besetzt ist.",
+    "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your weapon crackles with force, and the attack deals an extra 5d10 Force damage to the target. If this attack reduces the target to 50 Hit Points or fewer, you banish it. If the target is native to a different plane of existence than the one you're on, the target banishes to a harmless demiplane. While there, the target is Incapacitated. The target remains there until the spell ends, at which point the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-bigbys-hand",
+   "name": {
+    "de": "Bigbys Hand",
+    "en": "Bigby's Hand"
+   },
+   "level": 5,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "36 Meter",
+    "en": "120 feet"
+   },
+   "components": {
+    "de": "V, G, M (eine Eierschale und ein Handschuh aus Schlangenleder)",
+    "en": "V, S, M (an eggshell and a glove made of snakeskin)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du erschaffst eine große Hand aus schimmernder, durchsichtiger Energie in einem freien Bereich, der sich in Reichweite befindet und den du sehen kannst. Die Hand bleibt für die Wirkungsdauer des Zaubers bestehen und bewegt sich auf deinen Befehl hin. Sie ahmt die Bewegungen deiner eigenen Hand nach.\nDie Hand ist ein Gegenstand mit RK 20 und Trefferpunkten in Höhe deiner maximalen Trefferpunkte. Wird sie auf 0 Trefferpunkte reduziert, endet der Zauber. Sie besitzt eine Stärke von 26 (+8) und eine Geschicklichkeit von 10 (+0). Der Bereich, in dem sich die Hand befindet, gilt nicht als von ihr besetzt. In deinen folgenden Zügen kannst du die Hand als Bonusaktion bis zu 18 Meter weit bewegen und dann einen der folgenden Effekte auslösen.\n\n**Geschlossene Faust:** Die Hand schlägt eine Kreatur oder einen Gegenstand innerhalb von 1,50 Meter um sich. Führe einen Nahkampf-Zauberangriff durch, der deine Spielwerte verwendet. Bei einem Treffer erleidet das Ziel 4W8 Energieschaden.\n**Kraftvolle Hand:** Die Hand versucht, eine Kreatur im Umkreis von 1,50 Meter um sich in eine Richtung deiner Wahl zu schieben. Führe einen Wettstreit zwischen der Hand und dem Ziel durch: Lege für die Hand einen Stärkewurf ab gegen den Wurf auf Stärke (Athletik) des Ziels. Ist die Größenkategorie des Ziels mittelgroß oder kleiner, bist du bei diesem Wurf im Vorteil. Wenn du erfolgreich bist, schiebt die Hand das Ziel bis zu 1,50 Meter plus 1,50 Meter mal dem Modifikator deines zum Zaubern relevanten Attributs. Die Hand bewegt sich mit dem Ziel und bleibt im Abstand von 1,50 Meter zu ihm.\n**Greifende Hand:** Die Hand versucht, eine Kreatur der Größenkategorie riesig oder kleiner im Umkreis von 1,50 Meter um sich zu greifen. Lege einen Ringenwurf ab, wobei du den Stärkewert der Hand verwendest. Ist das Ziel mittelgroß oder kleiner, bist du bei diesem Wurf im Vorteil. Hat die Hand das Ziel ergriffen, kannst du eine Bonusaktion verwenden, damit sie es zerdrückt. Das Ziel erleidet Wuchtschaden in Höhe von 2W6 plus dem Modifikator deines zum Zaubern relevanten Attributs.\n**Blockierende Hand:** Die Hand platziert sich zwischen dir und einer Kreatur deiner Wahl, bis du ihr einen anderen Befehl gibst. Um diese Position beizubehalten, bewegt sich die Hand und gewährt dir so Teildeckung gegen das Ziel. Dieses kann sich nicht durch den Bereich der Hand bewegen, wenn sein Stärkewert dem der Hand entspricht oder niedriger ist. Ist der Stärkewert des Ziels höher, kann es sich durch den Bereich der Hand bewegen, behandelt diesen aber als schwieriges Gelände.",
+    "en": "You create a Large hand of shimmering, translucent force in an unoccupied space that you can see within range. The hand lasts for the duration, and it moves at your command, mimicking the movements of your own hand.\nThe hand is an object with AC 20 and Hit Points equal to your Hit Point maximum. If it drops to 0 Hit Points, the spell ends. It has a Strength of 26 (+8) and a Dexterity of 10 (+0). The space occupied by the hand isn't considered occupied. On each of your turns, you can use a Bonus Action to move the hand up to 60 feet and then cause one of the following effects with it.\n\n**Clenched Fist:** The hand strikes a creature or an object within 5 feet of it. Make a melee spell attack using your game statistics. On a hit, the target takes 4d8 Force damage.\n**Forceful Hand:** The hand attempts to push a creature within 5 feet of it in a direction you choose. Make a check with the hand's Strength contested by the Strength (Athletics) check of the target. If the target is Medium or smaller, you have Advantage on this check. If you succeed, the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target to remain within 5 feet of it.\n**Grasping Hand:** The hand attempts to grapple a Huge or smaller creature within 5 feet of it. Use the hand's Strength score to resolve the grapple. If the target is Medium or smaller, you have Advantage on this check. If the hand grapples the target, you can use a Bonus Action to have the hand crush it. When you do so, the target takes Bludgeoning damage equal to 2d6 plus your spellcasting ability modifier.\n**Interposing Hand:** The hand interposes itself between you and a creature of your choice until you give it a different command. The hand moves to stay between you and the target, providing you with Half Cover against the target. The target can't move through the hand's space if its Strength score is equal to or less than the hand's Strength score. If its Strength score is higher than the hand's Strength score, the target can move through the hand's space, but that space is Difficult Terrain for the target."
+   },
+   "higherLevels": {
+    "de": "Wenn du diesen Spruch mit einem Zauberplatz des 6. oder eines höheren Grades wirkst, steigt der Schaden der Geschlossenen Faust um 2W8 und der Schaden der Greifenden Hand um 2W6 für jeden Grad über den 5. hinaus.",
+    "en": "When you cast this spell using a spell slot of level 6 or higher, the damage from the Clenched Fist increases by 2d8 and the damage from the Grasping Hand increases by 2d6 for each slot level above 5."
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-circle-of-power",
+   "name": {
+    "de": "Kreis der Macht",
+    "en": "Circle of Power"
+   },
+   "level": 5,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Radius von 9 Metern)",
+    "en": "Self (9-meter radius)"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 10 Minuten",
+    "en": "Concentration, up to 10 minutes"
+   },
+   "description": {
+    "de": "Göttliche Energie strahlt von dir aus und verzerrt und zerstreut magische Energie innerhalb einer Sphäre mit 9 Metern Radius um dich herum. Bis der Zauber endet, bewegt sich die Sphäre mit dir als Mittelpunkt fort. Für die Wirkungsdauer ist jede verbündete Kreatur im Bereich der Sphäre (inklusive dir) im Vorteil bei Rettungswürfen gegen Zauber und andere magische Effekte. Gelingt einer Kreatur außerdem ein Rettungswurf gegen einen Zauber oder magischen Effekt, dessen Schaden bei einem Erfolg dieses Wurfs halbiert wird, erleidet sie durch den gelungenen Rettungswurf gar keinen Schaden.",
+    "en": "Divine energy radiates from you, distorting and disrupting magical energy within a 9-meter Sphere centered on you. Until the spell ends, the Sphere moves with you, centered on you. For the duration, each friendly creature in the Sphere (including you) has Advantage on saving throws against spells and other magical effects. Additionally, if a creature succeeds on a saving throw against a spell or magical effect that deals half damage on a successful save, that creature takes no damage from the successful save."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-conjure-volley",
+   "name": {
+    "de": "Pfeilsalve beschwören",
+    "en": "Conjure Volley"
+   },
+   "level": 5,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "45 Meter",
+    "en": "150 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein Geschoss oder eine Wurfwaffe)",
+    "en": "V, S, M (one piece of ammunition or a thrown weapon)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du schleuderst eine nicht-magische Wurfwaffe oder schießt ein nicht-magisches Geschoss in die Luft und bestimmst einen Punkt innerhalb der Reichweite. Hunderte magische Kopien des Gegenstands fallen in einem Hagel von oben herab und verschwinden dann. Jede Kreatur innerhalb eines Zylinders mit 12 Metern Radius und 6 Metern Höhe, zentriert um den Zielpunkt, muss einen Geschicklichkeitsrettungswurf ablegen. Bei einem Misserfolg erleidet eine Kreatur 8W8 Schaden oder halb so viel Schaden bei einem erfolgreichen Rettungswurf. Der Schadenstyp entspricht dem des als Materialkomponente verwendeten Gegenstands.",
+    "en": "You hurl a nonmagical weapon or fire a piece of nonmagical ammunition into the air and choose a point within range. Hundreds of magical copies of the object fall in a volley from above and then disappear. Each creature in a 12-meter-radius, 6-meter-high Cylinder centered on that point must make a Dexterity saving throw. A creature takes 8d8 damage on a failed save, or half as much damage on a successful one. The damage type is that of the weapon or piece of ammunition used as a component."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-destructive-wave",
+   "name": {
+    "de": "Zerstörerische Woge",
+    "en": "Destructive Wave"
+   },
+   "level": 5,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Emanation mit 9 Metern Radius)",
+    "en": "Self (9-meter Emanation)"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du schlägst mit deiner Hand auf den Boden und entlässt eine Welle zerstörerischer Energie, die sich in einem Radius von 9 Metern um dich herum ausbreitet. Jede Kreatur in diesem Bereich muss einen Konstitutionsrettungswurf ablegen. Bei einem Fehlschlag erleidet die Kreatur 6W6 Donner- und 6W6 Nekrotikschaden, oder nur die Hälfte davon bei einem erfolgreichen Rettungswurf. Wenn eine Kreatur durch diesen Schaden auf 0 Trefferpunkte reduziert wird, wird sie ebenfalls kampfunfähig.",
+    "en": "You slam your hand into the ground and release a burst of destructive energy that radiates out from you in a 9-meter Emanation. Each creature in that area must make a Constitution saving throw. A creature takes 6d6 Thunder damage and 6d6 Necrotic damage on a failed save, or half as much damage on a successful one. If a creature is reduced to 0 Hit Points by this damage, it is also Incapacitated."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-jallarzis-storm-of-radiance",
+   "name": {
+    "de": "Jallarzis Strahlungssturm",
+    "en": "Jallarzi's Storm of Radiance"
+   },
+   "level": 5,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Kleriker"
+    ],
+    "en": [
+     "Cleric"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Emanation mit 18 Metern Radius)",
+    "en": "Self (18-meter Emanation)"
+   },
+   "components": {
+    "de": "V, S",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Strahlende Energie umhüllt dich in einem Radius von 18 Metern. Bis der Zauber endet, bewegt sich die Emanation mit dir als Mittelpunkt fort. Jede Kreatur deiner Wahl, die du in der Emanation siehst, muss einen Konstitutionsrettungswurf ablegen. Bei einem Fehlschlag erleidet die Kreatur 4W10 gleißenden Schaden, oder nur die Hälfte bei einem erfolgreichen Rettungswurf. Eine durch diesen Schaden getroffene Kreatur kann für die Wirkungsdauer nicht unsichtbar werden und spendet für die Wirkungsdauer in einem Radius von 9 Metern dämmriges Licht.\nWenn du eine Kreatur, die durch diesen Zauber getroffen wurde, mit einem Angriffswurf triffst, erleidet das Ziel zusätzlich 2W10 gleißenden Schaden, und dieser Effekt endet für das Ziel.",
+    "en": "Radiant energy surrounds you in an 18-meter Emanation. Until the spell ends, the Emanation moves with you, centered on you. Each creature of your choice that you can see in the Emanation must make a Constitution saving throw. A creature takes 4d10 Radiant damage on a failed save, or half as much damage on a successful one. A creature hit by this damage can't become Invisible for the duration and sheds Dim Light in a 9-meter radius for the duration.\nIf you hit a creature affected by this spell with an attack roll, the target takes an extra 2d10 Radiant damage, and the effect ends for that target."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-rarys-telepathic-bond",
+   "name": {
+    "de": "Rarys Telepathische Bindung",
+    "en": "Rary's Telepathic Bond"
+   },
+   "level": 5,
+   "school": {
+    "en": "Divination",
+    "de": "Erkenntnismagie"
+   },
+   "classes": {
+    "de": [
+     "Barden",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, S, M (Stücke Eierschalen von zwei verschiedenen Kreaturen)",
+    "en": "V, S, M (pieces of eggshell from two different kinds of creatures)"
+   },
+   "duration": {
+    "de": "1 Stunde",
+    "en": "1 hour"
+   },
+   "description": {
+    "de": "Du schaffst eine telepathische Verbindung zwischen bis zu acht Kreaturen deiner Wahl, die du in Reichweite sehen kannst, und die für die Wirkungsdauer bestehen bleibt. Die Zielkreature können durch die Verbindung miteinander telepathisch kommunizieren, unabhängig davon, ob sie eine gemeinsame Sprache haben. Die Verbindung kann über jede Entfernung hinweg funktionieren, jedoch nicht über Ebenengrenzen hinweg.\nWenn eine der verbundenen Kreaturen eine Sprache spricht, die andere verbundene Kreaturen verstehen, können die anderen die Bedeutung verstehen, auch wenn sie die Sprache nicht selbst beherrschen.",
+    "en": "You forge a telepathic link among up to eight willing creatures of your choice that you can see within range, psychically linking each creature to the others for the duration. Creatures with telepathic links can communicate through the telepathic bond regardless of whether they share a common language. The communication is possible over any distance, though it can't extend to other planes of existence.\nIf one of the linked creatures speaks a language that the other linked creatures understand, they can understand the meaning even if they don't know the language themselves."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": true,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-steel-wind-strike",
+   "name": {
+    "de": "Stahlwindschlag",
+    "en": "Steel Wind Strike"
+   },
+   "level": 5,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "G, M (eine Nahkampfwaffe von mindestens 1 SM Wert)",
+    "en": "S, M (a melee weapon worth at least 1 sp)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du schwingst die Waffe, die beim Wirken verwendet wurde, und verschwindest dann, um wie der Wind zu attackieren. Wähle bis zu 5 Kreaturen, die du innerhalb der Reichweite sehen kannst. Führe gegen jedes Ziel einen Nahkampf-Zauberangriff durch. Bei einem Treffer nimmt ein Ziel 6W10 Energieschaden.\nDu kannst dich dann an einen unbesetzten Ort teleportieren, den du innerhalb von 1,50 Meter um eines der Ziele sehen kannst, welches du entweder getroffen oder verfehlt hast.",
+    "en": "You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 Force damage.\nYou can then teleport to an unoccupied space you can see within 1.5 meters of one of the targets you hit or missed."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-celestial",
+   "name": {
+    "de": "Himmelswesen herbeirufen",
+    "en": "Summon Celestial"
+   },
+   "level": 5,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Kleriker",
+     "Hexenmeister"
+    ],
+    "en": [
+     "Cleric",
+     "Warlock"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein Weihrauchgefäß im Wert von mindestens 100 GM)",
+    "en": "V, S, M (an incense burner worth at least 100 gp)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du beschwörst ein Himmelswesen mit einem Herausforderungsgrad von 4 oder niedriger, das in einem nicht besetzten Bereich erscheint, den du innerhalb der Reichweite sehen kannst. Das Himmelswesen verschwindet, wenn seine Trefferpunkte auf 0 sinken oder der Zauber endet.\nFür die Wirkungsdauer ist das Himmelswesen mit dir und deinen Gefährten verbündet. Würfle die Initiative für das Himmelswesen, da es eigene Züge ausführt. Es gehorcht deinen verbalen Befehlen (keine Aktion deinerseits erforderlich), solange diese nicht gegen seine Gesinnung verstoßen. Ohne Befehle verteidigt es sich gegen feindliche Kreaturen, führt aber ansonsten keine Aktionen aus. Der SL hat die Spielwerte des Himmelswesens zur Verfügung.",
+    "en": "You summon a celestial of Challenge Rating 4 or lower that appears in an unoccupied space that you can see within range. The celestial vanishes when it drops to 0 Hit Points or when the spell ends.\nFor the duration, the celestial is friendly to you and your companions. Roll Initiative for the celestial, which has its own turns. It obeys your verbal commands (no action required by you), provided they don't violate its alignment. If you give it no commands, it defends itself from hostile creatures but otherwise takes no actions. The DM has the celestial's statistics."
+   },
+   "higherLevels": {
+    "de": "Wenn du diesen Spruch mit einem Zauberplatz des 6. oder höheren Grades wirkst, steigt der Herausforderungsgrad des Himmelswesens für jeden Grad über den 5. hinaus um 1.",
+    "en": "When you cast this spell using a spell slot of level 6 or higher, the Challenge Rating increases by 1 for each slot level above 5."
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-swift-quiver",
+   "name": {
+    "de": "Schneller Köcher",
+    "en": "Swift Quiver"
+   },
+   "level": 5,
+   "school": {
+    "en": "Transmutation",
+    "de": "Verwandlung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "V, G, M (ein Köcher mit mindestens einem Geschoss)",
+    "en": "V, S, M (a quiver containing at least one piece of ammunition)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du erfüllst deinen Köcher mit Magie, sodass er einen endlosen Vorrat nicht-magischer Geschosse erschafft, die in deine Hand zu Springen scheinen, wenn du danach greifst.\nFür die Wirkungsdauer kannst du in jedem deiner Züge eine Bonusaktion verwenden, um zwei Angriffe mit einer Waffe auszuführen, die Geschosse aus dem Köcher verwendet. Bei jedem solchen Fernkampfangriff ersetzt dein Köcher magisch das Geschoss, das du verbraucht hast, mit einem identischen nicht-magischen Geschoss. Jegliche Geschosse, die durch diesen Zauber erschaffen werden, zerfallen nach Beenden des Spruchs. Ist der Köcher nicht mehr in deinem Besitz, endet der Zauber.",
+    "en": "You fill your quiver with magic so that it creates an endless supply of nonmagical ammunition that seems to leap into your hand when you reach for it.\nFor the duration, each time you make a ranged weapon attack using ammunition from the quiver, you can make one additional ranged weapon attack with the same weapon as part of the same action. Any ammunition created by this spell disintegrates when the spell ends. If the quiver leaves your possession, the spell ends."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-synaptic-static",
+   "name": {
+    "de": "Synaptisches Rauschen",
+    "en": "Synaptic Static"
+   },
+   "level": 5,
+   "school": {
+    "en": "Enchantment",
+    "de": "Verzauberung"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "36 Meter",
+    "en": "120 feet"
+   },
+   "components": {
+    "de": "V, S",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du wählst einen Punkt innerhalb der Reichweite und lässt dort psychische Energien explodieren. Jede Kreatur in einer Kugel mit 6 Metern Radius, deren Zentrum an diesem Punkt liegt, muss einen Intelligenzrettungswurf ablegen. Eine Kreatur mit einem Intelligenzwert von 2 oder geringer kann durch diesen Zauber nicht betroffen werden. Ein Ziel nimmt 8W6 psychischen Schaden bei einem Fehlschlag, die Hälfte davon bei einem Erfolg.\nNach einem Fehlschlag hat das Ziel für 1 Minute verworrene Gedanken. Während dieser Zeit wirft es 1W6 und zieht das Ergebnis von allen Angriffswürfen und Attributswürfen ab, ebenso von Konstitutionsrettungswürfen, um Konzentration aufrechtzuerhalten. Das Ziel kann am Ende jedes seiner Züge einen Intelligenzrettungswurf durchführen, um den Effekt bei sich mit einem Erfolg zu beenden.",
+    "en": "You choose a point within range and cause psychic energy to explode there. Each creature in a 6-meter-radius Sphere centered on that point must make an Intelligence saving throw. A creature with an Intelligence of 2 or lower can't be affected by this spell. A target takes 8d6 Psychic damage on a failed save, or half as much damage on a successful one.\nAfter a failed save, the target has muddled thoughts for 1 minute. During that time, the target rolls 1d6 and subtracts the number rolled from all attack rolls and ability checks, as well as Constitution saving throws made to maintain Concentration. The target can make an Intelligence saving throw at the end of each of its turns to end the effect on itself on a success."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-yolandes-regal-presence",
+   "name": {
+    "de": "Yolandes Majestätische Präsenz",
+    "en": "Yolande's Regal Presence"
+   },
+   "level": 5,
+   "school": {
+    "en": "Enchantment",
+    "de": "Verzauberung"
+   },
+   "classes": {
+    "de": [
+     "Barden",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "18 Meter",
+    "en": "60 feet"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du projizierst eine Aura von königlicher Autorität in einem Radius von 18 Metern um dich herum. Jede Kreatur deiner Wahl, die du in der Aura siehst, muss einen Weisheitsrettungswurf ablegen. Bei einem Fehlschlag ist die Kreatur für die Wirkungsdauer von dir bezaubert und kann dich nicht angreifen.\nWährend die Kreatur bezaubert ist, kannst du als Bonusaktion einen der folgenden Effekte auslösen: Die Kreatur erleidet 3W6 psychischen Schaden, oder die Kreatur muss einen weiteren Weisheitsrettungswurf ablegen. Bei einem Fehlschlag ist sie bis zum Ende deines nächsten Zuges kampfunfähig.",
+    "en": "You project an aura of royal authority in an 18-meter radius around you. Each creature of your choice that you can see in the aura must make a Wisdom saving throw. On a failed save, the creature is Charmed by you for the duration and can't attack you.\nWhile a creature is Charmed in this way, you can use a Bonus Action on each of your turns to cause one of the following effects on that creature: the creature takes 3d6 Psychic damage, or the creature must make another Wisdom saving throw. On a failed save, the creature is Incapacitated until the end of your next turn."
    },
    "higherLevels": {
     "de": "",
