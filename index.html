@@ -1,234 +1,726 @@
 <!DOCTYPE html>
 <html lang="de">
-<head>
-<meta charset="UTF-8">
-<title>Zauberkarten-Werkstatt</title>
-<style>
-  :root {
-    --bg: #23201c; --panel: #2e2a25; --panel2: #38332c; --ink: #e8e2d5; --muted: #a89f8d;
-    --accent: #c9a227; --line: #4a443b;
-    /* school colors (from example cards) */
-    --evocation: #b5342a; --abjuration: #d97e26; --necromancy: #6e6e70;
-    --transmutation: #d9a827; --conjuration: #3e8a44; --illusion: #3b6bb0;
-    --divination: #5da3a8; --enchantment: #b0509c;
-    --card-paper: #f0e0bd;
-  }
-  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Regular-sub.ttf"); font-weight: normal; font-style: normal; }
-  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Bold-sub.ttf"); font-weight: bold; font-style: normal; }
-  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-Italic-sub.ttf"); font-weight: normal; font-style: italic; }
-  @font-face { font-family: "FiraCondCard"; src: url("FiraSansCondensed-BoldItalic-sub.ttf"); font-weight: bold; font-style: italic; }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
-  html, body { height: 100%; }
-  body { background: var(--bg); color: var(--ink); font: 14px/1.45 "Segoe UI", system-ui, sans-serif; display: flex; flex-direction: column; }
-
-  /* ---------- toolbar ---------- */
-  #toolbar { display: flex; gap: 8px; align-items: center; padding: 8px 12px; background: var(--panel); border-bottom: 1px solid var(--line); flex-wrap: wrap; }
-  #toolbar h1 { font-size: 16px; color: var(--accent); margin-right: 12px; font-weight: 600; }
-  button, select, input[type=file]::file-selector-button {
-    background: var(--panel2); color: var(--ink); border: 1px solid var(--line); border-radius: 6px;
-    padding: 6px 12px; cursor: pointer; font-size: 13px;
-  }
-  button:hover { border-color: var(--accent); }
-  button.primary { background: var(--accent); color: #211c10; font-weight: 600; }
-  button.danger:hover { border-color: #c0392b; color: #e74c3c; }
-  .spacer { flex: 1; }
-  #langToggle .on { background: var(--accent); color: #211c10; }
-
-  /* ---------- layout ---------- */
-  #app { display: flex; flex: 1; min-height: 0; }
-  #sidebar { width: 320px; min-width: 260px; background: var(--panel); border-right: 1px solid var(--line); display: flex; flex-direction: column; }
-  #filters { padding: 10px; border-bottom: 1px solid var(--line); display: flex; flex-direction: column; gap: 6px; }
-  #filters input[type=search], #filters select { width: 100%; padding: 6px 8px; background: var(--panel2); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); }
-  #filters .row { display: flex; gap: 6px; }
-  #spellList { flex: 1; overflow-y: auto; }
-  .lvl-group { padding: 4px 10px 2px; font-size: 11px; text-transform: uppercase; letter-spacing: .08em; color: var(--accent); background: #29251f; position: sticky; top: 0; }
-  .spell-item { display: flex; align-items: center; gap: 8px; padding: 4px 10px; cursor: pointer; border-left: 3px solid transparent; }
-  .spell-item:hover { background: var(--panel2); }
-  .spell-item.active { background: var(--panel2); border-left-color: var(--accent); }
-  .spell-item .nm { flex: 1; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
-  .spell-item .tag { font-size: 10px; color: var(--muted); }
-  .spell-item.custom .nm { color: #8fd18f; }
-  #listFoot { padding: 8px 10px; border-top: 1px solid var(--line); font-size: 12px; color: var(--muted); display: flex; gap: 8px; align-items: center; }
-
-  #center { flex: 1; display: flex; align-items: flex-start; justify-content: center; overflow: auto; padding: 24px; background: repeating-conic-gradient(#26221d 0% 25%, #241f1b 0% 50%) 50%/24px 24px; }
-  #editor { width: 380px; min-width: 320px; background: var(--panel); border-left: 1px solid var(--line); overflow-y: auto; padding: 12px; }
-  #editor h2 { font-size: 14px; color: var(--accent); margin-bottom: 8px; }
-  #editor label { display: block; font-size: 11px; color: var(--muted); margin: 8px 0 2px; text-transform: uppercase; letter-spacing: .05em; }
-  #editor input[type=text], #editor textarea, #editor select { width: 100%; padding: 6px 8px; background: var(--panel2); border: 1px solid var(--line); border-radius: 6px; color: var(--ink); font: 13px/1.4 "Segoe UI", sans-serif; }
-  #editor textarea { resize: vertical; min-height: 60px; }
-  #editor textarea.big { min-height: 160px; }
-  #editor .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; }
-  #editor .btnrow { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
-  .hint { font-size: 11px; color: var(--muted); margin-top: 4px; }
-
-  /* ---------- card ---------- */
-  .card {
-    width: 63.5mm; height: 88.9mm; background: var(--card-paper); border-radius: 3.2mm;
-    color: #241d12; display: flex; flex-direction: column; overflow: hidden;
-    font-family: "FiraCondCard", "Segoe UI", "Noto Sans", sans-serif; position: relative;
-    box-shadow: 0 0 0 1mm #1a1713 inset;
-    padding: 1.25mm;
-  }
-  .card .inner { flex: 1; display: flex; flex-direction: column; min-height: 0; border-radius: 2mm; overflow: hidden; background: linear-gradient(#f3e6c6, #ecd9ae); }
-  .c-head { display: flex; align-items: center; gap: 1.5mm; padding: .7mm 1.8mm; color: #fff; min-height: 6mm; }
-  .c-head .glyph { width: 5mm; height: 5mm; border-radius: 50%; background: rgba(0,0,0,.35); display: flex; align-items: center; justify-content: center; font-size: 3.2mm; font-weight: 700; flex: none; }
-  .c-head h3 { font-size: 4.1mm; line-height: 1.05; font-weight: 700; text-shadow: 0 .3mm .5mm rgba(0,0,0,.5); letter-spacing: .01em; }
-  .c-head h3.long { font-size: 3.4mm; }
-  .c-sub { display: flex; justify-content: space-between; gap: 2mm; padding: .6mm 1.8mm; font-size: 2.15mm; color: #fff; background: rgba(0,0,0,.28); line-height: 1.2; }
-  .c-sub .cls { text-align: right; opacity: .92; }
-  .c-stats { display: grid; grid-template-columns: 1fr 1fr; gap: .2mm 1.8mm; padding: .7mm 1.8mm; background: rgba(255,255,255,.35); border-bottom: .3mm solid rgba(0,0,0,.25); }
-  .c-stat { font-size: 2.3mm; line-height: 1.18; }
-  .c-stat b { color: #5c4a23; }
-  .c-mat { grid-column: 1 / -1; font-size: 2mm; color: #6b5a33; font-style: italic; line-height: 1.18; }
-  .c-body { flex: 1; padding: 1mm 1.8mm; overflow: hidden; font-size: var(--body-size, 2.5mm); line-height: 1.23; text-align: justify; hyphens: auto; }
-  .c-body p { margin-bottom: .6em; }
-  .c-body p:last-child { margin-bottom: 0; }
-  .c-body table { width: 100%; border-collapse: collapse; font-size: .92em; margin-bottom: .8em; }
-  .c-body td { border-top: .2mm solid rgba(0,0,0,.2); padding: .3mm .5mm; vertical-align: top; }
-  .c-higher { padding: .9mm 1.8mm; font-size: 2.2mm; line-height: 1.28; color: #fff; }
-  .c-higher b { text-transform: uppercase; font-size: 1.9mm; letter-spacing: .04em; }
-  .c-foot { display: flex; justify-content: space-between; padding: .45mm 1.8mm .6mm; font-size: 1.9mm; color: #fff; background: rgba(0,0,0,.28); }
-  .c-foot .badges { display: flex; gap: 1mm; }
-  .badge { background: rgba(255,255,255,.25); border-radius: 1mm; padding: 0 .8mm; font-weight: 700; }
-  .overflow-warn { outline: 2px solid #e74c3c; }
-
-  /* school theming */
-  .s-Evocation      .c-head, .s-Evocation      .c-higher, .s-Evocation      .c-foot { background-color: var(--evocation); }
-  .s-Abjuration     .c-head, .s-Abjuration     .c-higher, .s-Abjuration     .c-foot { background-color: var(--abjuration); }
-  .s-Necromancy     .c-head, .s-Necromancy     .c-higher, .s-Necromancy     .c-foot { background-color: var(--necromancy); }
-  .s-Transmutation  .c-head, .s-Transmutation  .c-higher, .s-Transmutation  .c-foot { background-color: var(--transmutation); }
-  .s-Conjuration    .c-head, .s-Conjuration    .c-higher, .s-Conjuration    .c-foot { background-color: var(--conjuration); }
-  .s-Illusion       .c-head, .s-Illusion       .c-higher, .s-Illusion       .c-foot { background-color: var(--illusion); }
-  .s-Divination     .c-head, .s-Divination     .c-higher, .s-Divination     .c-foot { background-color: var(--divination); }
-  .s-Enchantment    .c-head, .s-Enchantment    .c-higher, .s-Enchantment    .c-foot { background-color: var(--enchantment); }
-  .c-sub, .c-foot { background-blend-mode: multiply; }
-
-  #cardWrap { transform-origin: top center; }
-  #previewNote { position: fixed; top: 60px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--accent); border-radius: 8px; padding: 6px 14px; font-size: 12px; color: var(--accent); display: none; z-index: 50; }
-
-  /* A4 sheet preview */
-  #sheetPreview { display: flex; flex-direction: column; align-items: center; gap: 6px; }
-  .sheet-screen { width: 210mm; height: 296mm; flex: none; background: #fff; position: relative;
-    display: grid; grid-template-columns: repeat(3, 63.5mm); grid-template-rows: repeat(3, 88.9mm);
-    justify-content: center; align-content: center; box-shadow: 0 6px 22px rgba(0,0,0,.55); }
-  .sheet-caption { color: var(--muted); font-size: 12px; margin-top: 10px; letter-spacing: .05em; }
-  .cutmark { position: absolute; background: #000; }
-  .cutmark.v { width: .15mm; height: 6mm; }
-  .cutmark.h { height: .15mm; width: 6mm; }
-  #sheetBtn.on { background: var(--accent); color: #211c10; }
-
-  /* appendix pages (browser print fallback) */
-  .appx-flow { display: none; }
-  @media print {
-    .appx-flow { display: block; background: #fff; color: #000; font-family: "FiraCondCard", sans-serif; font-size: 9.5pt; line-height: 1.35; padding: 14mm 16mm; page-break-before: always; }
-    .appx-flow h2 { font-size: 14pt; margin-bottom: 6mm; }
-    .appx-flow h3 { font-size: 11pt; margin: 5mm 0 1mm; }
-    .appx-flow .meta { font-style: italic; color: #444; margin-bottom: 2mm; }
-    .appx-flow p { margin-bottom: 2mm; text-align: justify; hyphens: auto; }
-  }
-  #zoomRow { position: fixed; bottom: 14px; left: 50%; transform: translateX(-50%); background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 4px 10px; display: flex; gap: 8px; align-items: center; font-size: 12px; }
-
-  /* ---------- print ---------- */
-  #printRoot { display: none; }
-  @media print {
-    body > *:not(#printRoot) { display: none !important; }
-    body { background: #fff; display: block; }
-    #printRoot { display: block; }
-    .sheet {
-      width: 210mm; height: 296mm; page-break-after: always; position: relative;
-      display: grid; grid-template-columns: repeat(3, 63.5mm); grid-template-rows: repeat(3, 88.9mm);
-      justify-content: center; align-content: center; gap: 0;
+  <head>
+    <meta charset="UTF-8">
+    <title>Zauberkarten-Werkstatt</title>
+    <style>
+    :root {
+        --bg: #23201c;
+        --panel: #2e2a25;
+        --panel2: #38332c;
+        --ink: #e8e2d5;
+        --muted: #a89f8d;
+        --accent: #c9a227;
+        --line: #4a443b;
+        /* school colors (from example cards) */
+        --evocation: #b5342a;
+        --abjuration: #d97e26;
+        --necromancy: #6e6e70;
+        --transmutation: #d9a827;
+        --conjuration: #3e8a44;
+        --illusion: #3b6bb0;
+        --divination: #5da3a8;
+        --enchantment: #b0509c;
+        --card-paper: #f0e0bd;
     }
-    .sheet .card { border-radius: 0; box-shadow: none; outline: none; }
-  }
-  @page { size: A4 portrait; margin: 0; }
-</style>
-</head>
-<body>
+    @font-face {
+        font-family: "FiraCondCard";
+        font-style: normal;
+        font-weight: normal;
+        src: url("FiraSansCondensed-Regular-sub.ttf");
+    }
+    @font-face {
+        font-family: "FiraCondCard";
+        font-style: normal;
+        font-weight: bold;
+        src: url("FiraSansCondensed-Bold-sub.ttf");
+    }
+    @font-face {
+        font-family: "FiraCondCard";
+        font-style: italic;
+        font-weight: normal;
+        src: url("FiraSansCondensed-Italic-sub.ttf");
+    }
+    @font-face {
+        font-family: "FiraCondCard";
+        font-style: italic;
+        font-weight: bold;
+        src: url("FiraSansCondensed-BoldItalic-sub.ttf");
+    }
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    html, body {
+        height: 100%;
+    }
+    body {
+        background: var(--bg);
+        color: var(--ink);
+        display: flex;
+        flex-direction: column;
+        font: 14px/1.45 "Segoe UI", system-ui, sans-serif;
+    }
 
-<div id="toolbar">
-  <h1>⚔ Zauberkarten-Editor <span style="font-size:11px;color:var(--muted)">SRD 5.2.1 (CC-BY-4.0)</span></h1>
-  <span id="langToggle">
-    <button id="langDe" class="on" onclick="setLang('de')">DE</button><button id="langEn" onclick="setLang('en')">EN</button>
-  </span>
-  <button onclick="newSpell()">+ Neue Karte</button>
-  <button onclick="duplicateSpell()">Duplizieren</button>
-  <button class="danger" onclick="deleteSpell()">Löschen</button>
-  <span class="spacer"></span>
-  <button id="sheetBtn" onclick="toggleSheetView()" title="Alle Karten als A4-Bögen anzeigen">📑 Bogenvorschau</button>
-  <button onclick="importJson()">Import JSON</button>
-  <button onclick="exportJson()">Export JSON</button>
-  <button class="danger" onclick="resetAll()" title="Lokale Änderungen verwerfen und SRD-Daten neu laden">Zurücksetzen</button>
-  <button onclick="printCards()" title="Über den Browser-Druckdialog drucken">🖨 Browser-Druck</button>
-  <button class="primary" onclick="exportPdf()">📄 PDF-Datei erstellen</button>
-</div>
+    /* ---------- toolbar ---------- */
+    #toolbar {
+        align-items: center;
+        background: var(--panel);
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        flex-wrap: wrap;
+        gap: 8px;
+        padding: 8px 12px;
+    }
+    #toolbar h1 {
+        color: var(--accent);
+        font-size: 16px;
+        font-weight: 600;
+        margin-right: 12px;
+    }
+    button, select, input[type="file"]::file-selector-button {
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--ink);
+        cursor: pointer;
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+    button:hover {
+        border-color: var(--accent);
+    }
+    button.primary {
+        background: var(--accent);
+        color: #211c10;
+        font-weight: 600;
+    }
+    button.danger:hover {
+        border-color: #c0392b;
+        color: #e74c3c;
+    }
+    .spacer {
+        flex: 1;
+    }
+    #langToggle .on {
+        background: var(--accent);
+        color: #211c10;
+    }
 
-<div id="app">
-  <aside id="sidebar">
-    <div id="filters">
-      <input type="search" id="q" placeholder="Suche (DE/EN)…" oninput="renderList()">
-      <div class="row">
-        <select id="fLevel" onchange="renderList()">
-          <option value="">Grad: alle</option>
-          <option value="0">Zaubertrick</option>
-          <option>1</option><option>2</option><option>3</option><option>4</option>
-          <option>5</option><option>6</option><option>7</option><option>8</option><option>9</option>
-        </select>
-        <select id="fClass" onchange="renderList()">
-          <option value="">Klasse: alle</option>
-        </select>
-      </div>
-      <div class="row">
-        <select id="fSchool" onchange="renderList()">
-          <option value="">Schule: alle</option>
-        </select>
-        <select id="fSrc" onchange="renderList()">
-          <option value="">Quelle: alle</option>
-        </select>
-      </div>
-      <div class="row">
-        <select id="fSel" onchange="renderList()">
-          <option value="">Auswahl: alle</option>
-          <option value="sel">nur ausgewählte</option>
-          <option value="custom">nur eigene</option>
-        </select>
-      </div>
-    </div>
-    <div id="spellList"></div>
-    <div id="listFoot">
-      <span id="counts"></span>
+    /* ---------- layout ---------- */
+    #app {
+        display: flex;
+        flex: 1;
+        min-height: 0;
+    }
+    #sidebar {
+        background: var(--panel);
+        border-right: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        min-width: 260px;
+        width: 320px;
+    }
+    #filters {
+        border-bottom: 1px solid var(--line);
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+        padding: 10px;
+    }
+    #filters input[type="search"], #filters select {
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--ink);
+        padding: 6px 8px;
+        width: 100%;
+    }
+    #filters .row {
+        display: flex;
+        gap: 6px;
+    }
+    #spellList {
+        flex: 1;
+        overflow-y: auto;
+    }
+    .lvl-group {
+        background: #29251f;
+        color: var(--accent);
+        font-size: 11px;
+        letter-spacing: 0.08em;
+        padding: 4px 10px 2px;
+        position: sticky;
+        text-transform: uppercase;
+        top: 0;
+    }
+    .spell-item {
+        align-items: center;
+        border-left: 3px solid transparent;
+        cursor: pointer;
+        display: flex;
+        gap: 8px;
+        padding: 4px 10px;
+    }
+    .spell-item:hover {
+        background: var(--panel2);
+    }
+    .spell-item.active {
+        background: var(--panel2);
+        border-left-color: var(--accent);
+    }
+    .spell-item .nm {
+        flex: 1;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .spell-item .tag {
+        color: var(--muted);
+        font-size: 10px;
+    }
+    .spell-item.custom .nm {
+        color: #8fd18f;
+    }
+    #listFoot {
+        align-items: center;
+        border-top: 1px solid var(--line);
+        color: var(--muted);
+        display: flex;
+        font-size: 12px;
+        gap: 8px;
+        padding: 8px 10px;
+    }
+
+    #center {
+        align-items: flex-start;
+        background: repeating-conic-gradient(#26221d 0% 25%, #241f1b 0% 50%)
+            50%/24px 24px;
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        overflow: auto;
+        padding: 24px;
+    }
+    #editor {
+        background: var(--panel);
+        border-left: 1px solid var(--line);
+        min-width: 320px;
+        overflow-y: auto;
+        padding: 12px;
+        width: 380px;
+    }
+    #editor h2 {
+        color: var(--accent);
+        font-size: 14px;
+        margin-bottom: 8px;
+    }
+    #editor label {
+        color: var(--muted);
+        display: block;
+        font-size: 11px;
+        letter-spacing: 0.05em;
+        margin: 8px 0 2px;
+        text-transform: uppercase;
+    }
+    #editor input[type="text"], #editor textarea, #editor select {
+        background: var(--panel2);
+        border: 1px solid var(--line);
+        border-radius: 6px;
+        color: var(--ink);
+        font: 13px/1.4 "Segoe UI", sans-serif;
+        padding: 6px 8px;
+        width: 100%;
+    }
+    #editor textarea {
+        min-height: 60px;
+        resize: vertical;
+    }
+    #editor textarea.big {
+        min-height: 160px;
+    }
+    #editor .grid2 {
+        display: grid;
+        gap: 6px;
+        grid-template-columns: 1fr 1fr;
+    }
+    #editor .btnrow {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px;
+        margin-top: 12px;
+    }
+    .hint {
+        color: var(--muted);
+        font-size: 11px;
+        margin-top: 4px;
+    }
+
+    /* ---------- card ---------- */
+    .card {
+        background: var(--card-paper);
+        border-radius: 3.2mm;
+        box-shadow: 0 0 0 1mm #1a1713 inset;
+        color: #241d12;
+        display: flex;
+        flex-direction: column;
+        font-family: "FiraCondCard", "Segoe UI", "Noto Sans", sans-serif;
+        height: 88.9mm;
+        overflow: hidden;
+        padding: 1.25mm;
+        position: relative;
+        width: 63.5mm;
+    }
+    .card .inner {
+        background: linear-gradient(#f3e6c6, #ecd9ae);
+        border-radius: 2mm;
+        display: flex;
+        flex: 1;
+        flex-direction: column;
+        min-height: 0;
+        overflow: hidden;
+    }
+    .c-head {
+        align-items: center;
+        color: #ffffff;
+        display: flex;
+        gap: 1.5mm;
+        min-height: 6mm;
+        padding: 0.7mm 1.8mm;
+    }
+    .c-head .glyph {
+        align-items: center;
+        background: rgba(0, 0, 0, 0.35);
+        border-radius: 50%;
+        display: flex;
+        flex: none;
+        font-size: 3.2mm;
+        font-weight: 700;
+        height: 5mm;
+        justify-content: center;
+        width: 5mm;
+    }
+    .c-head h3 {
+        font-size: 4.1mm;
+        font-weight: 700;
+        letter-spacing: 0.01em;
+        line-height: 1.05;
+        text-shadow: 0 0.3mm 0.5mm rgba(0, 0, 0, 0.5);
+    }
+    .c-head h3.long {
+        font-size: 3.4mm;
+    }
+    .c-sub {
+        background: rgba(0, 0, 0, 0.28);
+        color: #ffffff;
+        display: flex;
+        font-size: 2.15mm;
+        gap: 2mm;
+        justify-content: space-between;
+        line-height: 1.2;
+        padding: 0.6mm 1.8mm;
+    }
+    .c-sub .cls {
+        opacity: 0.92;
+        text-align: right;
+    }
+    .c-stats {
+        background: rgba(255, 255, 255, 0.35);
+        border-bottom: 0.3mm solid rgba(0, 0, 0, 0.25);
+        display: grid;
+        gap: 0.2mm 1.8mm;
+        grid-template-columns: 1fr 1fr;
+        padding: 0.7mm 1.8mm;
+    }
+    .c-stat {
+        font-size: 2.3mm;
+        line-height: 1.18;
+    }
+    .c-stat b {
+        color: #5c4a23;
+    }
+    .c-mat {
+        color: #6b5a33;
+        font-size: 2mm;
+        font-style: italic;
+        grid-column: 1 / -1;
+        line-height: 1.18;
+    }
+    .c-body {
+        flex: 1;
+        font-size: var(--body-size, 2.5mm);
+        hyphens: auto;
+        line-height: 1.23;
+        overflow: hidden;
+        padding: 1mm 1.8mm;
+        text-align: justify;
+    }
+    .c-body p {
+        margin-bottom: 0.6em;
+    }
+    .c-body p:last-child {
+        margin-bottom: 0;
+    }
+    .c-body table {
+        border-collapse: collapse;
+        font-size: 0.92em;
+        margin-bottom: 0.8em;
+        width: 100%;
+    }
+    .c-body td {
+        border-top: 0.2mm solid rgba(0, 0, 0, 0.2);
+        padding: 0.3mm 0.5mm;
+        vertical-align: top;
+    }
+    .c-higher {
+        color: #ffffff;
+        font-size: 2.2mm;
+        line-height: 1.28;
+        padding: 0.9mm 1.8mm;
+    }
+    .c-higher b {
+        font-size: 1.9mm;
+        letter-spacing: 0.04em;
+        text-transform: uppercase;
+    }
+    .c-foot {
+        background: rgba(0, 0, 0, 0.28);
+        color: #ffffff;
+        display: flex;
+        font-size: 1.9mm;
+        justify-content: space-between;
+        padding: 0.45mm 1.8mm 0.6mm;
+    }
+    .c-foot .badges {
+        display: flex;
+        gap: 1mm;
+    }
+    .badge {
+        background: rgba(255, 255, 255, 0.25);
+        border-radius: 1mm;
+        font-weight: 700;
+        padding: 0 0.8mm;
+    }
+    .overflow-warn {
+        outline: 2px solid #e74c3c;
+    }
+
+    /* school theming */
+    .s-Evocation .c-head, .s-Evocation .c-higher, .s-Evocation .c-foot {
+        background-color: var(--evocation);
+    }
+    .s-Abjuration .c-head, .s-Abjuration .c-higher, .s-Abjuration .c-foot {
+        background-color: var(--abjuration);
+    }
+    .s-Necromancy .c-head, .s-Necromancy .c-higher, .s-Necromancy .c-foot {
+        background-color: var(--necromancy);
+    }
+    .s-Transmutation .c-head,
+    .s-Transmutation .c-higher,
+    .s-Transmutation .c-foot {
+        background-color: var(--transmutation);
+    }
+    .s-Conjuration .c-head, .s-Conjuration .c-higher, .s-Conjuration .c-foot {
+        background-color: var(--conjuration);
+    }
+    .s-Illusion .c-head, .s-Illusion .c-higher, .s-Illusion .c-foot {
+        background-color: var(--illusion);
+    }
+    .s-Divination .c-head, .s-Divination .c-higher, .s-Divination .c-foot {
+        background-color: var(--divination);
+    }
+    .s-Enchantment .c-head, .s-Enchantment .c-higher, .s-Enchantment .c-foot {
+        background-color: var(--enchantment);
+    }
+    .c-sub, .c-foot {
+        background-blend-mode: multiply;
+    }
+
+    #cardWrap {
+        transform-origin: top center;
+    }
+    #previewNote {
+        background: var(--panel);
+        border: 1px solid var(--accent);
+        border-radius: 8px;
+        color: var(--accent);
+        display: none;
+        font-size: 12px;
+        left: 50%;
+        padding: 6px 14px;
+        position: fixed;
+        top: 60px;
+        transform: translateX(-50%);
+        z-index: 50;
+    }
+
+    /* A4 sheet preview */
+    #sheetPreview {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+    }
+    .sheet-screen {
+        align-content: center;
+        background: #ffffff;
+        box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+        display: grid;
+        flex: none;
+        grid-template-columns: repeat(3, 63.5mm);
+        grid-template-rows: repeat(3, 88.9mm);
+        height: 296mm;
+        justify-content: center;
+        position: relative;
+        width: 210mm;
+    }
+    .sheet-caption {
+        color: var(--muted);
+        font-size: 12px;
+        letter-spacing: 0.05em;
+        margin-top: 10px;
+    }
+    .cutmark {
+        background: #000000;
+        position: absolute;
+    }
+    .cutmark.v {
+        height: 6mm;
+        width: 0.15mm;
+    }
+    .cutmark.h {
+        height: 0.15mm;
+        width: 6mm;
+    }
+    #sheetBtn.on {
+        background: var(--accent);
+        color: #211c10;
+    }
+
+    /* appendix pages (browser print fallback) */
+    .appx-flow {
+        display: none;
+    }
+    @media print {
+        .appx-flow {
+            background: #ffffff;
+            color: #000000;
+            display: block;
+            font-family: "FiraCondCard", sans-serif;
+            font-size: 9.5pt;
+            line-height: 1.35;
+            padding: 14mm 16mm;
+            page-break-before: always;
+        }
+        .appx-flow h2 {
+            font-size: 14pt;
+            margin-bottom: 6mm;
+        }
+        .appx-flow h3 {
+            font-size: 11pt;
+            margin: 5mm 0 1mm;
+        }
+        .appx-flow .meta {
+            color: #444444;
+            font-style: italic;
+            margin-bottom: 2mm;
+        }
+        .appx-flow p {
+            hyphens: auto;
+            margin-bottom: 2mm;
+            text-align: justify;
+        }
+    }
+    #zoomRow {
+        align-items: center;
+        background: var(--panel);
+        border: 1px solid var(--line);
+        border-radius: 8px;
+        bottom: 14px;
+        display: flex;
+        font-size: 12px;
+        gap: 8px;
+        left: 50%;
+        padding: 4px 10px;
+        position: fixed;
+        transform: translateX(-50%);
+    }
+
+    /* ---------- print ---------- */
+    #printRoot {
+        display: none;
+    }
+    @media print {
+        body > *:not(#printRoot) {
+            display: none !important;
+        }
+        body {
+            background: #ffffff;
+            display: block;
+        }
+        #printRoot {
+            display: block;
+        }
+        .sheet {
+            align-content: center;
+            display: grid;
+            gap: 0;
+            grid-template-columns: repeat(3, 63.5mm);
+            grid-template-rows: repeat(3, 88.9mm);
+            height: 296mm;
+            justify-content: center;
+            page-break-after: always;
+            position: relative;
+            width: 210mm;
+        }
+        .sheet .card {
+            border-radius: 0;
+            box-shadow: none;
+            outline: none;
+        }
+    }
+    @page {
+        margin: 0;
+        size: A4 portrait;
+    }
+    </style>
+  </head>
+  <body>
+    <div id="toolbar">
+      <h1>
+        ⚔ Zauberkarten-Editor <span style="font-size: 11px; color: var(--muted)"
+        >SRD 5.2.1 (CC-BY-4.0)</span>
+      </h1>
+      <span id="langToggle">
+        <button id="langDe" class="on" onclick="setLang('de')">
+          DE
+        </button><button id="langEn" onclick="setLang('en')">EN</button>
+      </span>
+      <button onclick="newSpell()">+ Neue Karte</button>
+      <button onclick="duplicateSpell()">Duplizieren</button>
+      <button class="danger" onclick="deleteSpell()">Löschen</button>
       <span class="spacer"></span>
-      <button onclick="selectFiltered(true)" title="Alle gefilterten auswählen">☑ alle</button>
-      <button onclick="selectFiltered(false)" title="Auswahl aufheben">☐ keine</button>
+      <button
+        id="sheetBtn"
+        onclick="toggleSheetView()"
+        title="Alle Karten als A4-Bögen anzeigen"
+      >
+        📑 Bogenvorschau
+      </button>
+      <button onclick="importJson()">Import JSON</button>
+      <button onclick="exportJson()">Export JSON</button>
+      <button
+        class="danger"
+        onclick="resetAll()"
+        title="Lokale Änderungen verwerfen und SRD-Daten neu laden"
+      >
+        Zurücksetzen
+      </button>
+      <button
+        onclick="printCards()"
+        title="Über den Browser-Druckdialog drucken"
+      >
+        🖨 Browser-Druck
+      </button>
+      <button class="primary" onclick="exportPdf()">
+        📄 PDF-Datei erstellen
+      </button>
     </div>
-  </aside>
 
-  <main id="center">
-    <div id="cardWrap"><div id="cardHost"></div></div>
-    <div id="previewNote"></div>
-    <div id="zoomRow">
-      Zoom <input type="range" id="zoom" min="1" max="3.2" step="0.1" value="2" oninput="applyZoom()">
-      <span id="zoomVal">200%</span>
+    <div id="app">
+      <aside id="sidebar">
+        <div id="filters">
+          <input
+            type="search"
+            id="q"
+            placeholder="Suche (DE/EN)…"
+            oninput="renderList()"
+          >
+          <div class="row">
+            <select id="fLevel" onchange="renderList()">
+              <option value="">Grad: alle</option>
+              <option value="0">Zaubertrick</option>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+              <option>6</option>
+              <option>7</option>
+              <option>8</option>
+              <option>9</option>
+            </select>
+            <select id="fClass" onchange="renderList()">
+              <option value="">Klasse: alle</option>
+            </select>
+          </div>
+          <div class="row">
+            <select id="fSchool" onchange="renderList()">
+              <option value="">Schule: alle</option>
+            </select>
+            <select id="fSrc" onchange="renderList()">
+              <option value="">Quelle: alle</option>
+            </select>
+          </div>
+          <div class="row">
+            <select id="fSel" onchange="renderList()">
+              <option value="">Auswahl: alle</option>
+              <option value="sel">nur ausgewählte</option>
+              <option value="custom">nur eigene</option>
+            </select>
+          </div>
+        </div>
+        <div id="spellList"></div>
+        <div id="listFoot">
+          <span id="counts"></span>
+          <span class="spacer"></span>
+          <button
+            onclick="selectFiltered(true)"
+            title="Alle gefilterten auswählen"
+          >
+            ☑ alle
+          </button>
+          <button onclick="selectFiltered(false)" title="Auswahl aufheben">
+            ☐ keine
+          </button>
+        </div>
+      </aside>
+
+      <main id="center">
+        <div id="cardWrap"><div id="cardHost"></div></div>
+        <div id="previewNote"></div>
+        <div id="zoomRow">
+          Zoom <input
+            type="range"
+            id="zoom"
+            min="1"
+            max="3.2"
+            step="0.1"
+            value="2"
+            oninput="applyZoom()"
+          >
+          <span id="zoomVal">200%</span>
+        </div>
+      </main>
+
+      <aside id="editor">
+        <h2 id="edTitle">Karte bearbeiten</h2>
+        <div id="edForm"></div>
+      </aside>
     </div>
-  </main>
 
-  <aside id="editor">
-    <h2 id="edTitle">Karte bearbeiten</h2>
-    <div id="edForm"></div>
-  </aside>
-</div>
+    <div id="printRoot"></div>
 
-<div id="printRoot"></div>
-
-<script src="spells.js"></script>
-<script src="jspdf.umd.min.js"></script>
-<script src="fonts.js"></script>
-<script src="hyph_de.js"></script>
-<script>
-"use strict";
+    <script src="jspdf.umd.min.js"></script>
+    <script src="fonts.js"></script>
+    <script src="hyph_de.js"></script>
+    <script>
+    "use strict";
 // ---------------- data ----------------
 const LS_KEY = "dnd-zauberkarten-db-v1";
 let db = null;          // { meta, spells: [...] }
+let SPELL_DB = null;    // shipped data loaded from spells.json
 let lang = "de";        // card language
 let currentId = null;
 let selected = new Set();
@@ -249,19 +741,40 @@ const CLASSES = ["Barde","Druide","Hexenmeister","Kleriker","Magier","Paladin","
 const CLASS_EN = { Barde:"Bard", Druide:"Druid", Hexenmeister:"Warlock", Kleriker:"Cleric",
   Magier:"Wizard", Paladin:"Paladin", Waldläufer:"Ranger", Zauberer:"Sorcerer" };
 
-function loadDb() {
-  let stored = null;
-  try { stored = JSON.parse(localStorage.getItem(LS_KEY)); } catch (e) { console.warn("localStorage kaputt", e); }
-  db = stored || JSON.parse(JSON.stringify(window.SPELL_DB));
-  // pull in newly shipped spells without touching stored user edits
-  if (stored && window.SPELL_DB && Array.isArray(window.SPELL_DB.spells)) {
-    const have = new Set(db.spells.map(s => s.id));
-    let added = 0;
-    for (const s of window.SPELL_DB.spells) {
-      if (!have.has(s.id)) { db.spells.push(JSON.parse(JSON.stringify(s))); added++; }
-    }
-    if (added) saveDb();
+async function loadDb() {
+  const res = await fetch("spells.json");
+  if (!res.ok){
+    throw new Error(`spells.json konnte nicht geladen werden (${res.status})`);
   }
+  SPELL_DB = await res.json();
+  if (!SPELL_DB || !Array.isArray(SPELL_DB.spells)){
+    throw new Error("spells.json enthält kein 'spells'-Array");
+  }
+
+  let stored = null;
+  
+  try {
+    stored = JSON.parse(localStorage.getItem(LS_KEY));
+  } catch (e) {
+    console.warn("localStorage kaputt", e);
+  }
+  
+  db = stored || JSON.parse(JSON.stringify(SPELL_DB));
+
+  // pull in newly shipped spells without touching stored user edits
+  if (!stored) {
+    return;
+  }
+
+  const storedSpellIds = new Set(db.spells.map(s => s.id));
+  let newlyAddedSpells = 0;
+  for (const spell of SPELL_DB.spells) {
+    if (!storedSpellIds.has(spell.id)){
+      db.spells.push(JSON.parse(JSON.stringify(spell)));
+      newlyAddedSpells++;
+    }
+  }
+  if (newlyAddedSpells) saveDb();
 }
 function saveDb() { localStorage.setItem(LS_KEY, JSON.stringify(db)); }
 
@@ -834,10 +1347,11 @@ function deleteSpell() {
 function sortSpells() {
   db.spells.sort((a, b) => a.level - b.level || (a.name[lang] || a.name.de || a.name.en).localeCompare(b.name[lang] || b.name.de || b.name.en, "de"));
 }
-function resetAll() {
+async function resetAll() {
   if (!confirm("Alle lokalen Änderungen und eigenen Karten verwerfen und die SRD-Daten neu laden?")) return;
   localStorage.removeItem(LS_KEY);
-  loadDb(); currentId = null; selected.clear();
+  try { await loadDb(); } catch (e) { alert("spells.json konnte nicht geladen werden. Bitte die Seite über einen Webserver öffnen."); console.error(e); return; }
+  currentId = null; selected.clear();
   sortSpells(); renderList(); renderPreview(); renderEditor();
 }
 
@@ -1430,14 +1944,22 @@ function exportPdf() {
 }
 
 // ---------------- init ----------------
-loadDb();
-initFilters();
-sortSpells();
-renderList();
-applyZoom();
-if (db.spells.length) selectSpell(db.spells[0].id);
-// re-measure once the card font is loaded (pagination depends on real metrics)
-if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderPreview());
-</script>
-</body>
+(async function init() {
+  try {
+    await loadDb();
+  } catch (e) {
+    alert("spells.json konnte nicht geladen werden. Bitte die Seite über einen Webserver öffnen (z. B. python3 -m http.server).");
+    console.error(e);
+    return;
+  }
+  initFilters();
+  sortSpells();
+  renderList();
+  applyZoom();
+  if (db.spells.length) selectSpell(db.spells[0].id);
+  // re-measure once the card font is loaded (pagination depends on real metrics)
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(() => renderPreview());
+})();
+    </script>
+  </body>
 </html>

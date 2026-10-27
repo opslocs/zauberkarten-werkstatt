@@ -20,6 +20,17 @@ vollständig zweisprachig (Deutsch/Englisch).
 wie der Export). So können z. B. Zauber aus anderen Quellenbüchern ergänzt werden —
 solche Inhalte gehören aber nicht in dieses öffentliche Repository.
 
+## Lokal öffnen
+
+Die Zauberdaten werden aus `spells.json` geladen. Browser blockieren `fetch()` für lokale
+Dateien (`file://`), daher die Seite bitte über einen Webserver öffnen, z. B.:
+
+```bash
+python3 -m http.server
+```
+
+Danach <http://localhost:8000> aufrufen.
+
 ## Lizenz
 
 Dieses Werk enthält Material aus dem System Reference Document 5.2.1 („SRD 5.2.1“) und
