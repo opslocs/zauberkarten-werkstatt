@@ -16,6 +16,7 @@
     --divination: #5da3a8;
     --enchantment: #b0509c;
     --cunningactions: #6e7846;
+    --maneuver: #7a5c3f;
     --card-paper: #f0e0bd;
 }
 @font-face {
@@ -430,6 +431,9 @@ button.danger:hover {
 }
 .s-CunningActions .c-head, .s-CunningActions .c-higher, .s-CunningActions .c-foot {
     background-color: var(--cunningactions);
+}
+.s-Maneuver .c-head, .s-Maneuver .c-higher, .s-Maneuver .c-foot {
+    background-color: var(--maneuver);
 }
 .c-sub, .c-foot {
     background-blend-mode: multiply;

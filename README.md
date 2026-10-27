@@ -4,7 +4,7 @@ Druckbare deutsche D&D-Zauberkarten (Pokergröße) im Browser — Editor, A4-Bog
 und Vektor-PDF-Export. Enthält alle 339 Zauber des System Reference Document 5.2.1,
 vollständig zweisprachig (Deutsch/Englisch).
 
-**Live:** https://lil-dank.github.io/zauberkarten-werkstatt/
+**Live:** https://opslocs.github.io/zauberkarten-werkstatt/
 
 ## Funktionen
 
