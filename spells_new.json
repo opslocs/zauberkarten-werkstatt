@@ -1,9 +1,9 @@
 {
  "meta": {
-  "title": "PHB 2024 Cantrips and Level 1 Spells Missing from spells.json",
+  "title": "PHB 2024 Cantrips, Level 1, and Level 2 Spells Missing from spells.json",
   "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
   "generated": "2026-08-15",
-  "count": 13
+  "count": 20
  },
  "spells": [
   {
@@ -646,6 +646,360 @@
    "description": {
     "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einem Nahkampfangriff triffst, fügt der Angriff der Kreatur zusätzlich 1W6 Nekrotikschaden zu, und das Ziel muss einen Weisheitsrettungswurf bestehen, sonst erhält es den Zustand ängstlich für die Wirkungsdauer des Zaubers. Das Ziel kann am Ende jedes seiner Züge einen weiteren Weisheitsrettungswurf ablegen, um den Zustand zu beenden.\nDer Zauber endet, wenn du keine Nahkampfangriffe mehr ausführst, oder wenn du den Zauber erneut wirkst.",
     "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 Necrotic damage to the target, and the target must succeed on a Wisdom saving throw or gain the Frightened condition for the spell's duration. The target can make another Wisdom saving throw at the end of each of its turns to end the condition.\nThe spell ends when you no longer make melee weapon attacks, or if you cast this spell again."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-arcane-vigor",
+   "name": {
+    "de": "Arkane Vitalität",
+    "en": "Arcane Vigor"
+   },
+   "level": 2,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du zapfst deine Lebenskraft an, um dich selbst zu heilen. Würfle ein oder zwei deiner unausgeschöpften Trefferwürfel und gewinne eine Anzahl an Trefferpunkten, die dem Gesamtwert des Wurfs zuzüglich deines Zauberwirkungs-Attributsmodifikators entspricht. Diese Würfel werden dann verbraucht.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 3. oder eines höheren Grades wirkst, erhöht sich die Anzahl der unausgeschöpften Trefferwürfel, die du würfeln kannst, um eins für jeden Grad über den 2. hinaus.",
+    "en": "You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 3 or higher, the number of unexpended Hit Dice you can roll increases by one for each slot level above 2."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-beast-sense",
+   "name": {
+    "de": "Bestiale Wahrnehmung",
+    "en": "Beast Sense"
+   },
+   "level": 2,
+   "school": {
+    "en": "Divination",
+    "de": "Erkenntnismagie"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Waldläufer"
+    ],
+    "en": [
+     "Druid",
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "S",
+    "en": "S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du berührst einwilliges Tier. Für die Wirkungsdauer kannst du die Sinne des Tieres sowie deine eigenen wahrnehmen. Wenn du durch die Sinne des Tieres wahrnimmst, profitierst du von allen besonderen Sinnen, die es hat.",
+    "en": "You touch a willing beast. For the duration, you can perceive through the beast's senses as well as your own. When perceiving through the beast's senses, you benefit from any special senses it has."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": true,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-cloud-of-daggers",
+   "name": {
+    "de": "Wolke aus Dolchen",
+    "en": "Cloud of Daggers"
+   },
+   "level": 2,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Barde",
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, S, M (ein Schleifstein)",
+    "en": "V, S, M (a sliver of glass)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du füllst die Luft mit wirbelnden Dolchen an einem Punkt deiner Wahl in Reichweite. Jedes Mal, wenn eine Kreatur zum ersten Mal in einem Zug in den Bereich eintritt oder ihren Zug dort beginnt, erleidet sie 4W4 Stichschaden.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 3. oder eines höheren Grades wirkst, erhöht sich der Schaden um 2W4 für jeden Grad über den 2. hinaus.",
+    "en": "You fill the air with spinning daggers in a cube 1.5 meters on each side, centered on a point you choose within range. A creature takes 4d4 Slash damage when it enters the spell's area for the first time on a turn or starts its turn there.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 3 or higher, the damage increases by 2d4 for each slot level above 2."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-cordon-of-arrows",
+   "name": {
+    "de": "Pfeilspalier",
+    "en": "Cordon of Arrows"
+   },
+   "level": 2,
+   "school": {
+    "en": "Transmutation",
+    "de": "Verwandlung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "1,50 Meter",
+    "en": "5 feet"
+   },
+   "components": {
+    "de": "V, G, M (vier oder mehr Pfeile oder Bolzen)",
+    "en": "V, S, M (four or more arrows or bolts)"
+   },
+   "duration": {
+    "de": "8 Stunden",
+    "en": "8 hours"
+   },
+   "description": {
+    "de": "Du steckst vier nicht-magische Pfeile oder Armbrustbolzen in Reichweite in den Boden und legst Magie auf sie, um einen Bereich zu schützen. Bewegt sich während der Wirkungsdauer eine Kreatur außer dir das erste Mal auf 9 Meter oder näher an die Geschosse heran oder beendet ihren Zug dort, schießt eins der Geschosse auf die Kreatur zu. Misslingt dieser ein Geschicklichkeitsrettungswurf, erleidet sie 1W6 Schaden. Der Pfeil oder Bolzen wird dabei zerstört. Der Zauber endet, wenn keine Geschosse mehr übrig sind. Wenn du den Zauber wirkst, kannst du Kreaturen festlegen, die den Effekt nicht auslösen.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 3. oder eines höheren Grades wirkst, kannst du für jeden Grad über den 2. hinaus zwei weitere Geschosse verzaubern.",
+    "en": "You stick four nonmagical arrows or bolts into the ground in range and lay magic upon them to protect an area. If a creature other than you moves to within 9 meters of the projectiles for the first time on a turn or ends its turn there, one of the projectiles flies toward the creature. If the attack misses, the creature takes 1d6 Slash damage. The arrow or bolt is destroyed. The spell ends when no more projectiles remain. When you cast this spell, you can designate creatures that won't trigger the effect.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 3 or higher, you can enchant two additional projectiles for each slot level above 2."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-melfs-acid-arrow",
+   "name": {
+    "de": "Melfs Säurepfeil",
+    "en": "Melf's Acid Arrow"
+   },
+   "level": 2,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Magier",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein zerstoßenes Rhabarberblatt und der Magen einer Natter)",
+    "en": "V, S, M (powdered rhubarb leaf and an adder's stomach)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Ein schimmernder grüner Pfeil schießt auf ein Ziel in Reichweite und explodiert in einem Sprühregen aus Säure. Führe einen Fernkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet es sofort 4W4 Säureschaden und 2W4 Säureschaden am Ende seines nächsten Zuges. Verfehlst du, spritzt genug Säure auf das Ziel, um die Hälfte des anfänglichen Schadens zu verursachen, ohne jedoch Schaden am Ende des nächsten Zuges zuzufügen.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 3. oder eines höheren Grades wirkst, steigt der Schaden (sowohl der anfängliche als auch der spätere) für jeden Grad über den 2. hinaus um 1W4.",
+    "en": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage immediately and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much initial damage and no damage at the end of its next turn.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 3 or higher, the damage (both initial and later) increases by 1d4 for each slot level above 2."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-nystuls-magic-aura",
+   "name": {
+    "de": "Nystuls magische Aura",
+    "en": "Nystul's Magic Aura"
+   },
+   "level": 2,
+   "school": {
+    "en": "Illusion",
+    "de": "Illusion"
+   },
+   "classes": {
+    "de": [
+     "Barde",
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Berührung",
+    "en": "Touch"
+   },
+   "components": {
+    "de": "V, G, M (ein kleines Quadrat aus Seide)",
+    "en": "V, S, M (a small square of silk)"
+   },
+   "duration": {
+    "de": "24 Stunden",
+    "en": "24 hours"
+   },
+   "description": {
+    "de": "Du berührst eine Kreatur oder einen Gegenstand und legst eine Illusion auf das Ziel, sodass Erkenntniszauber falsche Informationen über es vermitteln. Das Ziel kann eine bereitwillige Kreatur oder ein Gegenstand sein, der nicht von einer anderen Kreatur getragen oder in der Hand gehalten wird.\nWähle beim Wirken des Zaubers einen oder beide der folgenden Effekte, die für die Wirkungsdauer anhalten. Wenn du diesen Zauber für 30 Tage jeden Tag auf dieselbe Kreatur oder denselben Gegenstand wirkst und jedes Mal den gleichen Effekt nutzt, hält die Illusion an, bis sie gebannt wird.\n\n**Falsche Aura:** Du veränderst die Art, wie das Ziel für Zauber und magische Effekte erscheint, die magische Auren aufspüren (etwa Magie entdecken). Du kannst einen nicht-magischen Gegenstand als magischen erscheinen lassen, einen magischen als nicht-magischen oder die Aura eines magischen Gegenstands ändern, sodass er einer Magieschule deiner Wahl anzugehören scheint. Wenn du diesen Effekt auf einen Gegenstand wirkst, kannst du entscheiden, dass die Illusion von jeder Kreatur erkannt wird, die den Gegenstand in die Hand nimmt.\n\n**Maskierung:** Du beeinflusst, wie das Ziel von Zaubern und magischen Effekten wahrgenommen wird, die Kreaturentypen aufspüren (etwa das Göttliche Gespür des Paladins oder der Auslöser des Zaubers Symbol). Bestimme einen Kreaturentyp, und Zauber und andere magische Effekte behandeln das Ziel, als wäre es eine entsprechende Kreatur oder von dieser Gesinnung.",
+    "en": "You touch a creature or an object and place an illusion on the target so that divination spells reveal false information about it. The target can be a willing creature or an object that isn't being worn or carried by another creature.\nWhen you cast the spell, choose one or both of the following effects, which last for the duration. If you cast this spell on the same creature or object every day for 30 days, using the same effect each time, the illusion lasts until it is dispelled.\n\n**False Aura:** You change the way the target appears to spells and magical effects that detect magical auras, such as Detect Magic. You can make a nonmagical object appear magical, a magical object appear nonmagical, or change the object's magical aura so that it appears to belong to a school of magic you choose. When you use this effect on an object, you can make the illusion apparent to any creature that handles the item.\n\n**Mask:** You influence the way the target appears to spells and magical effects that detect creature types, such as a paladin's Divine Sense or the trigger of the Symbol spell. Choose a creature type, and spells and other magical effects treat the target as if it were a creature of that type or of that alignment."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-summon-beast",
+   "name": {
+    "de": "Tier herbeirufen",
+    "en": "Summon Beast"
+   },
+   "level": 2,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Waldläufer"
+    ],
+    "en": [
+     "Druid",
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "27 Meter",
+    "en": "90 feet"
+   },
+   "components": {
+    "de": "V, G, M (eine Feder, ein Fellbüschel und ein Fischschwanz in einer vergoldeten Eichel im Wert von mindestens 200 GM)",
+    "en": "V, S, M (a feather, a tuft of fur, and a fish tail in a gold-plated acorn worth at least 200 gp)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Stunde",
+    "en": "Concentration, up to 1 hour"
+   },
+   "description": {
+    "de": "Du rufst einen Tiergeist herbei und er erscheint in einem freien Bereich in Reichweite, den du sehen kannst. Wenn du den Zauber wirkst, wähle eine der folgenden Umgebungen aus: Land, Luft oder Wasser.\nDie Kreatur sieht aus wie ein Tier, das in dieser Umgebung zu Hause ist, wodurch einige Details im Wertekasten bestimmt werden. Die Kreatur verschwindet wenn ihre Trefferpunkte auf 0 sinken oder der Zauber endet.\nDie Kreatur ist mit dir und deinen Verbündeten verbündet. Im Kampf nutzt sie deinen Initiativewert und ist direkt nach dir am Zug. Sie gehorcht deinen mündlichen Befehlen (keine Aktion deinerseits erforderlich). Befiehlst du ihr nichts, so führt sie die Ausweichaktion aus und nutzt ihre Bewegung, um Gefahren zu vermeiden.\n\n**Auf höheren Graden:** Verwende den Zauberplatzgrad als Zaubergrad im Wertekasten.",
+    "en": "You summon a beast spirit that appears in an unoccupied space you can see within range. When you cast the spell, choose one of the following environments: Land, Air, or Water.\nThe creature looks like a beast native to that environment, which determines some details in its stat block. The creature vanishes when it drops to 0 Hit Points or when the spell ends.\nThe creature is friendly to you and your allies. In combat, it shares your Initiative count and takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you give it no commands, it takes the Dodge action and uses its movement to avoid danger.\n\n**At Higher Levels:** Use the spell slot level as the spell level in its stat block."
    },
    "higherLevels": {
     "de": "",
