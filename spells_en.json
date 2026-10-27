@@ -1,0 +1,3046 @@
+{
+  "meta": {
+    "title": "D&D 2024 Player's Handbook - Additional Spells (English)",
+    "license": "Spells from the 2024 Player's Handbook (XPHB). Not part of SRD/CC-BY-4.0.",
+    "generated": "2026-10-31",
+    "count": 69
+  },
+  "spells": [
+    {
+      "id": "blade-ward",
+      "name": {
+        "de": "",
+        "en": "Blade Ward"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "Whenever a creature makes an attack roll against you before the spell ends, the attacker subtracts 1d4 from the attack roll."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "friends",
+      "name": {
+        "de": "",
+        "en": "Friends"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "S, M (some makeup)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn't a Humanoid, if you're fighting it, or if you have cast this spell on it within the past 24 hours.\n\nThe spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by you."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mind-sliver",
+      "name": {
+        "de": "",
+        "en": "Mind Sliver"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You try to temporarily sliver the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 Psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thorn-whip",
+      "name": {
+        "de": "",
+        "en": "Thorn Whip"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (the stem of a plant with thorns)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You create a vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. On a hit, the target takes 1d6 Piercing damage, and if it is Large or smaller, you can pull it up to 10 feet closer to you."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thunderclap",
+      "name": {
+        "de": "",
+        "en": "Thunderclap"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "Each creature in a 5-foot Emanation [Area of Effect] originating from you must succeed on a Constitution saving throw or take 1d6 Thunder damage. The spell's thunderous sound can be heard up to 100 feet away."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "toll-the-dead",
+      "name": {
+        "de": "",
+        "en": "Toll the Dead"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by one die when you reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "word-of-radiance",
+      "name": {
+        "de": "",
+        "en": "Word of Radiance"
+      },
+      "level": 0,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, M (a sunburst token)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "Burning radiance erupts from you in a 5-foot Emanation [Area of Effect]. Each creature of your choice that you can see in it must succeed on a Constitution saving throw or take 1d6 Radiant damage."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "armor-of-agathys",
+      "name": {
+        "de": "",
+        "en": "Armor of Agathys"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a shard of blue glass)"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "Protective magical frost surrounds you. You gain 5 Temporary Hit Points. If a creature hits you with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if you have no Temporary Hit Points."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The Temporary Hit Points and the Cold damage both increase by 5 for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arms-of-hadar",
+      "name": {
+        "de": "",
+        "en": "Arms of Hadar"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "Invoking Hadar, you cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation [Area of Effect] originating from you makes a Strength saving throw. On a failed save, a target takes 2d6 Necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "compelled-duel",
+      "name": {
+        "de": "",
+        "en": "Compelled Duel"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You try to compel a creature into a duel. One creature that you can see within range makes a Wisdom saving throw. On a failed save, the target has Disadvantage on attack rolls against creatures other than you, and it can't willingly move to a space that is more than 30 feet away from you.\n\nThe spell ends if you make an attack roll against a creature other than the target, if you cast a spell on an enemy other than the target, if an ally of yours damages the target, or if you end your turn more than 30 feet away from the target."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "hail-of-thorns",
+      "name": {
+        "de": "",
+        "en": "Hail of Thorns"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "As you hit the creature, this spell creates a rain of thorns that sprouts from your Ranged weapon or ammunition. The target of the attack and each creature within 5 feet of it make a Dexterity saving throw, taking 1d10 Piercing damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tashas-hideous-laughter",
+      "name": {
+        "de": "",
+        "en": "Tasha's Hideous Laughter"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a tart and a feather)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the Prone and Incapacitated conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the Prone condition on itself.\n\nAt the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "You can target one additional creature for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tensers-floating-disk",
+      "name": {
+        "de": "",
+        "en": "Tenser's Floating Disk"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a drop of mercury)"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.\n\nThe disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.\n\nIf you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thunderous-smite",
+      "name": {
+        "de": "",
+        "en": "Thunderous Smite"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the Prone condition."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "witch-bolt",
+      "name": {
+        "de": "",
+        "en": "Witch Bolt"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a twig struck by lightning)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "A beam of crackling energy lances toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against it. On a hit, the target takes 2d12 Lightning damage.\n\nOn each of your subsequent turns, you can take a Bonus Action to deal 1d12 Lightning damage to the target automatically, even if the first attack missed.\n\nThe spell ends if the target is ever outside the spell's range or if it has Total Cover from you."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The initial damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "wrathful-smite",
+      "name": {
+        "de": "",
+        "en": "Wrathful Smite"
+      },
+      "level": 1,
+      "school": {
+        "de": "",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "The target takes an extra 1d6 Necrotic damage from the attack, and it must succeed on a Wisdom saving throw or have the Frightened condition until the spell ends. At the end of each of its turns, the Frightened target repeats the save, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arcane-vigor",
+      "name": {
+        "de": "",
+        "en": "Arcane Vigor"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "beast-sense",
+      "name": {
+        "de": "",
+        "en": "Beast Sense"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You touch a willing Beast. For the duration, you can perceive through the Beast's senses as well as your own. When perceiving through the Beast's senses, you benefit from any special senses it has."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "cloud-of-daggers",
+      "name": {
+        "de": "",
+        "en": "Cloud of Daggers"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a sliver of glass)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You conjure spinning daggers in a 5-foot Cube [Area of Effect] centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube [Area of Effect] or ends its turn there or if the Cube [Area of Effect] moves into its space. A creature takes this damage only once per turn.\n\nOn your later turns, you can take a  action to teleport the Cube [Area of Effect] up to 30 feet."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "cordon-of-arrows",
+      "name": {
+        "de": "",
+        "en": "Cordon of Arrows"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (four or more arrows or bolts)"
+      },
+      "duration": {
+        "de": "",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.\n\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The amount of ammunition that can be affected increases by two for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "crown-of-madness",
+      "name": {
+        "de": "",
+        "en": "Crown of Madness"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn't Humanoid.\n\nA spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.\n\nOn your later turns, you must take the  action to maintain control of the target, or the spell ends."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "melfs-acid-arrow",
+      "name": {
+        "de": "",
+        "en": "Melf's Acid Arrow"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (powdered rhubarb leaf)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage (both initial and later) increases by  for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "nystuls-magic-aura",
+      "name": {
+        "de": "",
+        "en": "Nystul's Magic Aura"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Illusion"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a small square of silk)"
+      },
+      "duration": {
+        "de": "",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "With a touch, you place an illusion on a willing creature or an object that isn't being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If you cast the spell on the same target every day for 30 days, the illusion lasts until dispelled.\n\nChoose a creature type other than the target's actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type.\n\nYou change the way the target appears to spells and magical effects that detect magical auras, such as Detect Magic. You can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object's aura so that it appears to belong to a school of magic you choose."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-beast",
+      "name": {
+        "de": "",
+        "en": "Summon Beast"
+      },
+      "level": 2,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a feather, tuft of fur, and fish tail inside a gilded acorn worth 200+ GP', 'cost': 20000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range and uses the Bestial Spirit stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "aura-of-vitality",
+      "name": {
+        "de": "",
+        "en": "Aura of Vitality"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. When you create the aura and at the start of each of your turns while it persists, you can restore 2d6 Hit Points to one creature in it."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "blinding-smite",
+      "name": {
+        "de": "",
+        "en": "Blinding Smite"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "The target hit by the strike takes an extra 3d8 Radiant damage from the attack, and the target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a Constitution saving throw, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The extra damage increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "conjure-barrage",
+      "name": {
+        "de": "",
+        "en": "Conjure Barrage"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a Melee or Ranged weapon worth at least 1 CP', 'cost': 1})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You brandish the weapon used to cast the spell and conjure similar spectral weapons (or ammunition appropriate to the weapon) that launch forward and then disappear. Each creature of your choice that you can see in a 60-foot Cone [Area of Effect] makes a Dexterity saving throw, taking 5d8 Force damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "crusaders-mantle",
+      "name": {
+        "de": "",
+        "en": "Crusader's Mantle"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You radiate a magical aura in a 30-foot Emanation [Area of Effect]. While in the aura, you and your allies each deal an extra 1d4 Radiant damage when hitting with a weapon or an Unarmed Strike."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "elemental-weapon",
+      "name": {
+        "de": "",
+        "en": "Elemental Weapon"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "If you use a level 5-6 spell slot, the bonus to attack rolls increases to +2, and the extra damage increases to 2d4. If you use a level 7+ spell slot, the bonus increases to +3, and the extra damage increases to 3d4."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "feign-death",
+      "name": {
+        "de": "",
+        "en": "Feign Death"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a pinch of graveyard dirt)"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.\n\nFor the duration, the target appears dead to outward inspection and to spells used to determine the target's status. The target has the Blinded and Incapacitated conditions, and its Speed is 0.\n\nThe target also has Resistance to all damage except Psychic damage, and it has Immunity to the Poisoned condition."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "hunger-of-hadar",
+      "name": {
+        "de": "",
+        "en": "Hunger of Hadar"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "150 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a pickled tentacle)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere [Area of Effect] of Darkness appears, centered on a point within range and lasting for the duration. The Sphere [Area of Effect] is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition.\n\nAny creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The Cold or Acid damage (your choice) increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "leomunds-tiny-hut",
+      "name": {
+        "de": "",
+        "en": "Leomund's Tiny Hut"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a crystal bead)"
+      },
+      "duration": {
+        "de": "",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "A 10-foot Emanation [Area of Effect] springs into existence around you and remains stationary for the duration. The spell fails when you cast it if the Emanation [Area of Effect] isn't big enough to fully encapsulate all creatures in its area.\n\nCreatures and objects within the Emanation [Area of Effect] when you cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can't be cast through it, and the effects of such spells can't extend into it.\n\nThe atmosphere inside the Emanation [Area of Effect] is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to have Dim Light or Darkness (no action required). The Emanation [Area of Effect] is opaque from the outside and of any color you choose, but it's transparent from the inside.\n\nThe spell ends early if you leave the Emanation [Area of Effect] or if you cast it again."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "lightning-arrow",
+      "name": {
+        "de": "",
+        "en": "Lightning Arrow"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "As your attack hits or misses the target, the weapon or ammunition you're using transforms into a lightning bolt. Instead of taking any damage or other effects from the attack, the target takes 4d8 Lightning damage on a hit or half as much damage on a miss. Each creature within 10 feet of the target then makes a Dexterity saving throw, taking 2d8 Lightning damage on a failed save or half as much damage on a successful one.\n\nThe weapon or ammunition then returns to its normal form."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage for both effects of the spell increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-fey",
+      "name": {
+        "de": "",
+        "en": "Summon Fey"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a gilded flower worth 300+ GP', 'cost': 30000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth a Fey spirit. It manifests in an unoccupied space that you can see within range and uses the Fey Spirit stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of your choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-undead",
+      "name": {
+        "de": "",
+        "en": "Summon Undead"
+      },
+      "level": 3,
+      "school": {
+        "de": "",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a gilded skull worth 300+ GP', 'cost': 30000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the Undead Spirit stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "aura-of-purity",
+      "name": {
+        "de": "",
+        "en": "Aura of Purity"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. While in the aura, you and your allies have Resistance to Poison damage and Advantage on saving throws to avoid or end effects that include the Blinded, Charmed, Deafened, Frightened, Paralyzed, Poisoned, or Stunned condition."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "evards-black-tentacles",
+      "name": {
+        "de": "",
+        "en": "Evard's Black Tentacles"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a tentacle)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in that area into Difficult Terrain.\n\nEach creature in that area makes a Strength saving throw. On a failed save, it takes 3d6 Bludgeoning damage, and it has the Restrained condition until the spell ends. A creature also makes that save if it enters the area or ends its turn there. A creature makes that save only once per turn.\n\nA Restrained creature can take an action to make a Strength () check against your spell save DC, ending the condition on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "fount-of-moonlight",
+      "name": {
+        "de": "",
+        "en": "Fount of Moonlight"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "",
+        "en": "A cool light wreathes your body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\nUntil the spell ends, you have Resistance to Radiant damage, and your melee attacks deal an extra 2d6 Radiant damage on a hit.\n\nIn addition, immediately after you take damage from a creature you can see within 60 feet of yourself, you can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "grasping-vine",
+      "name": {
+        "de": "",
+        "en": "Grasping Vine"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You conjure a vine that sprouts from a surface in an unoccupied space that you can see within range. The vine lasts for the duration.\n\nMake a melee spell attack against a creature within 30 feet of the vine. On a hit, the target takes 4d8 Bludgeoning damage and is pulled up to 30 feet toward the vine; if the target is Huge or smaller, it has the Grappled condition (escape DC equal to your spell save DC). The vine can grapple only one creature at a time, and you can cause the vine to release a Grappled creature (no action required).\n\nAs a Bonus Action on your later turns, you can repeat the attack against a creature within 30 feet of the vine."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The number of creatures the vine can grapple increases by one for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "leomunds-secret-chest",
+      "name": {
+        "de": "",
+        "en": "Leomund's Secret Chest"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth 5,000+ GP, and a Tiny replica of the chest made from the same materials worth 50+ GP', 'cost': 500000})"
+      },
+      "duration": {
+        "de": "",
+        "en": ""
+      },
+      "description": {
+        "de": "",
+        "en": "You hide a chest and all its contents on the Ethereal Plane. You must touch the chest and the miniature replica that serve as Material components for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).\n\nWhile the chest remains on the Ethereal Plane, you can take a  action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by taking a  action to touch the chest and the replica.\n\nAfter 60 days, there is a cumulative  chance at the end of each day that the spell ends. The spell also ends if you cast this spell again or if the Tiny replica chest is destroyed. If the spell ends and the larger chest is on the Ethereal Plane, the chest remains there for you or someone else to find."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-faithful-hound",
+      "name": {
+        "de": "",
+        "en": "Mordenkainen's Faithful Hound"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a silver whistle)"
+      },
+      "duration": {
+        "de": "",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "You conjure a phantom watchdog in an unoccupied space that you can see within range. The hound remains for the duration or until the two of you are more than 300 feet apart from each other.\n\nNo one but you can see the hound, and it is intangible and invulnerable. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound has  with a range of 30 feet.\n\nAt the start of each of your turns, the hound attempts to bite one enemy within 5 feet of it. That enemy must succeed on a Dexterity saving throw or take 4d8 Force damage.\n\nOn your later turns, you can take a  action to move the hound up to 30 feet."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-private-sanctum",
+      "name": {
+        "de": "",
+        "en": "Mordenkainen's Private Sanctum"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "10 Minutes"
+      },
+      "range": {
+        "de": "",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a thin sheet of lead)"
+      },
+      "duration": {
+        "de": "",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "You make an area within range magically secure. The area is a Cube [Area of Effect] that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:\n\nCasting this spell on the same spot every day for 365 days makes the spell last until dispelled."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "You can increase the size of the Cube [Area of Effect] by 100 feet for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "otilukes-resilient-sphere",
+      "name": {
+        "de": "",
+        "en": "Otiluke's Resilient Sphere"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a glass sphere)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "A shimmering sphere encloses a Large or smaller creature or object within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed for the duration.\n\nNothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.\n\nThe sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can take an action to push against the sphere's walls and thus roll the sphere at up to half the creature's Speed. Similarly, the globe can be picked up and moved by other creatures.\n\nA Disintegrate spell targeting the globe destroys it without harming anything inside."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "staggering-smite",
+      "name": {
+        "de": "",
+        "en": "Staggering Smite"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "The target takes an extra 4d6 Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the Stunned condition until the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The extra damage increases by  for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-aberration",
+      "name": {
+        "de": "",
+        "en": "Summon Aberration"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a pickled tentacle and an eyeball in a platinum-inlaid vial worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range and uses the Aberrant Spirit stat block. When you cast the spell, choose Beholderkin, Mind Flayer, or Slaad. The creature resembles an Aberration of that kind, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-construct",
+      "name": {
+        "de": "",
+        "en": "Summon Construct"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a lockbox worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth the spirit of a Construct. It manifests in an unoccupied space that you can see within range and uses the Construct Spirit stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles an animate statue (you determine the appearance) made of the chosen material, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-elemental",
+      "name": {
+        "de": "",
+        "en": "Summon Elemental"
+      },
+      "level": 4,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the Elemental Spirit stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "banishing-smite",
+      "name": {
+        "de": "",
+        "en": "Banishing Smite"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "The target hit by the attack roll takes an extra 5d10 Force damage from the attack. If the attack reduces the target to 50 Hit Points or fewer, the target must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the Incapacitated condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "bigbys-hand",
+      "name": {
+        "de": "",
+        "en": "Bigby's Hand"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (an eggshell and a glove)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You create a Large hand of shimmering magical energy in an unoccupied space that you can see within range. The hand lasts for the duration, and it moves at your command, mimicking the movements of your own hand.\n\nThe hand is an object that has AC 20 and Hit Points equal to your Hit Points maximum. If it drops to 0 Hit Points, the spell ends. The hand doesn't occupy its space.\n\nWhen you cast the spell and as a Bonus Action on your later turns, you can move the hand up to 60 feet and then cause one of the following effects:\n\n**Clenched Fist.** The hand strikes a target within 5 feet of it. Make a melee spell attack. On a hit, the target takes 5d8 Force damage.\n\n**Forceful Hand.** The hand attempts to push a Huge or smaller creature within 5 feet of it. The target must succeed on a Strength saving throw, or the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target, remaining within 5 feet of it.\n\n**Grasping Hand.** The hand attempts to grapple a Huge or smaller creature within 5 feet of it. The target must succeed on a Dexterity saving throw, or the target has the Grappled condition, with an escape DC equal to your spell save DC. While the hand grapples the target, you can take a Bonus Action to cause the hand to crush it, dealing Bludgeoning damage to the target equal to 4d6 plus your spellcasting ability modifier.\n\n**Interposing Hand.** The hand grants you Cover against attacks and other effects that originate from its space or that pass through it. In addition, its space counts as Difficult Terrain for your enemies."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage of the Clenched Fist increases by  and the damage of the Grasping Hand increases by  for each spell slot level above 5."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "circle-of-power",
+      "name": {
+        "de": "",
+        "en": "Circle of Power"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "conjure-volley",
+      "name": {
+        "de": "",
+        "en": "Conjure Volley"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "150 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a Melee or Ranged weapon worth at least 1 CP', 'cost': 1})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You brandish the weapon used to cast the spell and choose a point within range. Hundreds of similar spectral weapons (or ammunition appropriate to the weapon) fall in a volley and then disappear. Each creature of your choice that you can see in a 40-foot-radius, 20-foot-high Cylinder [Area of Effect] centered on that point makes a Dexterity saving throw. A creature takes 8d8 Force damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "destructive-wave",
+      "name": {
+        "de": "",
+        "en": "Destructive Wave"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "Destructive energy ripples outward from you in a 30-foot Emanation [Area of Effect]. Each creature you choose in the Emanation [Area of Effect] makes a Constitution saving throw. On a failed save, a target takes 5d6 Thunder damage and 5d6 Radiant or Necrotic damage (your choice) and has the Prone condition. On a successful save, a target takes half as much damage only."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "jallarzis-storm-of-radiance",
+      "name": {
+        "de": "",
+        "en": "Jallarzi's Storm of Radiance"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a pinch of phosphorus)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder [Area of Effect] centered on a point you can see within range. While in this area, creatures have the Blinded and Deafened conditions, and they can't cast spells with a Verbal component.\n\nWhen the storm appears, each creature in it makes a Constitution saving throw, taking 2d10 Radiant damage and 2d10 Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The Radiant and Thunder damage increase by  for each spell slot level above 5."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "rarys-telepathic-bond",
+      "name": {
+        "de": "",
+        "en": "Rary's Telepathic Bond"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (two eggs)"
+      },
+      "duration": {
+        "de": "",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can't communicate in any languages aren't affected by this spell.\n\nUntil the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can't extend to other planes of existence."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "steel-wind-strike",
+      "name": {
+        "de": "",
+        "en": "Steel Wind Strike"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "S, M ({'text': 'a Melee weapon worth 1+ SP', 'cost': 10})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 Force damage.\n\nYou then teleport to an unoccupied space you can see within 5 feet of one of the targets."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-celestial",
+      "name": {
+        "de": "",
+        "en": "Summon Celestial"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a reliquary worth 500+ GP', 'cost': 50000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range and uses the Celestial Spirit stat block. When you cast the spell, choose Avenger or Defender. Your choice determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "swift-quiver",
+      "name": {
+        "de": "",
+        "en": "Swift Quiver"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "",
+        "en": "Self"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a Quiver worth 1+ GP', 'cost': 100})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "When you cast the spell and as a Bonus Action until it ends, you can make two attacks with a weapon that fires Arrows or Bolts, such as a Longbow or a Light Crossbow. The spell magically creates the ammunition needed for each attack. Each Arrow or Bolt created by the spell deals damage like a nonmagical piece of ammunition of its kind and disintegrates immediately after it hits or misses."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "synaptic-static",
+      "name": {
+        "de": "",
+        "en": "Synaptic Static"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere [Area of Effect] centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one.\n\nOn a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain . The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "yolandes-regal-presence",
+      "name": {
+        "de": "",
+        "en": "Yolande's Regal Presence"
+      },
+      "level": 5,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a miniature tiara)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You surround yourself with unearthly majesty in a 10-foot Emanation [Area of Effect]. Whenever the Emanation [Area of Effect] enters the space of a creature you can see and whenever a creature you can see enters the Emanation [Area of Effect] or ends its turn there, you can force that creature to make a Wisdom saving throw. On a failed save, the target takes 4d6 Psychic damage and has the Prone condition, and you can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arcane-gate",
+      "name": {
+        "de": "",
+        "en": "Arcane Gate"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "500 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "",
+        "en": "You create linked teleportation portals. Choose two Large, unoccupied spaces on the ground that you can see, one space within range and the other one within 10 feet of you. A circular portal opens in each of those spaces and remains for the duration.\n\nThe portals are two-dimensional glowing rings filled with mist that blocks sight. They hover inches from the ground and are perpendicular to it.\n\nA portal is open on only one side (you choose which). Anything entering the open side of a portal exits from the open side of the other portal as if the two were adjacent to each other. As a Bonus Action, you can change the facing of the open sides."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "drawmijs-instant-summons",
+      "name": {
+        "de": "",
+        "en": "Drawmij's Instant Summons"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a sapphire worth 1,000+ GP', 'cost': 100000})"
+      },
+      "duration": {
+        "de": "",
+        "en": ""
+      },
+      "description": {
+        "de": "",
+        "en": "You touch the sapphire used in the casting and an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an Invisible mark on that object and invisibly inscribes the object's name on the sapphire. Each time you cast this spell, you must use a different sapphire.\n\nThereafter, you can take a  action to speak the object's name and crush the sapphire. The object instantly appears in your hand regardless of physical or planar distances, and the spell ends.\n\nIf another creature is holding or carrying the object, crushing the sapphire doesn't transport it, but instead you learn who that creature is and where that creature is currently located."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "otilukes-freezing-sphere",
+      "name": {
+        "de": "",
+        "en": "Otiluke's Freezing Sphere"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "300 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a miniature crystal sphere)"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "A frigid globe streaks from you to a point of your choice within range, where it explodes in a 60-foot-radius Sphere [Area of Effect]. Each creature in that area makes a Constitution saving throw, taking 10d6 Cold damage on a failed save or half as much damage on a successful one.\n\nIf the globe strikes a body of water, it freezes the water to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice and have the Restrained condition. A trapped creature can take an action to make a Strength () check against your spell save DC to break free.\n\nYou can refrain from firing the globe after completing the spell's casting. If you do so, a globe about the size of a sling bullet, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as a normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "The damage increases by  for each spell slot level above 6."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "ottos-irresistible-dance",
+      "name": {
+        "de": "",
+        "en": "Otto's Irresistible Dance"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "One creature that you can see within range must make a Wisdom saving throw. On a successful save, the target dances comically until the end of its next turn, during which it must spend all its movement to dance in place.\n\nOn a failed save, the target has the Charmed condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-fiend",
+      "name": {
+        "de": "",
+        "en": "Summon Fiend"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a bloody vial worth 600+ GP', 'cost': 60000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "",
+        "en": "You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range and uses the Fiendish Spirit stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a Fiend of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tashas-bubbling-cauldron",
+      "name": {
+        "de": "",
+        "en": "Tasha's Bubbling Cauldron"
+      },
+      "level": 6,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a gilded ladle worth 500 + GP)"
+      },
+      "duration": {
+        "de": "",
+        "en": "10 Minutes"
+      },
+      "description": {
+        "de": "",
+        "en": "You conjure a claw-footed cauldron filled with bubbling liquid. The cauldron appears in an unoccupied space on the ground within 5 feet of you and lasts for the duration. The cauldron can't be moved and disappears when the spell ends, along with the bubbling liquid inside it.\n\nThe liquid in the cauldron duplicates the properties of a  of your choice (such as a ). As a Bonus Action, you or an ally can reach into the cauldron and withdraw one potion of that kind. The potion is contained in a vial that disappears when the potion is consumed. The cauldron can produce a number of these potions equal to your spellcasting ability modifier (minimum 1). When the last of these potions is withdrawn from the cauldron, the cauldron disappears, and the spell ends.\n\nPotions obtained from the cauldron that aren't consumed disappear when you cast this spell again."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-magnificent-mansion",
+      "name": {
+        "de": "",
+        "en": "Mordenkainen's Magnificent Mansion"
+      },
+      "level": 7,
+      "school": {
+        "de": "",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "",
+        "en": "300 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a miniature door worth 15+ GP', 'cost': 1500})"
+      },
+      "duration": {
+        "de": "",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "You conjure a shimmering door in range that lasts for the duration. The door leads to an extradimensional dwelling and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the door remains open. You can open or close it (no action required) if you are within 30 feet of it. While closed, the door is imperceptible.\n\nBeyond the door is a magnificent foyer with numerous chambers beyond. The dwelling's atmosphere is clean, fresh, and warm.\n\nYou can create any floor plan you like for the dwelling, but it can't exceed 50 contiguous 10-foot Cubes. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine-course banquet for up to 100 people. Furnishings and other objects created by this spell dissipate into smoke if removed from it.\n\nA staff of 100 near-transparent servants attends all who enter. You determine the appearance of these servants and their attire. They are invulnerable and obey your commands. Each servant can perform tasks that a human could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can't leave the dwelling.\n\nWhen the spell ends, any creatures or objects left inside the extradimensional space are expelled into the unoccupied spaces nearest to the entrance."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-sword",
+      "name": {
+        "de": "",
+        "en": "Mordenkainen's Sword"
+      },
+      "level": 7,
+      "school": {
+        "de": "",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M ({'text': 'a miniature sword worth 250+ GP', 'cost': 25000})"
+      },
+      "duration": {
+        "de": "",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "",
+        "en": "You create a spectral sword that hovers within range. It lasts for the duration.\n\nWhen the sword appears, you make a melee spell attack against a target within 5 feet of the sword. On a hit, the target takes Force damage equal to 4d12 plus your spellcasting ability modifier.\n\nOn your later turns, you can take a Bonus Action to move the sword up to 30 feet to a spot you can see and repeat the attack against the same target or a different one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "power-word-fortify",
+      "name": {
+        "de": "",
+        "en": "Power Word Fortify"
+      },
+      "level": 7,
+      "school": {
+        "de": "",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "",
+        "en": "V"
+      },
+      "duration": {
+        "de": "",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "",
+        "en": "You fortify up to six creatures you can see within range. The spell bestows 120 Temporary Hit Points, which you divide among the spell's recipients."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "telepathy",
+      "name": {
+        "de": "",
+        "en": "Telepathy"
+      },
+      "level": 8,
+      "school": {
+        "de": "",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": ""
+      },
+      "components": {
+        "de": "",
+        "en": "V, S, M (a pair of linked silver rings)"
+      },
+      "duration": {
+        "de": "",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "",
+        "en": "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.\n\nUntil the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    }
+  ]
+}

@@ -1,0 +1,3046 @@
+{
+  "meta": {
+    "title": "D&D 2024 Spielerhandbuch - Zusätzliche Zauber (Deutsch)",
+    "license": "Zauber aus dem Spielerhandbuch 2024 (XPHB). Nicht Teil der SRD/CC-BY-4.0. Deutsche Übersetzung basierend auf dem SRD 5.2.1 Deutsch und Community-Konventionen.",
+    "generated": "2026-10-31",
+    "count": 69
+  },
+  "spells": [
+    {
+      "id": "blade-ward",
+      "name": {
+        "de": "Klingenwall",
+        "en": "Blade Ward"
+      },
+      "level": 0,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Bis der Zauber endet, zieht jeder Angreifer, der einen Angriffswurf gegen dich ausführt, 1W4 von seinem Angriffswurf ab.",
+        "en": "Whenever a creature makes an attack roll against you before the spell ends, the attacker subtracts 1d4 from the attack roll."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "friends",
+      "name": {
+        "de": "Freunde",
+        "en": "Friends"
+      },
+      "level": 0,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "3 Meter",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "G, M (etwas Schminkzeug)",
+        "en": "S, M (some makeup)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du strahlst magisch Freundschaft gegenüber einer Kreatur aus, die du siehst und die in Reichweite ist. Das Ziel muss einen Weisheitsrettungswurf bestehen oder den Zustand Verzaubert für die Wirkungsdauer erhalten. Das Ziel besteht den Wurf automatisch, wenn es kein Humanoid ist, wenn du es bekämpfst oder wenn du diesen Zauber in den letzten 24 Stunden bereits auf es gewirkt hast.\n\nDer Zauber endet vorzeitig, wenn das Ziel Schaden nimmt oder du einen Angriffswurf ausführst, Schaden bewirkst oder jemanden zwingst, einen Rettungswurf zu machen. Wenn der Zauber endet, weiß das Ziel, dass es von dir Verzaubert wurde.",
+        "en": "You magically emanate a sense of friendship toward one creature you can see within range. The target must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The target succeeds automatically if it isn't a Humanoid, if you're fighting it, or if you have cast this spell on it within the past 24 hours.\n\nThe spell ends early if the target takes damage or if you make an attack roll, deal damage, or force anyone to make a saving throw. When the spell ends, the target knows it was Charmed by you."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mind-sliver",
+      "name": {
+        "de": "Geistesplitter",
+        "en": "Mind Sliver"
+      },
+      "level": 0,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du versuchst, vorübergehend den Geist einer Kreatur zu spalten, die du in Reichweite siehst. Das Ziel muss einen Intelligenzrettungswurf bestehen oder erleidet 1W6 psychischen Schaden und zieht 1W4 von dem nächsten Rettungswurf ab, den es vor Ende deines nächsten Zugs macht.",
+        "en": "You try to temporarily sliver the mind of one creature you can see within range. The target must succeed on an Intelligence saving throw or take 1d6 Psychic damage and subtract 1d4 from the next saving throw it makes before the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um 1W6, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thorn-whip",
+      "name": {
+        "de": "Dornenpeitsche",
+        "en": "Thorn Whip"
+      },
+      "level": 0,
+      "school": {
+        "de": "Verwandlung",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (der Stiel einer Pflanze mit Dornen)",
+        "en": "V, S, M (the stem of a plant with thorns)"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du erschaffst eine aus Dornen bestehende, rebenähnliche Peitsche, die auf deinen Befehl hin auf eine Kreatur in Reichweite einschlägt. Führe einen Nahkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 1W6 Stichschaden, und wenn es groß oder kleiner ist, kannst du es bis zu 3 Meter näher zu dir ziehen.",
+        "en": "You create a vine-like whip covered in thorns that lashes out at your command toward a creature in range. Make a melee spell attack against the target. On a hit, the target takes 1d6 Piercing damage, and if it is Large or smaller, you can pull it up to 10 feet closer to you."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um 1W6, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thunderclap",
+      "name": {
+        "de": "Donnerknall",
+        "en": "Thunderclap"
+      },
+      "level": 0,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "1,5 Meter",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "G",
+        "en": "S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Jede Kreatur in einer 1,5 Meter großen Emanation, die von dir ausgeht, muss einen Konstitutionsrettungswurf bestehen oder 1W6 Donner erleiden. Der donnernde Klang des Zaubers ist bis zu 30 Meter entfernt hörbar.",
+        "en": "Each creature in a 5-foot Emanation [Area of Effect] originating from you must succeed on a Constitution saving throw or take 1d6 Thunder damage. The spell's thunderous sound can be heard up to 100 feet away."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um 1W6, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "toll-the-dead",
+      "name": {
+        "de": "Totenglocke",
+        "en": "Toll the Dead"
+      },
+      "level": 0,
+      "school": {
+        "de": "Nekromantie",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du weist auf eine Kreatur, die du in Reichweite siehst, und der einzelne Schlag einer traurigen Glocke ist in einem Abstand von bis zu 3 Meter vom Ziel hörbar. Das Ziel muss einen Weisheitsrettungswurf bestehen oder 1W8 Nekrotik erleiden. Wenn das Ziel bereits Trefferpunkte verloren hat, erleidet es stattdessen 1W12 Nekrotik.",
+        "en": "You point at one creature you can see within range, and the single chime of a dolorous bell is audible within 10 feet of the target. The target must succeed on a Wisdom saving throw or take 1d8 Necrotic damage. If the target is missing any of its Hit Points, it instead takes 1d12 Necrotic damage."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um einen Würfel, wenn du die 5. (2W8 oder 2W12), die 11. (3W8 oder 3W12) und die 17. (4W8 oder 4W12) Stufe erreichst.",
+        "en": "The damage increases by one die when you reach levels 5 (2d8 or 2d12), 11 (3d8 or 3d12), and 17 (4d8 or 4d12)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "word-of-radiance",
+      "name": {
+        "de": "Wort der Strahlkraft",
+        "en": "Word of Radiance"
+      },
+      "level": 0,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "1,5 Meter",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "V, M (ein Sonnenstrahl-Token)",
+        "en": "V, M (a sunburst token)"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Brennende Strahlkraft bricht in einer 1,5 Meter großen Emanation von dir aus. Jede Kreatur deiner Wahl, die du darin siehst, muss einen Konstitutionsrettungswurf bestehen oder 1W6 Gleißend erleiden.",
+        "en": "Burning radiance erupts from you in a 5-foot Emanation [Area of Effect]. Each creature of your choice that you can see in it must succeed on a Constitution saving throw or take 1d6 Radiant damage."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um 1W6, wenn du die 5. (2W6), die 11. (3W6) und die 17. (4W6) Stufe erreichst.",
+        "en": "The damage increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "armor-of-agathys",
+      "name": {
+        "de": "Agathys' Rüstung",
+        "en": "Armor of Agathys"
+      },
+      "level": 1,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G, M (ein Splitter blaues Glas)",
+        "en": "V, S, M (a shard of blue glass)"
+      },
+      "duration": {
+        "de": "1 Stunde",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "Schützender magischer Frost umgibt dich. Du erhältst 5 temporäre Trefferpunkte. Wenn dich eine Kreatur mit einem Nahkampfangriffswurf trifft, bevor der Zauber endet, erleidet die Kreatur 5 Kälteschaden. Der Zauber endet vorzeitig, wenn du keine temporären Trefferpunkte mehr hast.",
+        "en": "Protective magical frost surrounds you. You gain 5 Temporary Hit Points. If a creature hits you with a melee attack roll before the spell ends, the creature takes 5 Cold damage. The spell ends early if you have no Temporary Hit Points."
+      },
+      "higherLevels": {
+        "de": "Die temporären Trefferpunkte und der Kälteschaden erhöhen sich jeweils um 5 für jeden Zauberplatzgrad über dem 1.",
+        "en": "The Temporary Hit Points and the Cold damage both increase by 5 for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arms-of-hadar",
+      "name": {
+        "de": "Arme von Hadar",
+        "en": "Arms of Hadar"
+      },
+      "level": 1,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "3 Meter",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du beschworst Hadars Macht und lässt Tentakel aus dir hervorbrechen. Jede Kreatur in einer 3 Meter großen Emanation, die von dir ausgeht, führt einen Stärkerettungswurf aus. Bei einem Misserfolg erleidet das Ziel 2W6 Nekrotik und kann bis zum Beginn seines nächsten Zugs keine Reaktionen ausführen. Bei einem Erfolg erleidet das Ziel nur die Hälfte des Schadens.",
+        "en": "Invoking Hadar, you cause tendrils to erupt from yourself. Each creature in a 10-foot Emanation [Area of Effect] originating from you makes a Strength saving throw. On a failed save, a target takes 2d6 Necrotic damage and can't take Reactions until the start of its next turn. On a successful save, a target takes half as much damage only."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 1.",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "compelled-duel",
+      "name": {
+        "de": "Zwangsduell",
+        "en": "Compelled Duel"
+      },
+      "level": 1,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du versuchst, eine Kreatur in ein Duell zu zwingen. Eine Kreatur deiner Wahl, die du in Reichweite siehst, führt einen Weisheitsrettungswurf aus. Bei einem Misserfolg hat das Ziel Nachteil auf Angriffswürfe gegen Kreaturen andere als dich, und es kann sich nicht freiwillig an einen Ort bewegen, der mehr als 9 Meter von dir entfernt ist.\n\nDer Zauber endet, wenn du einen Angriffswurf gegen eine Kreatur ausführst, die nicht das Ziel ist, wenn du einen Zauber auf einen Feind wirks, der nicht das Ziel ist, wenn ein Verbündeter von dir dem Ziel Schaden zufügt oder wenn du deinen Zug mehr als 9 Meter vom Ziel entfernt beendest.",
+        "en": "You try to compel a creature into a duel. One creature that you can see within range makes a Wisdom saving throw. On a failed save, the target has Disadvantage on attack rolls against creatures other than you, and it can't willingly move to a space that is more than 30 feet away from you.\n\nThe spell ends if you make an attack roll against a creature other than the target, if you cast a spell on an enemy other than the target, if an ally of yours damages the target, or if you end your turn more than 30 feet away from the target."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "hail-of-thorns",
+      "name": {
+        "de": "Dornhagel",
+        "en": "Hail of Thorns"
+      },
+      "level": 1,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Wenn du die Kreatur triffst, erschafft dieser Zauber einen Hagel aus Dornen, der aus deiner Fernkampfwaffe oder deinem Munitionssprössling sprießt. Das Ziel des Angriffs und jede Kreatur innerhalb von 1,5 Metern von ihm führen einen Geschicklichkeitsrettungswurf aus und erleiden bei einem Misserfolg 1W10 Stichschaden oder bei einem Erfolg die Hälfte.",
+        "en": "As you hit the creature, this spell creates a rain of thorns that sprouts from your Ranged weapon or ammunition. The target of the attack and each creature within 5 feet of it make a Dexterity saving throw, taking 1d10 Piercing damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 1.",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tashas-hideous-laughter",
+      "name": {
+        "de": "Fürchterlicher Lachanfall",
+        "en": "Tasha's Hideous Laughter"
+      },
+      "level": 1,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Torte und eine Feder)",
+        "en": "V, S, M (a tart and a feather)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Eine Kreatur deiner Wahl in Reichweite, die du sehen kannst, führt einen Weisheitsrettungswurf aus. Misslingt der Wurf, so hat sie für die Wirkungsdauer die Zustände Liegend sowie Kampfunfähig. Während dieser Dauer lacht sie unkontrollierbar, sofern sie lachen kann, und kann den Zustand Liegend bei sich nicht beenden.\n\nAm Ende jedes ihrer Züge und jedes Mal, wenn sie Schaden erleidet, führt die Kreatur einen weiteren Weisheitsrettungswurf aus. Dabei ist sie im Vorteil, wenn der Rettungswurf durch Schaden ausgelöst wurde. Bei einem erfolgreichen Rettungswurf endet der Zauber.",
+        "en": "One creature of your choice that you can see within range makes a Wisdom saving throw. On a failed save, it has the Prone and Incapacitated conditions for the duration. During that time, it laughs uncontrollably if it's capable of laughter, and it can't end the Prone condition on itself.\n\nAt the end of each of its turns and each time it takes damage, it makes another Wisdom saving throw. The target has Advantage on the save if the save is triggered by damage. On a successful save, the spell ends."
+      },
+      "higherLevels": {
+        "de": "Für jeden Zauberplatzgrad über dem 1. kannst du auf eine weitere Kreatur zielen.",
+        "en": "You can target one additional creature for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tensers-floating-disk",
+      "name": {
+        "de": "Schwebende Scheibe",
+        "en": "Tenser's Floating Disk"
+      },
+      "level": 1,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein Tropfen Quecksilber)",
+        "en": "V, S, M (a drop of mercury)"
+      },
+      "duration": {
+        "de": "1 Stunde",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "Dieser Zauber erschafft eine waagerechte runde Fläche aus Energie mit einem Durchmesser von 90 Zentimetern und einer Dicke von 2,5 Zentimetern. Sie schwebt in einem freien Bereich deiner Wahl in Reichweite, den du sehen kannst, 90 Zentimeter über dem Boden. Die Scheibe bleibt für die Wirkungsdauer bestehen und kann bis zu 250 Kilogramm tragen. Wenn sie mit mehr Gewicht belastet wird, endet der Zauber, und alles auf der Scheibe fällt zu Boden.\n\nDie Scheibe ist unbeweglich, solange du dich im Abstand von bis zu sechs Metern von ihr befindest. Entfernst du dich mehr als sechs Meter von ihr, so folgt dir die Scheibe, sodass sie im Abstand von bis zu sechs Metern von dir bleibt. Sie kann sich über unebenes Gelände, Treppen, Abhänge und dergleichen bewegen, jedoch keinen Höhenunterschied von mindestens drei Metern überwinden. Beispielsweise kann die Scheibe nicht über eine drei Meter tiefe Grube hinwegschweben oder eine solche Grube verlassen, falls sie darin erschaffen wurde.\n\nWenn du dich um mehr als 30 Meter von der Scheibe entfernst (meist, weil sie sich nicht um ein Hindernis bewegen kann, um dir zu folgen), endet der Zauber.",
+        "en": "This spell creates a circular, horizontal plane of force, 3 feet in diameter and 1 inch thick, that floats 3 feet above the ground in an unoccupied space of your choice that you can see within range. The disk remains for the duration and can hold up to 500 pounds. If more weight is placed on it, the spell ends, and everything on the disk falls to the ground.\n\nThe disk is immobile while you are within 20 feet of it. If you move more than 20 feet away from it, the disk follows you so that it remains within 20 feet of you. It can move across uneven terrain, up or down stairs, slopes and the like, but it can't cross an elevation change of 10 feet or more. For example, the disk can't move across a 10-foot-deep pit, nor could it leave such a pit if it was created at the bottom.\n\nIf you move more than 100 feet from the disk (typically because it can't move around an obstacle to follow you), the spell ends."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "thunderous-smite",
+      "name": {
+        "de": "Donnernder Schlag",
+        "en": "Thunderous Smite"
+      },
+      "level": 1,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Dein Schlag erklingt mit Donner, der bis zu 90 Meter von dir entfernt hörbar ist, und das Ziel erleidet zusätzlichen 2W6 Donner von dem Angriff. Zusätzlich, wenn das Ziel eine Kreatur ist, muss es einen Stärkerettungswurf bestehen oder 3 Meter von dir weggestoßen werden und den Zustand Liegend erhalten.",
+        "en": "Your strike rings with thunder that is audible within 300 feet of you, and the target takes an extra 2d6 Thunder damage from the attack. Additionally, if the target is a creature, it must succeed on a Strength saving throw or be pushed 10 feet away from you and have the Prone condition."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 1.",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "witch-bolt",
+      "name": {
+        "de": "Hexenschuss",
+        "en": "Witch Bolt"
+      },
+      "level": 1,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein vom Blitz getroffener Zweig)",
+        "en": "V, S, M (a twig struck by lightning)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Ein Strahl aus knisternder Energie schießt auf eine Kreatur in Reichweite zu und bildet einen anhaltenden Lichtbogen zwischen dir und dem Ziel. Führe einen Fernkampf-Zauberangriff gegen es aus. Bei einem Treffer erleidet das Ziel 2W12 Blitzschaden.\n\nIn jedem deiner folgenden Züge kannst du eine Bonusaktion ausführen, um dem Ziel automatisch 1W12 Blitzschaden zuzufügen, selbst wenn der erste Angriff daneben ging.\n\nDer Zauber endet, wenn das Ziel jemals außerhalb der Reichweite des Zaubers ist oder wenn es Totaler Deckung vor dir hat.",
+        "en": "A beam of crackling energy lances toward a creature within range, forming a sustained arc of lightning between you and the target. Make a ranged spell attack against it. On a hit, the target takes 2d12 Lightning damage.\n\nOn each of your subsequent turns, you can take a Bonus Action to deal 1d12 Lightning damage to the target automatically, even if the first attack missed.\n\nThe spell ends if the target is ever outside the spell's range or if it has Total Cover from you."
+      },
+      "higherLevels": {
+        "de": "Der anfängliche Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 1.",
+        "en": "The initial damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "wrathful-smite",
+      "name": {
+        "de": "Zorniger Schlag",
+        "en": "Wrathful Smite"
+      },
+      "level": 1,
+      "school": {
+        "de": "Nekromantie",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "1 Minute",
+        "en": "1 Minute"
+      },
+      "description": {
+        "de": "Das Ziel erleidet zusätzlichen 1W6 Nekrotik von dem Angriff, und es muss einen Weisheitsrettungswurf bestehen oder hat den Zustand Verängstigt, bis der Zauber endet. Am Ende jedes seiner Zugs wiederholt das Verängstigte Ziel den Wurf und beendet den Zauber auf sich selbst bei einem Erfolg.",
+        "en": "The target takes an extra 1d6 Necrotic damage from the attack, and it must succeed on a Wisdom saving throw or have the Frightened condition until the spell ends. At the end of each of its turns, the Frightened target repeats the save, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 1.",
+        "en": "The damage increases by  for each spell slot level above 1."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arcane-vigor",
+      "name": {
+        "de": "Arkaner Schwung",
+        "en": "Arcane Vigor"
+      },
+      "level": 2,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du greifst auf deine Lebenskraft zurück, um dich zu heilen. Würfle ein oder zwei deiner ungenutzten Trefferpunkt-Würfel und erhalte eine Anzahl von Trefferpunkten, die dem Ergebnis des Wurfs plus deinem Zauberwirken-Attributsmodifikator entspricht. Diese Würfel werden dann verbraucht.",
+        "en": "You tap into your life force to heal yourself. Roll one or two of your unexpended Hit Point Dice, and regain a number of Hit Points equal to the roll's total plus your spellcasting ability modifier. Those dice are then expended."
+      },
+      "higherLevels": {
+        "de": "Die Anzahl der ungenutzten Trefferwürfel, die du würfeln kannst, erhöht sich um eins für jeden Zauberplatzgrad über dem 2.",
+        "en": "The number of unexpended Hit Dice you can roll increases by one for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "beast-sense",
+      "name": {
+        "de": "Tierische Sinne",
+        "en": "Beast Sense"
+      },
+      "level": 2,
+      "school": {
+        "de": "Erkenntnismagie",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "G",
+        "en": "S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du berührst ein bereites Tier. Für die Wirkungsdauer kannst du durch die Sinne des Tieres sowie durch deine eigenen wahrnehmen. Wenn du durch die Sinne des Tieres wahrnimmst, profitierst du von allen besonderen Sinnen, die es hat.",
+        "en": "You touch a willing Beast. For the duration, you can perceive through the Beast's senses as well as your own. When perceiving through the Beast's senses, you benefit from any special senses it has."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "cloud-of-daggers",
+      "name": {
+        "de": "Dolchwolke",
+        "en": "Cloud of Daggers"
+      },
+      "level": 2,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein Glassplitter)",
+        "en": "V, S, M (a sliver of glass)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du beschworst sich drehende Dolche in einem 1,5 Meter großen Würfel, der auf einem Punkt in Reichweite zentriert ist. Jede Kreatur in diesem Bereich erleidet 4W4 Singschaden. Eine Kreatur erleidet diesen Schaden auch, wenn sie in den Würfel eintritt oder ihren Zug dort beendet oder wenn der Würfel sich in ihren Raum bewegt. Eine Kreatur erleidet diesen Schaden nur einmal pro Zug.\n\nIn deinen späteren Zügen kannst du eine  Aktion ausführen, um den Würfel bis zu 9 Meter zu teleportieren.",
+        "en": "You conjure spinning daggers in a 5-foot Cube [Area of Effect] centered on a point within range. Each creature in that area takes 4d4 Slashing damage. A creature also takes this damage if it enters the Cube [Area of Effect] or ends its turn there or if the Cube [Area of Effect] moves into its space. A creature takes this damage only once per turn.\n\nOn your later turns, you can take a  action to teleport the Cube [Area of Effect] up to 30 feet."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 2.",
+        "en": "The damage increases by  for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "cordon-of-arrows",
+      "name": {
+        "de": "Pfeilsperre",
+        "en": "Cordon of Arrows"
+      },
+      "level": 2,
+      "school": {
+        "de": "Verwandlung",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G, M (vier oder mehr Pfeile oder Bolzen)",
+        "en": "V, S, M (four or more arrows or bolts)"
+      },
+      "duration": {
+        "de": "8 Stunden",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "Du berührst bis zu vier nichtmagische Pfeile oder Bolzen und pflanzt sie in deinen Raum in den Boden. Bis der Zauber endet, kann die Munition nicht physisch entwurzelt werden, und immer wenn eine Kreatur außer dir zum ersten Mal in einem Zug einen Bereich innerhalb von 9 Metern von der Munition betritt oder ihren Zug dort beendet, fliegt ein Stück Munition auf und trifft sie. Die Kreatur muss einen Geschicklichkeitsrettungswurf bestehen oder 2W4 Stichschaden erleiden. Das Stück Munition wird dann zerstört. Der Zauber endet, wenn keine der Munition mehr im Boden steckt.\n\nWenn du diesen Zauber wirkst, kannst du alle Kreaturen, die du wählst, bezeichnen, und der Zauber ignoriert sie.",
+        "en": "You touch up to four nonmagical Arrows or Bolts and plant them in the ground in your space. Until the spell ends, the ammunition can't be physically uprooted, and whenever a creature other than you enters a space within 30 feet of the ammunition for the first time on a turn or ends its turn there, one piece of ammunition flies up to strike it. The creature must succeed on a Dexterity saving throw or take 2d4 Piercing damage. The piece of ammunition is then destroyed. The spell ends when none of the ammunition remains planted in the ground.\n\nWhen you cast this spell, you can designate any creatures you choose, and the spell ignores them."
+      },
+      "higherLevels": {
+        "de": "Die Menge der Munition, die betroffen sein kann, erhöht sich um zwei für jeden Zauberplatzgrad über dem 2.",
+        "en": "The amount of ammunition that can be affected increases by two for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "crown-of-madness",
+      "name": {
+        "de": "Wahnsinnskrone",
+        "en": "Crown of Madness"
+      },
+      "level": 2,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "36 Meter",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Eine Kreatur, die du in Reichweite siehst, muss einen Weisheitsrettungswurf bestehen oder den Zustand Verzaubert für die Wirkungsdauer erhalten. Die Kreatur besteht den Wurf automatisch, wenn sie kein Humanoid ist.\n\nEine spektrale Krone erscheint auf dem Kopf des Verzauberten, und es muss vor seiner Bewegung in jedem seiner Zug seine Aktion verwenden, um einen Nahkampfangriff gegen eine Kreatur außer sich selbst auszuführen, die du mental auswählst. Das Ziel kann normal auf seinen Zug handeln, wenn du keine Kreatur auswählst oder keine Kreatur in seiner Reichweite ist. Das Ziel wiederholt den Wurf am Ende jedes seiner Zugs und beendet den Zauber auf sich selbst bei einem Erfolg.\n\nIn deinen späteren Zugs musst du die  Aktion ausführen, um die Kontrolle über das Ziel aufrechtzuerhalten, oder der Zauber endet.",
+        "en": "One creature that you can see within range must succeed on a Wisdom saving throw or have the Charmed condition for the duration. The creature succeeds automatically if it isn't Humanoid.\n\nA spectral crown appears on the Charmed target's head, and it must use its action before moving on each of its turns to make a melee attack against a creature other than itself that you mentally choose. The target can act normally on its turn if you choose no creature or if no creature is within its reach. The target repeats the save at the end of each of its turns, ending the spell on itself on a success.\n\nOn your later turns, you must take the  action to maintain control of the target, or the spell ends."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "melfs-acid-arrow",
+      "name": {
+        "de": "Säurepfeil",
+        "en": "Melf's Acid Arrow"
+      },
+      "level": 2,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein zerstoßenes Rhabarberblatt)",
+        "en": "V, S, M (powdered rhubarb leaf)"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Auf ein Ziel in Reichweite schießt ein schimmernder grüner Pfeil, der in einem Sprühregen aus Säure explodiert. Führe einen Fernkampf-Zauberangriff gegen das Ziel aus. Bei einem Treffer erleidet das Ziel 4W4 Säureschaden sowie 2W4 Säureschaden am Ende seines nächsten Zugs. Bei einem Misserfolg spritzt dennoch genügend Säure auf das Ziel, um ihm die Hälfte des anfänglichen Schadens zuzufügen.",
+        "en": "A shimmering green arrow streaks toward a target within range and bursts in a spray of acid. Make a ranged spell attack against the target. On a hit, the target takes 4d4 Acid damage and 2d4 Acid damage at the end of its next turn. On a miss, the arrow splashes the target with acid for half as much of the initial damage only."
+      },
+      "higherLevels": {
+        "de": "Für jeden Zauberplatzgrad über dem 2. werden anfänglicher sowie späterer Schaden jeweils um 1W4 erhöht.",
+        "en": "The damage (both initial and later) increases by  for each spell slot level above 2."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "nystuls-magic-aura",
+      "name": {
+        "de": "Nystuls magische Aura",
+        "en": "Nystul's Magic Aura"
+      },
+      "level": 2,
+      "school": {
+        "de": "Illusion",
+        "en": "Illusion"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G, M (ein kleines Seidenquadrat)",
+        "en": "V, S, M (a small square of silk)"
+      },
+      "duration": {
+        "de": "24 Stunden",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "Mit einer Berührung platzierst du eine Illusion auf einer bereitwilligen Kreatur oder einem Gegenstand, der nicht getragen oder getragen wird. Eine Kreatur erhält die Maskenwirkung unten, und ein Objekt erhält die Falsche-Aura-Wirkung unten. Die Wirkung hält für die Wirkungsdauer an. Wenn du den Zauber täglich für 30 Tage auf dasselbe Ziel wirkst, hält die Illusion, bis sie gebannt wird.\n\nWähle einen Kreaturentyp, der nicht der tatsächliche Typ des Ziels ist. Zauber und andere magische Effekte behandeln das Ziel, als wäre es ein Kreatur des gewählten Typs.\n\nDu änderst, wie das Ziel auf Zauber und magische Effekte erscheint, die magische Auren erkennen, wie zum Beispiel Magie entdecken. Du kannst einen nichtmagischen Gegenstand magisch erscheinen lassen, einen magischen Gegenstand nichtmagisch erscheinen lassen oder die Aura des Objekts so ändern, dass sie einer von dir gewählten Schule der Magie zugehört.",
+        "en": "With a touch, you place an illusion on a willing creature or an object that isn't being worn or carried. A creature gains the Mask effect below, and an object gains the False Aura effect below. The effect lasts for the duration. If you cast the spell on the same target every day for 30 days, the illusion lasts until dispelled.\n\nChoose a creature type other than the target's actual type. Spells and other magical effects treat the target as if it were a creature of the chosen type.\n\nYou change the way the target appears to spells and magical effects that detect magical auras, such as Detect Magic. You can make a nonmagical object appear magical, make a magic item appear nonmagical, or change the object's aura so that it appears to belong to a school of magic you choose."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-beast",
+      "name": {
+        "de": "Tier beschwören",
+        "en": "Summon Beast"
+      },
+      "level": 2,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Feder, ein Büschel Fell und ein Fischschwanz in einer vergoldeten Eichel im Wert von 200+ GP)",
+        "en": "V, S, M ({'text': 'a feather, tuft of fur, and fish tail inside a gilded acorn worth 200+ GP', 'cost': 20000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen Bestiengeist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Bestiengeist-Steckbrief. Wenn du diesen Zauber wirkst, wähle eine Umgebung: Luft, Land, oder Water. Die Kreatur ähnelt einem Tier deiner Wahl, das in der gewählten Umgebung beheimatet ist, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth a bestial spirit. It manifests in an unoccupied space that you can see within range and uses the Bestial Spirit stat block. When you cast the spell, choose an environment: Air, Land, or Water. The creature resembles an animal of your choice that is native to the chosen environment, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "aura-of-vitality",
+      "name": {
+        "de": "Aura der Vitalität",
+        "en": "Aura of Vitality"
+      },
+      "level": 3,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Eine Aura strahlt in einer 9 Meter großen Emanation von dir aus für die Wirkungsdauer. Wenn du die Aura erschaffst und zu Beginn jedes deiner Zugs, solange sie besteht, kannst du einer Kreatur darin 2W6 Trefferpunkte wiederherstellen.",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. When you create the aura and at the start of each of your turns while it persists, you can restore 2d6 Hit Points to one creature in it."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "blinding-smite",
+      "name": {
+        "de": "Blendender Schlag",
+        "en": "Blinding Smite"
+      },
+      "level": 3,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "1 Minute",
+        "en": "1 Minute"
+      },
+      "description": {
+        "de": "Das Ziel, das von dem Schlag getroffen wird, erleidet zusätzlichen 3W8 Gleißend von dem Angriff, und das Ziel hat den Zustand Geblendet, bis der Zauber endet. Am Ende jedes seiner Zugs macht das Geblendete Ziel einen Konstitutionsrettungswurf und beendet den Zauber auf sich selbst bei einem Erfolg.",
+        "en": "The target hit by the strike takes an extra 3d8 Radiant damage from the attack, and the target has the Blinded condition until the spell ends. At the end of each of its turns, the Blinded target makes a Constitution saving throw, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "Der zusätzliche Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 3.",
+        "en": "The extra damage increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "conjure-barrage",
+      "name": {
+        "de": "Beschworener Hagel",
+        "en": "Conjure Barrage"
+      },
+      "level": 3,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Nahkampf- oder Fernkampfwaffe im Wert von mindestens 1 CP)",
+        "en": "V, S, M ({'text': 'a Melee or Ranged weapon worth at least 1 CP', 'cost': 1})"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du schwingst die Waffe, die du zum Wirken des Zaubers verwendet hast, und beschworst ähnliche spectrale Waffen (oder Munition, die der Waffe angemessen ist) die nach vorne starten und dann verschwinden. Jede Kreatur deiner Wahl, die du in einem 18 Meter großen Kegel siehst, führt einen Geschicklichkeitsrettungswurf aus und erleidet bei einem Misserfolg 5W8 Wucht oder bei einem Erfolg die Hälfte.",
+        "en": "You brandish the weapon used to cast the spell and conjure similar spectral weapons (or ammunition appropriate to the weapon) that launch forward and then disappear. Each creature of your choice that you can see in a 60-foot Cone [Area of Effect] makes a Dexterity saving throw, taking 5d8 Force damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "Der Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 3.",
+        "en": "The damage increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "crusaders-mantle",
+      "name": {
+        "de": "Mantel des Kreuzfahrers",
+        "en": "Crusader's Mantle"
+      },
+      "level": 3,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du strahlst eine magische Aura in einer 9 Meter großen Emanation aus. Während sie in der Aura sind, fügen du und deine Verbündeten bei Treffern mit einer Waffe oder einem Waffenschlag zusätzlich 1W4 Gleißend zu.",
+        "en": "You radiate a magical aura in a 30-foot Emanation [Area of Effect]. While in the aura, you and your allies each deal an extra 1d4 Radiant damage when hitting with a weapon or an Unarmed Strike."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "elemental-weapon",
+      "name": {
+        "de": "Elementarwaffe",
+        "en": "Elemental Weapon"
+      },
+      "level": 3,
+      "school": {
+        "de": "Verwandlung",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Eine nichtmagische Waffe, die du berührst, wird zu einer magischen Waffe. Wähle einen der folgenden Schadentypen: Säure, Kälte, Feuer, Blitz oder Donner. Für die Wirkungsdauer hat die Waffe einen +1-Bonus auf Angriffswürfe und fügt bei einem Treffer zusätzlichen 1W4 Schaden des gewählten Typs zu.",
+        "en": "A nonmagical weapon you touch becomes a magic weapon. Choose one of the following damage types: Acid, Cold, Fire, Lightning, or Thunder. For the duration, the weapon has a +1 bonus to attack rolls and deals an extra 1d4 damage of the chosen type when it hits."
+      },
+      "higherLevels": {
+        "de": "Wenn du einen Zauberplatz der Stufe 5-6 verwendest, erhöht sich der Bonus auf Angriffswürfe auf +2, und der zusätzliche Schaden erhöht sich auf 2W4. Wenn du einen Zauberplatz der Stufe 7+ verwendest, erhöht sich der Bonus auf +3, und der zusätzliche Schaden erhöht sich auf 3W4.",
+        "en": "If you use a level 5-6 spell slot, the bonus to attack rolls increases to +2, and the extra damage increases to 2d4. If you use a level 7+ spell slot, the bonus increases to +3, and the extra damage increases to 3d4."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "feign-death",
+      "name": {
+        "de": "Vortäuschen des Todes",
+        "en": "Feign Death"
+      },
+      "level": 3,
+      "school": {
+        "de": "Nekromantie",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G, M (eine Prise Friedhofserde)",
+        "en": "V, S, M (a pinch of graveyard dirt)"
+      },
+      "duration": {
+        "de": "1 Stunde",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "Du berührst eine bereitwillige Kreatur und versetzt sie in einen kataleptischen Zustand, der äußerlich nicht von dem Tod zu unterscheiden ist.\n\nFür die Wirkungsdauer erscheint das Ziel für äußere Untersuchungen und für Zauber, die den Status des Ziels bestimmen, als tot. Das Ziel hat die Zustände Geblendet und Kampfunfähig, und seine Geschwindigkeit ist 0.\n\nDas Ziel hat zudem Widerstand gegen allen Schaden außer psychischen Schaden, und es ist immun gegen den Zustand Vergiftet.",
+        "en": "You touch a willing creature and put it into a cataleptic state that is indistinguishable from death.\n\nFor the duration, the target appears dead to outward inspection and to spells used to determine the target's status. The target has the Blinded and Incapacitated conditions, and its Speed is 0.\n\nThe target also has Resistance to all damage except Psychic damage, and it has Immunity to the Poisoned condition."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "hunger-of-hadar",
+      "name": {
+        "de": "Hadars Hunger",
+        "en": "Hunger of Hadar"
+      },
+      "level": 3,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "45 Meter",
+        "en": "150 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein eingelegtes Tentakel)",
+        "en": "V, S, M (a pickled tentacle)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du öffnest ein Tor zum Fernen Reich, einer Region, die von unsagbaren Schrecken bevölkert ist. Eine 6 Meter große Dunkelheits-Sphäre erscheint, zentriert auf einen Punkt in Reichweite und hält für die Wirkungsdauer an. Die Sphäre ist Schwieriges Gelände und ist erfüllt mit seltsamen Flüstern und Schlürfgeräuschen, die bis zu 9 Meter entfernt hörbar sind. Kein Licht, magisch oder nicht, kann den Bereich erhellen, und Kreaturen, die sich vollständig darin befinden, haben den Zustand Geblendet.\n\nJede Kreatur, die ihren Zug im Bereich beginnt, erleidet 2W6 Kälteschaden. Jede Kreatur, die ihren Zug dort beendet, muss einen Geschicklichkeitsrettungswurf bestehen oder 2W6 Säureschaden von anderenweltlichen Tentakeln erleiden.",
+        "en": "You open a gateway to the Far Realm, a region infested with unspeakable horrors. A 20-foot-radius Sphere [Area of Effect] of Darkness appears, centered on a point within range and lasting for the duration. The Sphere [Area of Effect] is Difficult Terrain, and it is filled with strange whispers and slurping noises, which can be heard up to 30 feet away. No light, magical or otherwise, can illuminate the area, and creatures fully within it have the Blinded condition.\n\nAny creature that starts its turn in the area takes 2d6 Cold damage. Any creature that ends its turn there must succeed on a Dexterity saving throw or take 2d6 Acid damage from otherworldly tentacles."
+      },
+      "higherLevels": {
+        "de": "Der Kälte- oder Säureschaden (deine Wahl) erhöht sich um  für jeden Zauberplatzgrad über dem 3.",
+        "en": "The Cold or Acid damage (your choice) increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "leomunds-tiny-hut",
+      "name": {
+        "de": "Winzige Hütte",
+        "en": "Leomund's Tiny Hut"
+      },
+      "level": 3,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "1 Minute",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "3 Meter",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Kristallperle)",
+        "en": "V, S, M (a crystal bead)"
+      },
+      "duration": {
+        "de": "8 Stunden",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "Um dich herum entsteht eine Ausströmung von drei Metern und bleibt für die Wirkungsdauer ortsfest. Der Zauber misslingt beim Wirken, wenn die Ausströmung nicht groß genug ist, um alle Kreaturen in ihrem Bereich vollständig aufzunehmen.\n\nKreaturen und Gegenstände, die sich beim Wirken des Zaubers innerhalb der Ausströmung befinden, können sich frei darin bewegen oder bewegt werden. Andere Kreaturen und Gegenstände können sie nicht passieren. Zauber des höchstens 3. Grades können nicht durch die Aura hindurch gewirkt werden, und ihre Effekte können sich nicht bis in die Aura erstrecken.\n\nDie Atmosphäre innerhalb der Ausströmung ist unabhängig vom Wetter außerhalb angenehm und trocken. Für die Wirkungsdauer kannst du befehlen, dass innerhalb der Aura dämmriges Licht oder Dunkelheit herrschen soll (keine Aktion erforderlich). Die Ausströmung ist von außen undurchsichtig und erscheint in einer Farbe deiner Wahl. Von innen ist sie durchsichtig.\n\nDer Zauber endet vorzeitig, wenn du die Ausströmung verlässt oder den Zauber erneut wirkst.",
+        "en": "A 10-foot Emanation [Area of Effect] springs into existence around you and remains stationary for the duration. The spell fails when you cast it if the Emanation [Area of Effect] isn't big enough to fully encapsulate all creatures in its area.\n\nCreatures and objects within the Emanation [Area of Effect] when you cast the spell can move through it freely. All other creatures and objects are barred from passing through it. Spells of level 3 or lower can't be cast through it, and the effects of such spells can't extend into it.\n\nThe atmosphere inside the Emanation [Area of Effect] is comfortable and dry, regardless of the weather outside. Until the spell ends, you can command the interior to have Dim Light or Darkness (no action required). The Emanation [Area of Effect] is opaque from the outside and of any color you choose, but it's transparent from the inside.\n\nThe spell ends early if you leave the Emanation [Area of Effect] or if you cast it again."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "lightning-arrow",
+      "name": {
+        "de": "Blitzpfeil",
+        "en": "Lightning Arrow"
+      },
+      "level": 3,
+      "school": {
+        "de": "Verwandlung",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Wenn dein Angriff trifft oder daneben geht, verwandelt sich die Waffe oder Munition, die du verwendest, in einen Blitzstrahl. Anstatt Schaden oder andere Effekte aus dem Angriff zu nehmen, erleidet das Ziel 4W8 Blitzschaden bei einem Treffer oder die Hälfte bei einem Fehlschuss. Jede Kreatur innerhalb von 3 Meter um das Ziel führt dann einen Geschicklichkeitsrettungswurf aus, wobei es bei einem Misserfolg 2W8 Blitzschaden oder bei einem Erfolg die Hälfte erleidet.\n\nDie Waffe oder Munition kehrt dann zu ihrer normalen Form zurück.",
+        "en": "As your attack hits or misses the target, the weapon or ammunition you're using transforms into a lightning bolt. Instead of taking any damage or other effects from the attack, the target takes 4d8 Lightning damage on a hit or half as much damage on a miss. Each creature within 10 feet of the target then makes a Dexterity saving throw, taking 2d8 Lightning damage on a failed save or half as much damage on a successful one.\n\nThe weapon or ammunition then returns to its normal form."
+      },
+      "higherLevels": {
+        "de": "Der Schaden für beide Effekte des Zaubers erhöht sich um  für jeden Zauberplatzgrad über dem 3.",
+        "en": "The damage for both effects of the spell increases by  for each spell slot level above 3."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-fey",
+      "name": {
+        "de": "Fey beschwören",
+        "en": "Summon Fey"
+      },
+      "level": 3,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine vergoldete Blume im Wert von 300+ GP)",
+        "en": "V, S, M ({'text': 'a gilded flower worth 300+ GP', 'cost': 30000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen Feen-Geist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Feen-Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle eine Stimmung: Rauchend, Heiter oder Schelmisch. Die Kreatur ähnelt einer Fee deiner Wahl, die von der gewählten Stimmung geprägt ist, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth a Fey spirit. It manifests in an unoccupied space that you can see within range and uses the Fey Spirit stat block. When you cast the spell, choose a mood: Fuming, Mirthful, or Tricksy. The creature resembles a Fey creature of your choice marked by the chosen mood, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-undead",
+      "name": {
+        "de": "Untote beschwören",
+        "en": "Summon Undead"
+      },
+      "level": 3,
+      "school": {
+        "de": "Nekromantie",
+        "en": "Necromancy"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein vergoldeter Schädel im Wert von 300+ GP)",
+        "en": "V, S, M ({'text': 'a gilded skull worth 300+ GP', 'cost': 30000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen Untoten-Geist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Untoten-Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle die Form der Kreatur: Geistig, Fäulnis oder Skelettisch. Der Geist ähnelt einer Untoten-Kreatur mit der gewählten Form, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth an Undead spirit. It manifests in an unoccupied space that you can see within range and uses the Undead Spirit stat block. When you cast the spell, choose the creature's form: Ghostly, Putrid, or Skeletal. The spirit resembles an Undead creature with the chosen form, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "aura-of-purity",
+      "name": {
+        "de": "Aura der Reinheit",
+        "en": "Aura of Purity"
+      },
+      "level": 4,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 10 Minuten",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "Eine Aura strahlt in einer 9 Meter großen Emanation von dir aus für die Wirkungsdauer. Während sie in der Aura sind, haben du und deine Verbündeten Widerstand gegen Giftschaden und Vorteil auf Rettungswürfe, um die Zustände Geblendet, Verzaubert, Taub, Verängstigt, Gelähmt, Vergiftet oder Betäubt zu vermeiden oder zu beenden.",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. While in the aura, you and your allies have Resistance to Poison damage and Advantage on saving throws to avoid or end effects that include the Blinded, Charmed, Deafened, Frightened, Paralyzed, Poisoned, or Stunned condition."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "evards-black-tentacles",
+      "name": {
+        "de": "Schwarze Tentakel",
+        "en": "Evard's Black Tentacles"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein Tentakel)",
+        "en": "V, S, M (a tentacle)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Ein quadratischer Bodenbereich mit sechs Metern Kantenlänge in Reichweite, den du sehen kannst, wird von tiefschwarzen zuckenden Tentakeln erfüllt. Die Tentakel verwandeln diesen Bereich für die Wirkungsdauer in schwieriges Gelände.\n\nJede Kreatur in diesem Bereich führt einen Stärkerettungswurf aus. Misslingt der Wurf, so erleidet sie 3W6 Wuchtschaden und ist festgesetzt, bis der Zauber endet. Auch Kreaturen, die sich in den Bereich begeben oder ihren Zug darin beenden, führen den Rettungswurf aus. Jede Kreatur führt den Rettungswurf nur einmal pro Zug aus.\n\nEine festgesetzte Kreatur kann als Aktion einen Stärkewurf (Athletik) gegen deinen Zauberrettungswurf-SG ausführen. Bei einem Erfolg endet der Zustand bei ihr.",
+        "en": "Squirming, ebony tentacles fill a 20-foot square on ground that you can see within range. For the duration, these tentacles turn the ground in that area into Difficult Terrain.\n\nEach creature in that area makes a Strength saving throw. On a failed save, it takes 3d6 Bludgeoning damage, and it has the Restrained condition until the spell ends. A creature also makes that save if it enters the area or ends its turn there. A creature makes that save only once per turn.\n\nA Restrained creature can take an action to make a Strength () check against your spell save DC, ending the condition on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "fount-of-moonlight",
+      "name": {
+        "de": "Mondlichtquelle",
+        "en": "Fount of Moonlight"
+      },
+      "level": 4,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 10 Minuten",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "Ein kühles Licht umhüllt deinen Körper für die Wirkungsdauer und spendet helles Licht in einem Radius von 6 Meter und zusätzliches Dämmriges Licht für weitere 6 Meter.\n\nBis der Zauber endet, hast du Widerstand gegen Gleißend, und deine Nahkampfangriffe fügen bei einem Treffer zusätzlichen 2W6 Gleißend zu.\n\nZusätzlich kannst du sofort nach Erhalt von Schaden durch eine Kreatur, die du innerhalb von 18 Meter von dir siehst, eine Reaktion ausführen, um die Kreatur zu zwingen, einen Konstitutionsrettungswurf zu machen. Bei einem Misserfolg hat die Kreatur den Zustand Geblendet bis zum Ende deines nächsten Zugs.",
+        "en": "A cool light wreathes your body for the duration, emitting Bright Light in a 20-foot radius and Dim Light for an additional 20 feet.\n\nUntil the spell ends, you have Resistance to Radiant damage, and your melee attacks deal an extra 2d6 Radiant damage on a hit.\n\nIn addition, immediately after you take damage from a creature you can see within 60 feet of yourself, you can take a Reaction to force the creature to make a Constitution saving throw. On a failed save, the creature has the Blinded condition until the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "grasping-vine",
+      "name": {
+        "de": "Greifende Ranke",
+        "en": "Grasping Vine"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du beschworst eine Ranke, die von einer Oberfläche in einem unbelegten Raum, den du in Reichweite siehst, sprießt. Die Ranke hält für die Wirkungsdauer.\n\nFühre einen Nahkampf-Zauberangriff gegen eine Kreatur innerhalb von 9 Meter um die Ranke aus. Bei einem Treffer erleidet das Ziel 4W8 Wucht und wird bis zu 9 Meter zur Ranke gezogen; wenn das Ziel riesig oder kleiner ist, hat es den Zustand Gegriffen (Flucht-SG gleich deinem Zauberrettungswurf-SG). Die Ranke kann nur eine Kreatur gleichzeitig greifen, und du kannst die Ranke veranlassen, eine Gegriffene Kreatur freizulassen (keine Aktion erforderlich).\n\nAls Bonusaktion in deinen späteren Zugs kannst du den Angriff gegen eine Kreatur innerhalb von 9 Meter um die Ranke wiederholen.",
+        "en": "You conjure a vine that sprouts from a surface in an unoccupied space that you can see within range. The vine lasts for the duration.\n\nMake a melee spell attack against a creature within 30 feet of the vine. On a hit, the target takes 4d8 Bludgeoning damage and is pulled up to 30 feet toward the vine; if the target is Huge or smaller, it has the Grappled condition (escape DC equal to your spell save DC). The vine can grapple only one creature at a time, and you can cause the vine to release a Grappled creature (no action required).\n\nAs a Bonus Action on your later turns, you can repeat the attack against a creature within 30 feet of the vine."
+      },
+      "higherLevels": {
+        "de": "Die Anzahl der Kreaturen, die die Ranke greifen kann, erhöht sich um eine für jeden Zauberplatzgrad über dem 4.",
+        "en": "The number of creatures the vine can grapple increases by one for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "leomunds-secret-chest",
+      "name": {
+        "de": "Geheime Truhe",
+        "en": "Leomund's Secret Chest"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G, M (vier oder mehr Pfeile oder Bolzen)",
+        "en": "V, S, M ({'text': 'a chest, 3 feet by 2 feet by 2 feet, constructed from rare materials worth 5,000+ GP, and a Tiny replica of the chest made from the same materials worth 50+ GP', 'cost': 500000})"
+      },
+      "duration": {
+        "de": "8 Stunden",
+        "en": ""
+      },
+      "description": {
+        "de": "Du berührst bis zu vier nichtmagische Pfeile oder Bolzen und pflanzt sie in deinen Raum in den Boden. Bis der Zauber endet, kann die Munition nicht physisch entwurzelt werden, und immer wenn eine Kreatur außer dir zum ersten Mal in einem Zug einen Bereich innerhalb von 9 Metern von der Munition betritt oder ihren Zug dort beendet, fliegt ein Stück Munition auf und trifft sie. Die Kreatur muss einen Geschicklichkeitsrettungswurf bestehen oder 2W4 Stichschaden erleiden. Das Stück Munition wird dann zerstört. Der Zauber endet, wenn keine der Munition mehr im Boden steckt.\n\nWenn du diesen Zauber wirkst, kannst du alle Kreaturen, die du wählst, bezeichnen, und der Zauber ignoriert sie.",
+        "en": "You hide a chest and all its contents on the Ethereal Plane. You must touch the chest and the miniature replica that serve as Material components for the spell. The chest can contain up to 12 cubic feet of nonliving material (3 feet by 2 feet by 2 feet).\n\nWhile the chest remains on the Ethereal Plane, you can take a  action and touch the replica to recall the chest. It appears in an unoccupied space on the ground within 5 feet of you. You can send the chest back to the Ethereal Plane by taking a  action to touch the chest and the replica.\n\nAfter 60 days, there is a cumulative  chance at the end of each day that the spell ends. The spell also ends if you cast this spell again or if the Tiny replica chest is destroyed. If the spell ends and the larger chest is on the Ethereal Plane, the chest remains there for you or someone else to find."
+      },
+      "higherLevels": {
+        "de": "Die Menge der Munition, die betroffen sein kann, erhöht sich um zwei für jeden Zauberplatzgrad über dem 2.",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-faithful-hound",
+      "name": {
+        "de": "Treuer Hund",
+        "en": "Mordenkainen's Faithful Hound"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Silberpfeife)",
+        "en": "V, S, M (a silver whistle)"
+      },
+      "duration": {
+        "de": "8 Stunden",
+        "en": "8 Hours"
+      },
+      "description": {
+        "de": "Du beschwörst in einem freien Bereich in Reichweite, den du sehen kannst, einen geisterhaften Wachhund. Dieser bleibt für die Wirkungsdauer bestehen, oder bis ihr euch weiter als 90 Meter voneinander entfernt.\n\nNiemand außer dir kann den Hund sehen, und er ist immateriell und unverwundbar. Wenn sich ihm eine Kreatur von mindestens kleiner Größe auf höchstens neun Meter nähert, ohne zuvor das Kennwort zu sprechen, das du beim Wirken des Zaubers festgelegt hast, bellt der Hund laut. Der Hund hat Wahrer Blick mit einer Reichweite von neun Metern.\n\nZu Beginn jedes deiner Züge versucht der Hund, einen Gegner im Abstand von bis zu 1,5 Metern von sich zu beißen. Der Gegner muss einen Geschicklichkeitsrettungswurf bestehen, oder er erleidet 4W8 Energieschaden.\n\nIn deinen folgenden Zügen kannst du eine magische Aktion ausführen, um den Hund bis zu neun Meter weit zu bewegen.",
+        "en": "You conjure a phantom watchdog in an unoccupied space that you can see within range. The hound remains for the duration or until the two of you are more than 300 feet apart from each other.\n\nNo one but you can see the hound, and it is intangible and invulnerable. When a Small or larger creature comes within 30 feet of it without first speaking the password that you specify when you cast this spell, the hound starts barking loudly. The hound has  with a range of 30 feet.\n\nAt the start of each of your turns, the hound attempts to bite one enemy within 5 feet of it. That enemy must succeed on a Dexterity saving throw or take 4d8 Force damage.\n\nOn your later turns, you can take a  action to move the hound up to 30 feet."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-private-sanctum",
+      "name": {
+        "de": "Privates Heiligtum",
+        "en": "Mordenkainen's Private Sanctum"
+      },
+      "level": 4,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "10 Minuten",
+        "en": "10 Minutes"
+      },
+      "range": {
+        "de": "36 Meter",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein dünnes Bleiblech)",
+        "en": "V, S, M (a thin sheet of lead)"
+      },
+      "duration": {
+        "de": "24 Stunden",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "Du sicherst einen Bereich in Reichweite auf magische Art. Dabei handelt es sich um einen Würfel mit einer Kantenlänge zwischen 1,5 und 30 Metern. Der Zauber bleibt für die Wirkungsdauer bestehen.\n\nWenn du den Zauber wirkst, entscheidest du, welche Sicherheit er bietet. Du kannst eine beliebige der folgenden Eigenschaften auswählen: • Geräusche können die Barriere am Rand des geschützten Bereichs nicht durchdringen. • Die Barriere des geschützten Bereichs erscheint dunkel und neblig und verhindert jegliche Sicht (auch Dunkelsicht). • Sensoren von Erkenntniszaubern können weder im geschützten Bereich erscheinen noch den Rand der Barriere durchdringen. • Kreaturen in dem Bereich können nicht zum Ziel von Erkenntniszaubern werden. • Nichts kann in den bewachten Bereich hineinoder aus ihm herausteleportiert werden. • Ebenenreisen werden innerhalb des geschützten Bereichs blockiert.\n\nWenn du diesen Zauber 365 Tage lang täglich am selben Ort wirkst, wird der Effekt dauerhaft.",
+        "en": "You make an area within range magically secure. The area is a Cube [Area of Effect] that can be as small as 5 feet to as large as 100 feet on each side. The spell lasts for the duration.\n\nWhen you cast the spell, you decide what sort of security the spell provides, choosing any of the following properties:\n\nCasting this spell on the same spot every day for 365 days makes the spell last until dispelled."
+      },
+      "higherLevels": {
+        "de": "Für jeden Zauberplatzgrad über dem 4. kannst du die Kantenlänge des Würfels um 30 Meter vergrößern.",
+        "en": "You can increase the size of the Cube [Area of Effect] by 100 feet for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "otilukes-resilient-sphere",
+      "name": {
+        "de": "Unverwüstliche Sphäre",
+        "en": "Otiluke's Resilient Sphere"
+      },
+      "level": 4,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Glaskugel)",
+        "en": "V, S, M (a glass sphere)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Eine schimmernde Kugel umschließt eine Kreatur oder einen Gegenstand von jeweils höchstens großer Größe in Reichweite. Eine nicht bereitwillige Kreatur muss einen Geschicklichkeitsrettungswurf bestehen, oder sie wird für die Wirkungsdauer eingeschlossen.\n\nPhysische Gegenstände, Energien und Zaubereffekte können die Barriere weder von außen noch von innen durchdringen. Eine Kreatur in der Kugel kann jedoch atmen. Die Kugel ist gegen alle Schadensarten immun, und eine Kreatur oder ein Gegenstand darin kann weder durch Angriffe noch Effekte von außerhalb Schaden erleiden. Gleichermaßen kann eine Kreatur in der Kugel keinen Schaden außerhalb der Kugel bewirken.\n\nDie Kugel ist schwerelos und gerade groß genug für die Kreatur oder den Gegenstand darin. Eine gefangene Kreatur kann sich als Aktion gegen die Wand der Kugel lehnen und die Kugel so bis zur halben Bewegungsrate der Kreatur bewegen. Ebenso kann die Kugel von anderen Kreaturen aufgehoben und bewegt werden.\n\nWird der Zauber *Auflösung* auf die Kugel gewirkt, so wird die Kugel zerstört, ohne dass etwas im Inneren Schaden erleidet.",
+        "en": "A shimmering sphere encloses a Large or smaller creature or object within range. An unwilling creature must succeed on a Dexterity saving throw or be enclosed for the duration.\n\nNothing—not physical objects, energy, or other spell effects—can pass through the barrier, in or out, though a creature in the sphere can breathe there. The sphere is immune to all damage, and a creature or object inside can't be damaged by attacks or effects originating from outside, nor can a creature inside the sphere damage anything outside it.\n\nThe sphere is weightless and just large enough to contain the creature or object inside. An enclosed creature can take an action to push against the sphere's walls and thus roll the sphere at up to half the creature's Speed. Similarly, the globe can be picked up and moved by other creatures.\n\nA Disintegrate spell targeting the globe destroys it without harming anything inside."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "staggering-smite",
+      "name": {
+        "de": "Taumelnder Schlag",
+        "en": "Staggering Smite"
+      },
+      "level": 4,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Das Ziel erleidet zusätzlichen 4W6 psychischen Schaden von dem Angriff, und das Ziel muss einen Weisheitsrettungswurf bestehen oder hat den Zustand Betäubt bis zum Ende deines nächsten Zugs.",
+        "en": "The target takes an extra 4d6 Psychic damage from the attack, and the target must succeed on a Wisdom saving throw or have the Stunned condition until the end of your next turn."
+      },
+      "higherLevels": {
+        "de": "Der zusätzliche Schaden erhöht sich um  für jeden Zauberplatzgrad über dem 4.",
+        "en": "The extra damage increases by  for each spell slot level above 4."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-aberration",
+      "name": {
+        "de": "Aberration beschwören",
+        "en": "Summon Aberration"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein eingelegtes Tentakel und ein Augapfel in einer platin-einlagen-Vial im Wert von 400+ GP)",
+        "en": "V, S, M ({'text': 'a pickled tentacle and an eyeball in a platinum-inlaid vial worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen aberratischen Geist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Aberratischen Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle Beholderkin, Gedankenfresser oder Slaad. Die Kreatur ähnelt einer Aberration von dieser Art, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth an aberrant spirit. It manifests in an unoccupied space that you can see within range and uses the Aberrant Spirit stat block. When you cast the spell, choose Beholderkin, Mind Flayer, or Slaad. The creature resembles an Aberration of that kind, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, it shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-construct",
+      "name": {
+        "de": "Konstrukt beschwören",
+        "en": "Summon Construct"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein Schließkästchen im Wert von 400+ GP)",
+        "en": "V, S, M ({'text': 'a lockbox worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst den Geist eines Konstruktes. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Konstrukt-Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle ein Material: Ton, Metall, oder Stein. Die Kreatur ähnelt einer animierten Statue (du bestimmst das Aussehen) aus dem gewählten Material, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth the spirit of a Construct. It manifests in an unoccupied space that you can see within range and uses the Construct Spirit stat block. When you cast the spell, choose a material: Clay, Metal, or Stone. The creature resembles an animate statue (you determine the appearance) made of the chosen material, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-elemental",
+      "name": {
+        "de": "Elementar beschwören",
+        "en": "Summon Elemental"
+      },
+      "level": 4,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (Luft, ein Kieselstein, Asche und Wasser in einer gold-einlagen-Vial im Wert von 400+ GP)",
+        "en": "V, S, M ({'text': 'air, a pebble, ash, and water inside a gold-inlaid vial worth 400+ GP', 'cost': 40000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen Elementargeist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Elementargeist-Steckbrief. Wenn du diesen Zauber wirkst, wähle ein Element: Luft, Erde, Feuer oder Wasser. Die Kreatur ähnelt einer zweibeinigen Gestalt, die vom gewählten Element umwölkt ist, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth an Elemental spirit. It manifests in an unoccupied space that you can see within range and uses the Elemental Spirit stat block. When you cast the spell, choose an element: Air, Earth, Fire, or Water. The creature resembles a bipedal form wreathed in the chosen element, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "banishing-smite",
+      "name": {
+        "de": "Bannender Schlag",
+        "en": "Banishing Smite"
+      },
+      "level": 5,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Das Ziel, das von dem Angriffswurf getroffen wird, erleidet zusätzlichen 5W10 Wucht von dem Angriff. Wenn der Angriff das Ziel auf 50 Trefferpunkte oder weniger reduziert, muss das Ziel einen Charismarettungswurf bestehen oder in ein harmloses Demiplan für die Wirkungsdauer transportiert werden. Während es dort ist, hat das Ziel den Zustand Kampfunfähig. Wenn der Zauber endet, erscheint das Ziel wieder in dem Raum, den es verlassen hat, oder im nächsten unbelegten Raum, wenn dieser belegt ist.",
+        "en": "The target hit by the attack roll takes an extra 5d10 Force damage from the attack. If the attack reduces the target to 50 Hit Points or fewer, the target must succeed on a Charisma saving throw or be transported to a harmless demiplane for the duration. While there, the target has the Incapacitated condition. When the spell ends, the target reappears in the space it left or in the nearest unoccupied space if that space is occupied."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "bigbys-hand",
+      "name": {
+        "de": "Arkanes Händchen",
+        "en": "Bigby's Hand"
+      },
+      "level": 5,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "36 Meter",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Eierschale und ein Handschuh)",
+        "en": "V, S, M (an eggshell and a glove)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du erschaffst eine Große Hand aus schimmernder magischer Energie in einem unbelegten Raum, den du in Reichweite siehst. Die Hand hält für die Wirkungsdauer an und bewegt sich auf deinen Befehl, wobei sie die Bewegungen deiner eigenen Hand nachahmt.\n\nDie Hand ist ein Gegenstand, der RK 20 und Trefferpunkte gleich deinem Trefferpunktemaximum hat. Wenn sie auf 0 Trefferpunkte fällt, endet der Zauber. Die Hand besetzt keinen Raum.\n\nWenn du den Zauber wirkst und als Bonusaktion in deinen späteren Zugs, kannst du die Hand bis zu 18 Meter bewegen und dann eine der folgenden Effekte verursachen:\n\n**Geballte Faust.** Die Hand schlägt ein Ziel innerhalb von 1,5 Meter. Führe einen Nahkampf-Zauberangriff aus. Bei einem Treffer erleidet das Ziel 5W8 Wucht.\n\n**Starkende Hand.** Die Hand versucht, eine Riesen oder kleinere Kreatur innerhalb von 1,5 Meter von ihr zu stoßen. Das Ziel muss einen Stärkerettungswurf bestehen, oder die Hand stößt das Ziel bis zu 1,5 Meter plus eine Anzahl von Meter gleich fünfmal deinem Zauberwirken-Attributsmodifikator weg. Die Hand bewegt sich mit dem Ziel und bleibt innerhalb von 1,5 Meter von ihm.\n\n**Greifende Hand.** Die Hand versucht, eine Riesen oder kleinere Kreatur innerhalb von 1,5 Meter von ihr zu greifen. Das Ziel muss einen Geschicklichkeitsrettungswurf bestehen, oder das Ziel hat den Zustand Gegriffen, mit einem Flucht-SG gleich deinem Zauberrettungswurf-SG. Während die Hand das Ziel greift, kannst du eine Bonusaktion ausführen, um die Hand zu veranlassen, es zu zermalmen, und dem Ziel Wucht zuzufügen, gleich 4W6 plus deinem Zauberwirken-Attributsmodifikator.\n\n**Dazwischentrete Hand.** Die Hand gewährt dir Deckung gegen Angriffe und andere Effekte, die aus ihrem Raum stammen oder durch ihn hindurchgehen. Zudem zählt ihr Raum als Schwieriges Gelände für deine Feinde.",
+        "en": "You create a Large hand of shimmering magical energy in an unoccupied space that you can see within range. The hand lasts for the duration, and it moves at your command, mimicking the movements of your own hand.\n\nThe hand is an object that has AC 20 and Hit Points equal to your Hit Points maximum. If it drops to 0 Hit Points, the spell ends. The hand doesn't occupy its space.\n\nWhen you cast the spell and as a Bonus Action on your later turns, you can move the hand up to 60 feet and then cause one of the following effects:\n\n**Clenched Fist.** The hand strikes a target within 5 feet of it. Make a melee spell attack. On a hit, the target takes 5d8 Force damage.\n\n**Forceful Hand.** The hand attempts to push a Huge or smaller creature within 5 feet of it. The target must succeed on a Strength saving throw, or the hand pushes the target up to 5 feet plus a number of feet equal to five times your spellcasting ability modifier. The hand moves with the target, remaining within 5 feet of it.\n\n**Grasping Hand.** The hand attempts to grapple a Huge or smaller creature within 5 feet of it. The target must succeed on a Dexterity saving throw, or the target has the Grappled condition, with an escape DC equal to your spell save DC. While the hand grapples the target, you can take a Bonus Action to cause the hand to crush it, dealing Bludgeoning damage to the target equal to 4d6 plus your spellcasting ability modifier.\n\n**Interposing Hand.** The hand grants you Cover against attacks and other effects that originate from its space or that pass through it. In addition, its space counts as Difficult Terrain for your enemies."
+      },
+      "higherLevels": {
+        "de": "Der Schaden der Geballten Faust erhöht sich um  und der Schaden der Greifenden Hand erhöht sich um  für jeden Zauberplatzgrad über dem 5.",
+        "en": "The damage of the Clenched Fist increases by  and the damage of the Grasping Hand increases by  for each spell slot level above 5."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "circle-of-power",
+      "name": {
+        "de": "Kreis der Macht",
+        "en": "Circle of Power"
+      },
+      "level": 5,
+      "school": {
+        "de": "Bannmagie",
+        "en": "Abjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 10 Minuten",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "Eine Aura strahlt in einer 9 Meter großen Emanation von dir aus für die Wirkungsdauer. Während sie in der Aura sind, haben du und deine Verbündeten Vorteil auf Rettungswürfe gegen Zauber und andere magische Effekte. Wenn eine betroffene Kreatur einen Rettungswurf gegen einen Zauber oder magischen Effekt macht, der es erlaubt, nur die Hälfte des Schadens zu nehmen, erleidet sie keinen Schaden, wenn sie den Wurf besteht.",
+        "en": "An aura radiates from you in a 30-foot Emanation [Area of Effect] for the duration. While in the aura, you and your allies have Advantage on saving throws against spells and other magical effects. When an affected creature makes a saving throw against a spell or magical effect that allows a save to take only half damage, it takes no damage if it succeeds on the save."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "conjure-volley",
+      "name": {
+        "de": "Beschwörter Salve",
+        "en": "Conjure Volley"
+      },
+      "level": 5,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "45 Meter",
+        "en": "150 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Nahkampf- oder Fernkampfwaffe im Wert von mindestens 1 CP)",
+        "en": "V, S, M ({'text': 'a Melee or Ranged weapon worth at least 1 CP', 'cost': 1})"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du schwingst die Waffe, die du zum Wirken des Zaubers verwendet hast, und wählst einen Punkt in Reichweite. Hunderte spectrale Waffen (oder Munition, die der Waffe angemessen ist) fallen in einer Salve und verschwinden dann. Jede Kreatur deiner Wahl, die du in einem 12 Meter großen Radius, 6 Meter hohen Zylinder siehst, der auf diesen Punkt zentriert ist, führt einen Geschicklichkeitsrettungswurf aus. Eine Kreatur erleidet 8W8 Wucht bei einem Misserfolg oder die Hälfte bei einem Erfolg.",
+        "en": "You brandish the weapon used to cast the spell and choose a point within range. Hundreds of similar spectral weapons (or ammunition appropriate to the weapon) fall in a volley and then disappear. Each creature of your choice that you can see in a 40-foot-radius, 20-foot-high Cylinder [Area of Effect] centered on that point makes a Dexterity saving throw. A creature takes 8d8 Force damage on a failed save or half as much damage on a successful one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "destructive-wave",
+      "name": {
+        "de": "Zerstörerische Welle",
+        "en": "Destructive Wave"
+      },
+      "level": 5,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Zerstörerische Energie breitet sich in einer 9 Meter großen Emanation von dir aus. Jede Kreatur deiner Wahl in der Emanation führt einen Konstitutionsrettungswurf aus. Bei einem Misserfolg erleidet das Ziel 5W6 Donner und 5W6 Gleißend oder Nekrotik (deine Wahl) und hat den Zustand Liegend. Bei einem Erfolg erleidet das Ziel nur die Hälfte des Schadens.",
+        "en": "Destructive energy ripples outward from you in a 30-foot Emanation [Area of Effect]. Each creature you choose in the Emanation [Area of Effect] makes a Constitution saving throw. On a failed save, a target takes 5d6 Thunder damage and 5d6 Radiant or Necrotic damage (your choice) and has the Prone condition. On a successful save, a target takes half as much damage only."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "jallarzis-storm-of-radiance",
+      "name": {
+        "de": "Jallarzis Strahlensturm",
+        "en": "Jallarzi's Storm of Radiance"
+      },
+      "level": 5,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "36 Meter",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Prise Phosphor)",
+        "en": "V, S, M (a pinch of phosphorus)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du entfesselst einen Sturm aus blitzendem Licht und tobendem Donner in einem 3 Meter großen Radius, 12 Meter hohen Zylinder, der auf einen Punkt zentriert ist, den du in Reichweite siehst. Während sie sich in diesem Bereich befinden, haben Kreaturen die Zustände Geblendet und Taub und können keine Zauber mit einer Verbalkomponente wirken.\nWenn der Sturm erscheint, führt jede Kreatur in ihm einen Konstitutionsrettungswurf aus und erleidet bei einem Misserfolg 2W10 Gleißend und 2W10 Donner oder bei einem Erfolg die Hälfte. Eine Kreatur macht diesen Wurf auch, wenn sie zum ersten Mal in einem Zug den Bereich des Zaubers betritt oder ihren Zug dort beendet. Eine Kreatur macht diesen Wurf nur einmal pro Zug.",
+        "en": "You unleash a storm of flashing light and raging thunder in a 10-foot-radius, 40-foot-high Cylinder [Area of Effect] centered on a point you can see within range. While in this area, creatures have the Blinded and Deafened conditions, and they can't cast spells with a Verbal component.\n\nWhen the storm appears, each creature in it makes a Constitution saving throw, taking 2d10 Radiant damage and 2d10 Thunder damage on a failed save or half as much damage on a successful one. A creature also makes this save when it enters the spell's area for the first time on a turn or ends its turn there. A creature makes this save only once per turn."
+      },
+      "higherLevels": {
+        "de": "Der Gleißend- und Donner-Schaden erhöhen sich um  für jeden Zauberplatzgrad über dem 5.",
+        "en": "The Radiant and Thunder damage increase by  for each spell slot level above 5."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "rarys-telepathic-bond",
+      "name": {
+        "de": "Telepathische Bindung",
+        "en": "Rary's Telepathic Bond"
+      },
+      "level": 5,
+      "school": {
+        "de": "Erkenntnismagie",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V, G, M (zwei Eier)",
+        "en": "V, S, M (two eggs)"
+      },
+      "duration": {
+        "de": "1 Stunde",
+        "en": "1 Hour"
+      },
+      "description": {
+        "de": "Du erschaffst zwischen bis zu acht bereitwilligen Kreaturen deiner Wahl in Reichweite eine telepathische Verbindung. Dadurch sind alle Kreaturen für die Wirkungsdauer psychisch miteinander verbunden. Kreaturen, die in keiner Sprache kommunizieren können, sind von diesem Zauber nicht betroffen.\n\nBis der Zauber endet, können die Ziele telepathisch miteinander kommunizieren, unabhängig davon, ob sie eine gemeinsame Sprache sprechen. Die Kommunikation ist auf jede Entfernung möglich, reicht allerdings nicht bis auf andere Existenzebenen.",
+        "en": "You forge a telepathic link among up to eight willing creatures of your choice within range, psychically linking each creature to all the others for the duration. Creatures that can't communicate in any languages aren't affected by this spell.\n\nUntil the spell ends, the targets can communicate telepathically through the bond whether or not they share a language. The communication is possible over any distance, though it can't extend to other planes of existence."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "steel-wind-strike",
+      "name": {
+        "de": "Stahlwindschlag",
+        "en": "Steel Wind Strike"
+      },
+      "level": 5,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "S, M (eine Nahkampfwaffe im Wert von 1+ SP)",
+        "en": "S, M ({'text': 'a Melee weapon worth 1+ SP', 'cost': 10})"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du schwingst die Waffe, die beim Wirken verwendet wurde, und verschwindest dann, um wie der Wind zuzuschlagen. Wähle bis zu fünf Kreaturen, die du in Reichweite siehst. Führe einen Nahkampf-Zauberangriff gegen jedes Ziel aus. Bei einem Treffer erleidet ein Ziel 6W10 Wucht.\n\nDu teleportierst dich dann in einen unbelegten Raum, den du innerhalb von 1,5 Meter von einem der Ziele siehst.",
+        "en": "You flourish the weapon used in the casting and then vanish to strike like the wind. Choose up to five creatures you can see within range. Make a melee spell attack against each target. On a hit, a target takes 6d10 Force damage.\n\nYou then teleport to an unoccupied space you can see within 5 feet of one of the targets."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-celestial",
+      "name": {
+        "de": "Himmelswesen beschwören",
+        "en": "Summon Celestial"
+      },
+      "level": 5,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Reliquie im Wert von 500+ GP)",
+        "en": "V, S, M ({'text': 'a reliquary worth 500+ GP', 'cost': 50000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen Himmlischen Geist. Er manifestiert sich in einer engelhaften Gestalt in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Himmlischen Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle Rächer oder Verteidiger. Deine Wahl bestimmt bestimmte Details in seinem Steckbrief. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth a Celestial spirit. It manifests in an angelic form in an unoccupied space that you can see within range and uses the Celestial Spirit stat block. When you cast the spell, choose Avenger or Defender. Your choice determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "swift-quiver",
+      "name": {
+        "de": "Schneller Köcher",
+        "en": "Swift Quiver"
+      },
+      "level": 5,
+      "school": {
+        "de": "Verwandlung",
+        "en": "Transmutation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Bonusaktion",
+        "en": "1 Bonus"
+      },
+      "range": {
+        "de": "Selbst",
+        "en": "Self"
+      },
+      "components": {
+        "de": "V, G, M (ein Köcher im Wert von 1+ GP)",
+        "en": "V, S, M ({'text': 'a Quiver worth 1+ GP', 'cost': 100})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Wenn du den Zauber wirkst und als Bonusaktion, bis er endet, kannst du zwei Angriffe mit einer Waffe machen, die Pfeile oder Bolzen abfeuert, wie einen Langbogen oder eine Leichte Armbrust. Der Zauber erschafft magisch die Munition, die für jeden Angriff benötigt wird. Jeder Pfeil oder Bolzen, der vom Zauber erschaffen wird, fügt Schaden wie ein nichtmagisches Stück Munition seiner Art zu und disintegriert sofort, nachdem er trifft oder daneben geht.",
+        "en": "When you cast the spell and as a Bonus Action until it ends, you can make two attacks with a weapon that fires Arrows or Bolts, such as a Longbow or a Light Crossbow. The spell magically creates the ammunition needed for each attack. Each Arrow or Bolt created by the spell deals damage like a nonmagical piece of ammunition of its kind and disintegrates immediately after it hits or misses."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "synaptic-static",
+      "name": {
+        "de": "Synaptischer Statischer",
+        "en": "Synaptic Static"
+      },
+      "level": 5,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "36 Meter",
+        "en": "120 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du verursachst, dass psychische Energie an einem Punkt innerhalb der Reichweite ausbricht. Jede Kreatur in einer 6 Meter großen Sphäre, die auf diesen Punkt zentriert ist, führt einen Intelligenzrettungswurf aus, wobei sie bei einem Misserfolg 8W6 psychischen Schaden oder bei einem Erfolg die Hälfte erleidet.\n\nBei einem Misserfolg hat das Ziel auch für 1 Minute verwirrte Gedanken. Während dieser Zeit zieht es 1W6 von allen seinen Angriffswürfen und Attributsprüfen ab, sowie von allen Konstitutionsrettungswürfen, um  aufrechtzuerhalten. Das Ziel führt am Ende jedes seiner Zugs einen Intelligenzrettungswurf aus und beendet die Wirkung auf sich selbst bei einem Erfolg.",
+        "en": "You cause psychic energy to erupt at a point within range. Each creature in a 20-foot-radius Sphere [Area of Effect] centered on that point makes an Intelligence saving throw, taking 8d6 Psychic damage on a failed save or half as much damage on a successful one.\n\nOn a failed save, a target also has muddled thoughts for 1 minute. During that time, it subtracts 1d6 from all its attack rolls and ability checks, as well as any Constitution saving throws to maintain . The target makes an Intelligence saving throw at the end of each of its turns, ending the effect on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "yolandes-regal-presence",
+      "name": {
+        "de": "Yolandes königliche Gegenwart",
+        "en": "Yolande's Regal Presence"
+      },
+      "level": 5,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "3 Meter",
+        "en": "10 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine Miniatur-Tiara)",
+        "en": "V, S, M (a miniature tiara)"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du umgibst dich mit unwirklicher Majestät in einer 3 Meter großen Emanation. Jedes Mal, wenn die Emanation den Raum einer Kreatur betritt, die du siehst, und jedes Mal, wenn eine Kreatur, die du siehst, die Emanation betritt oder ihren Zug dort beendet, kannst du diese Kreatur zwingen, einen Weisheitsrettungswurf zu machen. Bei einem Misserfolg erleidet das Ziel 4W6 psychischen Schaden und hat den Zustand Liegend, und du kannst es bis zu 3 Meter wegstoßen. Bei einem Erfolg erleidet das Ziel nur die Hälfte des Schadens. Eine Kreatur macht diesen Wurf nur einmal pro Zug.",
+        "en": "You surround yourself with unearthly majesty in a 10-foot Emanation [Area of Effect]. Whenever the Emanation [Area of Effect] enters the space of a creature you can see and whenever a creature you can see enters the Emanation [Area of Effect] or ends its turn there, you can force that creature to make a Wisdom saving throw. On a failed save, the target takes 4d6 Psychic damage and has the Prone condition, and you can push it up to 10 feet away. On a successful save, the target takes half as much damage only. A creature makes this save only once per turn."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "arcane-gate",
+      "name": {
+        "de": "Arkantes Tor",
+        "en": "Arcane Gate"
+      },
+      "level": 6,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "150 Meter",
+        "en": "500 feet"
+      },
+      "components": {
+        "de": "V, G",
+        "en": "V, S"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 10 Minuten",
+        "en": "Concentration, up to 10 Minutes"
+      },
+      "description": {
+        "de": "Du erschaffst verknüpfte Teleportationsportale. Wähle zwei Große, unbelegte Flächen auf dem Boden, die du sehen kannst, einen innerhalb der Reichweite und den anderen innerhalb von 3 Meter von dir. Ein kreisförmiges Portal öffnet sich in jedem dieser Räume und bleibt für die Wirkungsdauer.\n\nDie Portale sind zweidimensionale, leuchtende Ringe, die mit Nebel gefüllt sind und die Sicht blockieren. Sie schweben Zentimeter über dem Boden und sind senkrecht zu ihm.\n\nEin Portal ist nur auf einer Seite offen (du wählst, welche). Alles, was die offene Seite eines Portals betritt, verlässt die offene Seite des anderen Portals, als ob die beiden nebeneinander wären. Als Bonusaktion kannst du die Ausrichtung der offenen Seiten ändern.",
+        "en": "You create linked teleportation portals. Choose two Large, unoccupied spaces on the ground that you can see, one space within range and the other one within 10 feet of you. A circular portal opens in each of those spaces and remains for the duration.\n\nThe portals are two-dimensional glowing rings filled with mist that blocks sight. They hover inches from the ground and are perpendicular to it.\n\nA portal is open on only one side (you choose which). Anything entering the open side of a portal exits from the open side of the other portal as if the two were adjacent to each other. As a Bonus Action, you can change the facing of the open sides."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "drawmijs-instant-summons",
+      "name": {
+        "de": "Sofortige Beschwörung",
+        "en": "Drawmij's Instant Summons"
+      },
+      "level": 6,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "1 Minute",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "Berührung",
+        "en": "Touch"
+      },
+      "components": {
+        "de": "V, G, M (ein Saphir im Wert von mindestens 1.000 GM)",
+        "en": "V, S, M ({'text': 'a sapphire worth 1,000+ GP', 'cost': 100000})"
+      },
+      "duration": {
+        "de": "Bis der Zauber gebannt wird",
+        "en": ""
+      },
+      "description": {
+        "de": "Du berührst den Saphir, den du zum Wirken verwendest, sowie einen Gegenstand, der höchstens 4,5 Kilogramm wiegt und keine größere Abmessung als 1,8 Meter hat. Der Zauber hinterlässt eine unsichtbare Markierung am Gegenstand und schreibt den Namen des Gegenstands unsichtbar in den Saphir ein. Jedes Mal, wenn du diesen Zauber wirkst, musst du einen anderen Saphir verwenden.\n\nDanach kannst du eine magische Aktion ausführen, um den Namen des Gegenstands auszusprechen und den Saphir zu zerstören. Der Gegenstand erscheint unabhängig von seiner physischen oder planaren Entfernung sofort in deiner Hand, und der Zauber endet.\n\nWenn eine andere Kreatur den Gegenstand hält oder trägt, wird er nicht transportiert, wenn der Saphir zerstört wird. Stattdessen erfährst du, wer die Kreatur ist, die ihn bei sich hat, und wo sie sich aktuell befindet.",
+        "en": "You touch the sapphire used in the casting and an object weighing 10 pounds or less whose longest dimension is 6 feet or less. The spell leaves an Invisible mark on that object and invisibly inscribes the object's name on the sapphire. Each time you cast this spell, you must use a different sapphire.\n\nThereafter, you can take a  action to speak the object's name and crush the sapphire. The object instantly appears in your hand regardless of physical or planar distances, and the spell ends.\n\nIf another creature is holding or carrying the object, crushing the sapphire doesn't transport it, but instead you learn who that creature is and where that creature is currently located."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": true,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "otilukes-freezing-sphere",
+      "name": {
+        "de": "Frostsphäre",
+        "en": "Otiluke's Freezing Sphere"
+      },
+      "level": 6,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "90 Meter",
+        "en": "300 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine MiniaturKristallkugel)",
+        "en": "V, S, M (a miniature crystal sphere)"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du verschießt eine eisige Kugel an einen Punkt deiner Wahl in Reichweite, wo sie zu einer Kugel mit einem Radius von 18 Metern explodiert. Jede Kreatur in diesem Bereich führt einen Konstitutionsrettungswurf aus. Misslingt der Wurf, so erleidet sie 10W6 Kälteschaden, anderenfalls die Hälfte.\n\nWenn die Kugel ein Gewässer trifft, so gefriert dieses in einem quadratischen Bereich von neun Metern Kantenlänge bis in eine Tiefe von 15 Zentimetern. Das Eis bleibt eine Minute lang bestehen. Kreaturen, die an der Oberfläche des gefrorenen Wassers schwimmen, werden im Eis gefangen und sind festgesetzt. Eine gefangene Kreatur kann als Aktion einen Stärkewurf (Athletik) gegen deinen Zauberrettungswurf-SG ausführen, um sich zu befreien.\n\nDu musst die Kugel nach dem Wirken des Zaubers nicht sofort verschießen. In diesem Fall erscheint eine kleine kühle Kugel von der Größe eines Schleudersteins in deiner Hand. Du oder eine Kreatur, der du die Kugel gibst, kann sie jederzeit bis zu zwölf Meter weit werfen oder mit einer Schleuder innerhalb ihrer Grundreichweite verschießen. Die Kugel zerbirst beim Aufprall und bewirkt den gleichen Effekt wie das normale Wirken des Zaubers. Du kannst die Kugel auch ablegen, ohne dass sie zerbirst. Ist sie nach einer Minute nicht zerborsten, so explodiert sie.",
+        "en": "A frigid globe streaks from you to a point of your choice within range, where it explodes in a 60-foot-radius Sphere [Area of Effect]. Each creature in that area makes a Constitution saving throw, taking 10d6 Cold damage on a failed save or half as much damage on a successful one.\n\nIf the globe strikes a body of water, it freezes the water to a depth of 6 inches over an area 30 feet square. This ice lasts for 1 minute. Creatures that were swimming on the surface of frozen water are trapped in the ice and have the Restrained condition. A trapped creature can take an action to make a Strength () check against your spell save DC to break free.\n\nYou can refrain from firing the globe after completing the spell's casting. If you do so, a globe about the size of a sling bullet, cool to the touch, appears in your hand. At any time, you or a creature you give the globe to can throw the globe (to a range of 40 feet) or hurl it with a sling (to the sling's normal range). It shatters on impact, with the same effect as a normal casting of the spell. You can also set the globe down without shattering it. After 1 minute, if the globe hasn't already shattered, it explodes."
+      },
+      "higherLevels": {
+        "de": "Für jeden Zauberplatzgrad über dem 6. wird der Schaden um 1W6 erhöht.",
+        "en": "The damage increases by  for each spell slot level above 6."
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "ottos-irresistible-dance",
+      "name": {
+        "de": "Unwiderstehlicher Tanz",
+        "en": "Otto's Irresistible Dance"
+      },
+      "level": 6,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "9 Meter",
+        "en": "30 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Eine Kreatur in Reichweite, die du sehen kannst, muss einen Weisheitsrettungswurf ausführen. Bei einem erfolgreichen Rettungswurf tanzt das Ziel bis zum Ende seines nächsten Zugs albern an einer Stelle und verbraucht dafür seine gesamte Bewegungsrate.\n\nMisslingt der Wurf, so ist das Ziel für die Wirkungsdauer bezaubert. Solange es bezaubert ist, tanzt das Ziel albern an einer Stelle und benötigt dafür seine gesamte Bewegungsrate. Es ist bei Geschicklichkeitsrettungswürfen sowie bei Angriffswürfen im Nachteil, und andere Kreaturen sind bei Angriffswürfen gegen das Ziel im Vorteil. Das Ziel kann in jedem seiner Züge eine Aktion ausführen, um sich zu sammeln und den Rettungswurf zu wiederholen. Bei einem Erfolg endet der Zauber.",
+        "en": "One creature that you can see within range must make a Wisdom saving throw. On a successful save, the target dances comically until the end of its next turn, during which it must spend all its movement to dance in place.\n\nOn a failed save, the target has the Charmed condition for the duration. While Charmed, the target dances comically, must use all its movement to dance in place, and has Disadvantage on Dexterity saving throws and attack rolls, and other creatures have Advantage on attack rolls against it. On each of its turns, the target can take an action to collect itself and repeat the save, ending the spell on itself on a success."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "summon-fiend",
+      "name": {
+        "de": "Unhold beschwören",
+        "en": "Summon Fiend"
+      },
+      "level": 6,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine blutige Phiole im Wert von 600+ GP)",
+        "en": "V, S, M ({'text': 'a bloody vial worth 600+ GP', 'cost': 60000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Stunde",
+        "en": "Concentration, up to 1 Hour"
+      },
+      "description": {
+        "de": "Du beschworst einen unholdischen Geist. Er manifestiert sich in einem unbelegten Raum, den du in Reichweite siehst, und nutzt den Unholdischen Geist-Steckbrief. Wenn du diesen Zauber wirkst, wähle Dämon, Teufel, oder Yugoloth. Die Kreatur ähnelt einem Unhold der gewählten Art, was bestimmte Details in ihrem Steckbrief bestimmt. Die Kreatur verschwindet, wenn sie auf 0 Trefferpunkte fällt oder der Zauber endet.\n\nDie Kreatur ist ein Verbündeter von dir und deinen Verbündeten. Im Kampf teilt sie sich deinen Initiativwert, nimmt ihren Zug aber unmittelbar nach deinem. Sie befolgt deine verbalen Befehle (keine Aktion erforderlich von dir). Wenn du keine ausgibst, nimmt sie die  Aktion und nutzt ihre Bewegung, um Gefahr zu vermeiden.",
+        "en": "You call forth a fiendish spirit. It manifests in an unoccupied space that you can see within range and uses the Fiendish Spirit stat block. When you cast the spell, choose Demon, Devil, or Yugoloth. The creature resembles a Fiend of the chosen type, which determines certain details in its stat block. The creature disappears when it drops to 0 Hit Points or when the spell ends.\n\nThe creature is an ally to you and your allies. In combat, the creature shares your Initiative count, but it takes its turn immediately after yours. It obeys your verbal commands (no action required by you). If you don't issue any, it takes the  action and uses its movement to avoid danger."
+      },
+      "higherLevels": {
+        "de": "Verwende die Stufe des Zauberplatzes als die Stufe des Zaubers im Steckbrief.",
+        "en": "Use the spell slot's level for the spell's level in the stat block."
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "tashas-bubbling-cauldron",
+      "name": {
+        "de": "Taschas blubbernder Kessel",
+        "en": "Tasha's Bubbling Cauldron"
+      },
+      "level": 6,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "1,5 Meter",
+        "en": "5 feet"
+      },
+      "components": {
+        "de": "V, G, M (eine vergoldete Kelle im Wert von 500 + GP)",
+        "en": "V, S, M (a gilded ladle worth 500 + GP)"
+      },
+      "duration": {
+        "de": "10 Minuten",
+        "en": "10 Minutes"
+      },
+      "description": {
+        "de": "Du beschworst einen klauenfüßigen Kessel, gefüllt mit blubbernder Flüssigkeit. Der Kessel erscheint in einem unbelegten Raum auf dem Boden innerhalb von 1,5 Meter von dir und hält für die Wirkungsdauer. Der Kessel kann nicht bewegt werden und verschwindet, wenn der Zauber endet, zusammen mit der blubbernden Flüssigkeit darin.\n\nDie Flüssigkeit im Kessel dupliziert die Eigenschaften eines  deiner Wahl (z. B. ein ). Als Bonusaktion kannst du oder ein Verbündeter in den Kessel greifen und einen Trank dieser Art entnehmen. Der Trank ist in einer Phiole enthalten, die verschwindet, wenn der Trank konsumiert wird. Der Kessel kann eine Anzahl dieser Trank gleich deinem Zauberwirken-Attributsmodifikator (mindestens 1) herstellen. Wenn der letzte der Trank aus dem Kessel entnommen wurde, verschwindet der Kessel, und der Zauber endet.\n\nTrank, die aus dem Kessel gewonnen und nicht konsumiert werden, verschwinden, wenn du diesen Zauber erneut wirkst.",
+        "en": "You conjure a claw-footed cauldron filled with bubbling liquid. The cauldron appears in an unoccupied space on the ground within 5 feet of you and lasts for the duration. The cauldron can't be moved and disappears when the spell ends, along with the bubbling liquid inside it.\n\nThe liquid in the cauldron duplicates the properties of a  of your choice (such as a ). As a Bonus Action, you or an ally can reach into the cauldron and withdraw one potion of that kind. The potion is contained in a vial that disappears when the potion is consumed. The cauldron can produce a number of these potions equal to your spellcasting ability modifier (minimum 1). When the last of these potions is withdrawn from the cauldron, the cauldron disappears, and the spell ends.\n\nPotions obtained from the cauldron that aren't consumed disappear when you cast this spell again."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-magnificent-mansion",
+      "name": {
+        "de": "Herrliches Herrenhaus",
+        "en": "Mordenkainen's Magnificent Mansion"
+      },
+      "level": 7,
+      "school": {
+        "de": "Beschwörung",
+        "en": "Conjuration"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "1 Minute",
+        "en": "1 Minute"
+      },
+      "range": {
+        "de": "90 Meter",
+        "en": "300 feet"
+      },
+      "components": {
+        "de": "V, G, M ({'text': 'eine Miniatur Tür im Wert von 15+ GP', 'cost': 1500})",
+        "en": "V, S, M ({'text': 'a miniature door worth 15+ GP', 'cost': 1500})"
+      },
+      "duration": {
+        "de": "24 Stunden",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "Du erschaffst eine schimmernde Tür in Reichweite, die für die Wirkungsdauer besteht. Die Tür führt zu einer extradimensionalen Behausung und ist 5 Fuß breit und 10 Fuß groß. Du und jede Kreatur, die du beim Wirken des Zaubers festlegst, kannst in die extradimensionale Behausung eintreten, solange die Tür geöffnet bleibt. Du kannst sie öffnen oder schließen (keine Aktion erforderlich) wenn du dich innerhalb von 9 Meter von ihr befindest. Während sie geschlossen ist, ist die Tür unmerklich.\n\nHinter der Tür ist eine prächtige Diele mit zahlreichen Kammern dahinter. Die Atmosphäre der Behausung ist sauber, frisch und warm.\n\nDu kannst jeden Grundriss für die Behausung erstellen, aber sie kann nicht mehr als 50 zusammenhängende 10-Fuß-Würfel überschreiten. Der Ort ist möbliert und dekoriert, wie du es wählst. Es enthält ausreichend Nahrung, um ein Neun-Gänge-Menü für bis zu 100 Personen zu servieren. Möbel und andere Gegenstände, die durch diesen Zauber erschaffen werden, lösen sich in Rauch auf, wenn sie aus der Behausung entfernt werden.\n\nEin Stab von 100 fast durchsichtigen Dienern kümmert sich um alle, die eintreten. Du bestimmst das Erscheinungsbild dieser Diener und ihre Kleidung. Sie sind unverwundbar und gehorchen deinen Befehlen. Jeder Diener kann Aufgaben ausführen, die ein Mensch ausführen könnte, aber sie können nicht angreifen oder jede Aktion ausführen, die direkt einer anderen Kreatur schaden würde. Die Diener können Dinge holen, putzen, flicken, Kleidung zusammenfalten, Feuer anzünden, Essen servieren, Wein einschenken usw. Die Diener können die Behausung nicht verlassen.\n\nWenn der Zauber endet, werden alle Kreaturen oder Gegenstände, die sich noch im extradimensionalen Raum befinden, in die nächsten unbelegten Räume am nächsten zum Eingang ausgestoßen.",
+        "en": "You conjure a shimmering door in range that lasts for the duration. The door leads to an extradimensional dwelling and is 5 feet wide and 10 feet tall. You and any creature you designate when you cast the spell can enter the extradimensional dwelling as long as the door remains open. You can open or close it (no action required) if you are within 30 feet of it. While closed, the door is imperceptible.\n\nBeyond the door is a magnificent foyer with numerous chambers beyond. The dwelling's atmosphere is clean, fresh, and warm.\n\nYou can create any floor plan you like for the dwelling, but it can't exceed 50 contiguous 10-foot Cubes. The place is furnished and decorated as you choose. It contains sufficient food to serve a nine-course banquet for up to 100 people. Furnishings and other objects created by this spell dissipate into smoke if removed from it.\n\nA staff of 100 near-transparent servants attends all who enter. You determine the appearance of these servants and their attire. They are invulnerable and obey your commands. Each servant can perform tasks that a human could perform, but they can't attack or take any action that would directly harm another creature. Thus the servants can fetch things, clean, mend, fold clothes, light fires, serve food, pour wine, and so on. The servants can't leave the dwelling.\n\nWhen the spell ends, any creatures or objects left inside the extradimensional space are expelled into the unoccupied spaces nearest to the entrance."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "mordenkainens-sword",
+      "name": {
+        "de": "Arkanes Schwert",
+        "en": "Mordenkainen's Sword"
+      },
+      "level": 7,
+      "school": {
+        "de": "Hervorrufung",
+        "en": "Evocation"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "27 Meter",
+        "en": "90 feet"
+      },
+      "components": {
+        "de": "V, G, M (ein Miniaturschwert im Wert von mindestens 250 GM)",
+        "en": "V, S, M ({'text': 'a miniature sword worth 250+ GP', 'cost': 25000})"
+      },
+      "duration": {
+        "de": "Konzentration, bis zu 1 Minute",
+        "en": "Concentration, up to 1 Minute"
+      },
+      "description": {
+        "de": "Du erschaffst ein geisterhaftes Schwert, das in Reichweite schwebt. Die Kugel bleibt für die Wirkungsdauer bestehen.\n\nWenn das Schwert erscheint, kannst du einen Nahkampf-Zauberangriff gegen ein Ziel im Abstand von bis zu 1,5 Metern vom Schwert ausführen. Bei einem Treffer erleidet das Ziel Energieschaden in Höhe von 4W12 plus deinem Zauberwirken-Attributsmodifikator.\n\nIn deinen folgenden Zügen kannst du das Schwert mit einer Bonusaktion bis zu neun Meter weit an einen Ort bewegen, den du sehen kannst, und den Angriff gegen dasselbe oder ein anderes Ziel wiederholen.",
+        "en": "You create a spectral sword that hovers within range. It lasts for the duration.\n\nWhen the sword appears, you make a melee spell attack against a target within 5 feet of the sword. On a hit, the target takes Force damage equal to 4d12 plus your spellcasting ability modifier.\n\nOn your later turns, you can take a Bonus Action to move the sword up to 30 feet to a spot you can see and repeat the attack against the same target or a different one."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": true,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "power-word-fortify",
+      "name": {
+        "de": "Wort der Stärkung",
+        "en": "Power Word Fortify"
+      },
+      "level": 7,
+      "school": {
+        "de": "Verzauberung",
+        "en": "Enchantment"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "18 Meter",
+        "en": "60 feet"
+      },
+      "components": {
+        "de": "V",
+        "en": "V"
+      },
+      "duration": {
+        "de": "Unmittelbar",
+        "en": "Instantaneous"
+      },
+      "description": {
+        "de": "Du stärkst bis zu sechs Kreaturen, die du in Reichweite siehst. Der Zauber verleiht 120 temporäre Trefferpunkte, die du unter den Empfängern des Zaubers aufteilst.",
+        "en": "You fortify up to six creatures you can see within range. The spell bestows 120 Temporary Hit Points, which you divide among the spell's recipients."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    },
+    {
+      "id": "telepathy",
+      "name": {
+        "de": "Telepathie",
+        "en": "Telepathy"
+      },
+      "level": 8,
+      "school": {
+        "de": "Erkenntnismagie",
+        "en": "Divination"
+      },
+      "classes": {
+        "de": [],
+        "en": []
+      },
+      "castingTime": {
+        "de": "Aktion",
+        "en": "1 Action"
+      },
+      "range": {
+        "de": "",
+        "en": ""
+      },
+      "components": {
+        "de": "V, G, M (ein Paar verbundene silberne Ringe)",
+        "en": "V, S, M (a pair of linked silver rings)"
+      },
+      "duration": {
+        "de": "24 Stunden",
+        "en": "24 Hours"
+      },
+      "description": {
+        "de": "Du erschaffst einen telepathischen Link zwischen dir selbst und einer bereitwilligen Kreatur, mit der du vertraut bist. Die Kreatur kann sich irgendwo auf derselben Ebene der Existenz wie du befinden. Der Zauber endet, wenn du oder das Ziel nicht länger auf derselben Ebene seid.\n\nBis der Zauber endet, kannst du und das Ziel sofort Worte, Bilder, Geräusche und andere sensorische Botschaften miteinander durch den Link teilen, und das Ziel erkennt dich als die Kreatur, mit der es kommuniziert. Der Zauber ermöglicht es einer Kreatur, die Bedeutung deiner Worte und aller sensorischen Botschaften zu verstehen, die du sendest.",
+        "en": "You create a telepathic link between yourself and a willing creature with which you are familiar. The creature can be anywhere on the same plane of existence as you. The spell ends if you or the target are no longer on the same plane.\n\nUntil the spell ends, you and the target can instantly share words, images, sounds, and other sensory messages with each other through the link, and the target recognizes you as the creature it is communicating with. The spell enables a creature to understand the meaning of your words and any sensory messages you send to it."
+      },
+      "higherLevels": {
+        "de": "",
+        "en": ""
+      },
+      "ritual": false,
+      "concentration": false,
+      "source": "XPHB",
+      "custom": false
+    }
+  ]
+}

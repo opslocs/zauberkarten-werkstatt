@@ -6,8 +6,8 @@ const PDF = {
   PT: 0.3528,                       // pt -> mm
   COLORS: {
     Evocation: [181,52,42], Abjuration: [217,126,38], Necromancy: [110,110,112],
-    Transmutation: [217,168,39], Conjuration: [62,138,68], Illusion: [59,107,176],
-    Divination: [93,163,168], Enchantment: [176,80,156],
+    Transmutation: [217,168,39], Conjuration: [62,138,68], CunningActions: [110,120,70],
+    Illusion: [59,107,176], Divination: [93,163,168], Enchantment: [176,80,156],
   },
   PAPER: [240,224,189], PAPER2: [246,236,212], INK: [36,29,18], LABEL: [92,74,35], DARK: [26,23,19],
 };

@@ -8,21 +8,21 @@ let lang = "de";        // card language
 let currentId = null;
 let selected = new Set();
 
-const SCHOOLS_EN = ["Abjuration","Conjuration","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"];
-const SCHOOL_DE = { Abjuration:"Bannmagie", Conjuration:"Beschwörung", Divination:"Erkenntnismagie",
+const SCHOOLS_EN = ["Abjuration","Conjuration","CunningActions","Divination","Enchantment","Evocation","Illusion","Necromancy","Transmutation"];
+const SCHOOL_DE = { Abjuration:"Bannmagie", Conjuration:"Beschwörung", CunningActions:"Raffinierter Schlag", Divination:"Erkenntnismagie",
   Enchantment:"Verzauberung", Evocation:"Hervorrufung", Illusion:"Illusion", Necromancy:"Nekromantie", Transmutation:"Verwandlung" };
-const SCHOOL_ZAUBER = { Bannmagie:"Bannzauber", Beschwörung:"Beschwörungszauber", Erkenntnismagie:"Erkenntniszauber",
+const SCHOOL_ZAUBER = { Bannmagie:"Bannzauber", Beschwörung:"Beschwörungszauber", "Raffinierter Schlag":"Raffinierter Schlagzauber", Erkenntnismagie:"Erkenntniszauber",
   Verzauberung:"Verzauberungszauber", Hervorrufung:"Hervorrufungszauber", Illusion:"Illusionszauber",
   Nekromantie:"Nekromantiezauber", Verwandlung:"Verwandlungszauber" };
 const SCHOOL_TRICK = { Bannmagie:"Zaubertrick des Banns", Beschwörung:"Zaubertrick der Beschwörung",
-  Erkenntnismagie:"Zaubertrick der Erkenntnismagie", Verzauberung:"Zaubertrick der Verzauberung",
-  Hervorrufung:"Zaubertrick der Hervorrufung", Illusion:"Zaubertrick der Illusion",
+  "Raffinierter Schlag":"Zaubertrick des raffinierten Schlags", Erkenntnismagie:"Zaubertrick der Erkenntnismagie",
+  Verzauberung:"Zaubertrick der Verzauberung", Hervorrufung:"Zaubertrick der Hervorrufung", Illusion:"Zaubertrick der Illusion",
   Nekromantie:"Zaubertrick der Nekromantie", Verwandlung:"Zaubertrick der Verwandlung" };
-const SCHOOL_GLYPH = { Abjuration:"🛡", Conjuration:"✳", Divination:"👁", Enchantment:"♥",
+const SCHOOL_GLYPH = { Abjuration:"🛡", Conjuration:"✳", CunningActions:"🦊", Divination:"👁", Enchantment:"♥",
   Evocation:"🔥", Illusion:"◐", Necromancy:"☠", Transmutation:"⚙" };
-const CLASSES = ["Barde","Druide","Hexenmeister","Kleriker","Magier","Paladin","Waldläufer","Zauberer"];
+const CLASSES = ["Barde","Druide","Hexenmeister","Kleriker","Magier","Paladin","Schurke","Waldläufer","Zauberer"];
 const CLASS_EN = { Barde:"Bard", Druide:"Druid", Hexenmeister:"Warlock", Kleriker:"Cleric",
-  Magier:"Wizard", Paladin:"Paladin", Waldläufer:"Ranger", Zauberer:"Sorcerer" };
+  Magier:"Wizard", Paladin:"Paladin", Schurke:"Rogue", Waldläufer:"Ranger", Zauberer:"Sorcerer" };
 
 async function loadDb() {
   const res = await fetch("spells.json");
