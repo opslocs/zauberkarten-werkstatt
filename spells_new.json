@@ -1,9 +1,9 @@
 {
  "meta": {
-  "title": "PHB 2024 Cantrips Missing from spells.json",
+  "title": "PHB 2024 Cantrips and Level 1 Spells Missing from spells.json",
   "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
   "generated": "2026-08-15",
-  "count": 4
+  "count": 13
  },
  "spells": [
   {
@@ -209,6 +209,450 @@
    },
    "ritual": false,
    "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-armor-of-agathys",
+   "name": {
+    "de": "Rüstung von Agathys",
+    "en": "Armor of Agathys"
+   },
+   "level": 1,
+   "school": {
+    "en": "Abjuration",
+    "de": "Bannmagie"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister"
+    ],
+    "en": [
+     "Warlock"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V, G, M (ein Becher Wasser)",
+    "en": "V, S, M (a cup of water)"
+   },
+   "duration": {
+    "de": "1 Stunde",
+    "en": "1 hour"
+   },
+   "description": {
+    "de": "Schützende magische Energie umgibt dich, die sich als geisterhafter Frost manifestiert, der dich und deine Ausrüstung bedeckt. Du erhältst für die Wirkungsdauer 5 temporäre Trefferpunkte. Wenn dich eine Kreatur mit einem Nahkampfangriff trifft, während du über diese Trefferpunkte verfügst, erleidet die Kreatur 5 Kälteschaden.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 2. oder eines höheren Grades wirkst, steigen sowohl die temporären Trefferpunkte als auch der Kälteschaden für jeden Grad über den 1. hinaus um 5.",
+    "en": "Protective magical energy surrounds you, manifesting as spectral frost that covers you and your equipment. You gain 5 temporary Hit Points for the duration. If a creature hits you with a melee attack while you have these Hit Points, the creature takes 5 Cold damage.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 2 or higher, both the temporary Hit Points and the Cold damage increase by 5 for each slot level above 1."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-arms-of-hadar",
+   "name": {
+    "de": "Arme von Hadar",
+    "en": "Arms of Hadar"
+   },
+   "level": 1,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst (Radius von 3 Metern)",
+    "en": "Self (3-meter radius)"
+   },
+   "components": {
+    "de": "V, G",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du berufst dich auf die Macht Hadars, des Dunklen Hungers. Tentakel aus finsterer Energie brechen aus dir hervor und schlagen auf alle Kreaturen innerhalb von 3 Metern ein. Jede Kreatur in diesem Bereich muss einen Stärkerettungswurf ablegen. Bei einem Misserfolg erleidet ein Ziel 2W6 nekrotischen Schaden und kann bis zu seinem nächsten Zug keine Reaktion verwenden. Bei einem erfolgreichen Rettungswurf nimmt die Kreatur halben Schaden, erleidet aber keine anderen Auswirkungen.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 2. oder eines höheren Grades wirkst, steigt der Schaden für jeden Grad über den 1. hinaus um 1W6.",
+    "en": "You call on the power of Hadar, the Dark Hunger. Tendrils of dark energy erupt from you and lash out at all creatures within 3 meters. Each creature in that area must make a Strength saving throw. On a failed save, a target takes 2d6 Necrotic damage and can't use Reactions until its next turn. On a successful save, the creature takes half as much damage and suffers no other effects.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 2 or higher, the damage increases by 1d6 for each slot level above 1."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-compelled-duel",
+   "name": {
+    "de": "Erzwungenes Duell",
+    "en": "Compelled Duel"
+   },
+   "level": 1,
+   "school": {
+    "en": "Enchantment",
+    "de": "Verzauberung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Du versuchst, eine Kreatur in ein Duell zu zwingen. Wähle eine Kreatur in Reichweite, die du sehen kannst. Sie muss einen Weisheitsrettungswurf ablegen. Bei einem Misserfolg wird das Ziel von dir angezogen, gezwungen von deiner göttlichen Herausforderung. Für die Wirkungsdauer ist das Ziel im Nachteil bei Angriffswürfen gegen Kreaturen mit Ausnahme von dir. Zusätzlich muss es einen Weisheitsrettungswurf ablegen, wenn es sich weiter als 9 Meter von dir entfernen möchte. Gelingt dieses, schränkt der Zauber die Bewegung des Ziels für diesen Zug nicht ein.\nDer Zauber endet, wenn du eine andere Kreatur angreifst, du einen Spruch auf eine andere feindliche Kreatur wirkst, wenn eine mit dir verbündete Kreatur das Ziel verletzt oder einen schädigenden Zauber auf es wirkt oder wenn du deinen Zug weiter als 9 Meter vom Ziel entfernt beendest.",
+    "en": "You attempt to compel a creature into a duel. Choose one creature in range that you can see. It must make a Wisdom saving throw. On a failed save, the target is drawn to you, compelled by your divine challenge. For the duration, the target has Disadvantage on attack rolls against creatures other than you. Additionally, it must make a Wisdom saving throw if it wishes to move more than 9 meters away from you. If this save succeeds, the spell doesn't restrict the target's movement for that turn.\nThe spell ends if you attack another creature, if you cast a spell that targets a hostile creature other than the target, if a friendly creature damages the target or casts a harmful spell on it, or if you end your turn more than 9 meters away from the target."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-hail-of-thorns",
+   "name": {
+    "de": "Dornenhagel",
+    "en": "Hail of Thorns"
+   },
+   "level": 1,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Waldläufer"
+    ],
+    "en": [
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einer Fernkampfwaffe triffst, verwandelt sich das Geschoss oder die Waffe selbst (im Falle einer Wurfwaffe) in einen Hagel aus Dornen. Neben dem normalen Effekt des Angriffs müssen das Ziel und alle Kreaturen innerhalb von 1,50 Metern um dieses einen Geschicklichkeitsrettungswurf ablegen. Bei einem Misserfolg erleidet eine Kreatur 1W10 Stichschaden oder halb so viel Schaden bei einem erfolgreichen Rettungswurf.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 2. oder eines höheren Grades wirkst, steigt der Schaden für jeden Grad über den 1. hinaus um 1W10 (maximal 6W10).",
+    "en": "The next time you hit a creature with a ranged weapon attack during the spell's duration, the missile or weapon itself (in the case of a thrown weapon) turns into a hail of thorns. In addition to the normal effect of the attack, the target and all creatures within 1.5 meters of it must make a Dexterity saving throw. On a failed save, a creature takes 1d10 Pierce damage, or half as much damage on a successful save.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 2 or higher, the damage increases by 1d10 for each slot level above 1 (maximum 6d10)."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-tashas-hideous-laughter",
+   "name": {
+    "de": "Tashas fürchterlicher Lachanfall",
+    "en": "Tasha's Hideous Laughter"
+   },
+   "level": 1,
+   "school": {
+    "en": "Enchantment",
+    "de": "Verzauberung"
+   },
+   "classes": {
+    "de": [
+     "Barde",
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Sorcerer",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G, M (winzige Küchlein und eine Feder, die durch die Luft geschwenkt wird)",
+    "en": "V, S, M (tiny tarts and a feather waved through the air)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Eine Kreatur deiner Wahl in Reichweite, die du sehen kannst, nimmt alles als unglaublich lustig wahr und verfällt in einen Lachanfall, wenn der Zauber in Kraft tritt. Misslingt dem Ziel ein Weisheitsrettungswurf, erhält es den Zustand liegend, wird kampfunfähig und kann für die Wirkungsdauer nicht aufstehen. Kreaturen mit Intelligenz 4 oder niedriger werden von diesem Zauber nicht betroffen.\nWenn das Ziel Schaden erleidet sowie am Ende eines jeden seiner Züge, darf es einen weiteren Weisheitsrettungswurf ablegen. Es ist bei dem Rettungswurf im Vorteil, wenn dieser durch Schaden ausgelöst wurde. Bei einem Erfolg endet der Zauber.",
+    "en": "A creature of your choice that you can see within range perceives everything as uproariously funny and falls into fits of laughter if the spell is in effect. If the target fails its Wisdom saving throw, it gains the Prone condition, is Incapacitated, and can't stand up for the duration. Creatures with an Intelligence of 4 or lower are unaffected by this spell.\nIf the target takes damage, and at the end of each of its turns, it can make another Wisdom saving throw. It has Advantage on the saving throw if triggered by damage. On a success, the spell ends."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-tensers-floating-disk",
+   "name": {
+    "de": "Tensers schwebende Scheibe",
+    "en": "Tenser's Floating Disk"
+   },
+   "level": 1,
+   "school": {
+    "en": "Conjuration",
+    "de": "Beschwörung"
+   },
+   "classes": {
+    "de": [
+     "Magier",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G, M (ein Tropfen Quecksilber)",
+    "en": "V, S, M (a drop of mercury)"
+   },
+   "duration": {
+    "de": "1 Stunde",
+    "en": "1 hour"
+   },
+   "description": {
+    "de": "Der Zauber erschafft eine kreisförmige, waagerechte Fläche aus Energie mit 90 Zentimetern Durchmesser und 2,5 Zentimetern Dicke. Sie schwebt in einem nicht besetzten Bereich deiner Wahl, den du sehen kannst, in 90 Zentimetern Höhe über dem Boden. Die Scheibe bleibt für die Wirkungsdauer bestehen und kann bis zu 500 Pfund tragen. Wenn mehr Gewicht auf ihr lastet, endet der Zauber, und alles, das sich auf ihr befand, fällt zu Boden.\nDie Scheibe ist unbeweglich, solange du dich innerhalb von 6 Metern um sie befindest. Entfernst du dich mehr als 6 Meter, folgt dir die Scheibe, sodass sie innerhalb von 6 Metern zu dir bleibt. Sie ist in der Lage, sich über unebenes Gelände, Treppen, Abhänge und Ähnliches zu bewegen, kann aber keine Höhenunterschiede von 3 Metern oder mehr überwinden. Zum Beispiel kann sich die Scheibe nicht über eine 3 Meter tiefe Grube bewegen oder eine solche verlassen, wenn sie in ihr erschaffen wurde.\nEntfernst du dich weiter als 30 Meter von der Scheibe (für gewöhnlich weil sie sich nicht um ein Hindernis bewegen kann, um dir zu folgen), endet der Zauber.",
+    "en": "This spell creates a circular, horizontal plane of force, 90 centimeters in diameter and 2.5 centimeters thick, that floats in an unoccupied space of your choice that you can see within range. The disk remains for the duration and can hold up to 500 pounds. If more weight is placed on it, the spell ends and everything on it falls to the ground.\nThe disk is immobile while you are within 6 meters of it. If you move more than 6 meters away from it, the disk follows you so that it remains within 6 meters of you. It can move across uneven terrain, up and down stairs, slopes and the like, but it can't cross an elevation change of 3 meters or more. For example, the disk can't move across a 3-meter-deep pit, nor could it leave such a pit if it was created there.\nIf you move more than 30 meters away from the disk (typically because it can't move around obstacles to follow you), the spell ends."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": true,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-thunderous-smite",
+   "name": {
+    "de": "Donnernder Schlag",
+    "en": "Thunderous Smite"
+   },
+   "level": 1,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einem Nahkampfangriff triffst, fügt der Angriff der Kreatur zusätzlich 2W6 Schallschaden zu, und wenn die Kreatur eine Groß- oder kleinere Kreatur ist, muss sie einen Stärkerettungswurf bestehen, sonst wird sie um 3 Meter von dir weggestoßen und erhält den Zustand liegend.\nDer Zauber endet, wenn du keine Nahkampfangriffe mehr ausführst, oder wenn du den Zauber erneut wirkst.",
+    "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your attack deals an extra 2d6 Thunder damage to the target, and if the creature is Large or smaller, it must succeed on a Strength saving throw or be pushed 3 meters away from you and gain the Prone condition.\nThe spell ends when you no longer make melee weapon attacks, or if you cast this spell again."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-witch-bolt",
+   "name": {
+    "de": "Hexenblitz",
+    "en": "Witch Bolt"
+   },
+   "level": 1,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, S",
+    "en": "V, S"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Ein Strahl aus prasselnder Energie schießt aus deiner Hand auf eine Kreatur, die du in Reichweite siehst. Mach einen Fernkampf-Zauberangriff gegen das Ziel. Bei einem Treffer erleidet das Ziel 1W12 Blitzschaden, und für die Wirkungsdauer des Zaubers kannst du eine Aktion verwenden, um automatisch 1W12 Blitzschaden an das Ziel zuzufügen, sofern es sich noch innerhalb der Reichweite befindet.\nDer Zauber endet vorzeitig, wenn du ihn erneut wirkst, oder wenn das Ziel sich außerhalb der Reichweite bewegt oder totaler Deckung erhält.\n\n**Auf höheren Graden:** Wenn du diesen Spruch mit einem Zauberplatz des 2. oder eines höheren Grades wirkst, steigt der initiale Schaden um 1W12 für jeden Grad über den 1. hinaus.",
+    "en": "A beam of crackling energy streaks toward a creature within range. Make a ranged spell attack against the target. On a hit, the target takes 1d12 Lightning damage, and for the duration of the spell, you can use your action to automatically deal 1d12 Lightning damage to the target, provided it remains within range.\nThe spell ends early if you cast it again, or if the target moves out of range or has Total Cover.\n\n**At Higher Levels:** When you cast this spell using a spell slot of level 2 or higher, the initial damage increases by 1d12 for each slot level above 1."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-wrathful-smite",
+   "name": {
+    "de": "Zornvoller Schlag",
+    "en": "Wrathful Smite"
+   },
+   "level": 1,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Paladin"
+    ],
+    "en": [
+     "Paladin"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Bonusaktion",
+    "en": "1 Bonus Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Das nächste Mal, wenn du innerhalb der Wirkungsdauer des Zaubers eine Kreatur mit einem Nahkampfangriff triffst, fügt der Angriff der Kreatur zusätzlich 1W6 Nekrotikschaden zu, und das Ziel muss einen Weisheitsrettungswurf bestehen, sonst erhält es den Zustand ängstlich für die Wirkungsdauer des Zaubers. Das Ziel kann am Ende jedes seiner Züge einen weiteren Weisheitsrettungswurf ablegen, um den Zustand zu beenden.\nDer Zauber endet, wenn du keine Nahkampfangriffe mehr ausführst, oder wenn du den Zauber erneut wirkst.",
+    "en": "The next time you hit a creature with a melee weapon attack during this spell's duration, your attack deals an extra 1d6 Necrotic damage to the target, and the target must succeed on a Wisdom saving throw or gain the Frightened condition for the spell's duration. The target can make another Wisdom saving throw at the end of each of its turns to end the condition.\nThe spell ends when you no longer make melee weapon attacks, or if you cast this spell again."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
    "source": "PHB",
    "custom": true
   }
