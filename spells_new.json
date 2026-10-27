@@ -1,0 +1,216 @@
+{
+ "meta": {
+  "title": "PHB 2024 Cantrips Missing from spells.json",
+  "license": "Zusätzliche PHB'24-Zauber (Quelle: 5e.tools-Export und deutsche Übersetzungen von arret-kelmo auf WorldAnvil) sind nicht Teil des SRD/CC-BY-4.0.",
+  "generated": "2026-08-15",
+  "count": 4
+ },
+ "spells": [
+  {
+   "id": "custom-phb-friends",
+   "name": {
+    "de": "Freundschaft",
+    "en": "Friends"
+   },
+   "level": 0,
+   "school": {
+    "en": "Enchantment",
+    "de": "Verzauberung"
+   },
+   "classes": {
+    "de": [
+     "Barde",
+     "Hexenmeister",
+     "Magier",
+     "Zauberer"
+    ],
+    "en": [
+     "Bard",
+     "Sorcerer",
+     "Warlock",
+     "Wizard"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "G, M (eine kleine Menge Schminke, die beim Wirken des Zaubers auf das Gesicht aufgetragen wird)",
+    "en": "S, M (a small amount of makeup applied to the face as you cast this spell)"
+   },
+   "duration": {
+    "de": "Konzentration, bis zu 1 Minute",
+    "en": "Concentration, up to 1 minute"
+   },
+   "description": {
+    "de": "Für die Wirkungsdauer bist du im Vorteil bei allen Charismawürfen in Verbindung mit einer Kreatur deiner Wahl, die dir nicht feindlich gesonnen ist. Wenn der Zauber endet, begreift die Kreatur, dass du Magie angewendet hast, um ihre Stimmung zu beeinflussen und wird feindselig. Neigt eine Kreatur zu Gewalt, könnte sie dich angreifen. Unterschiedliche Gemüter und moralische Vorstellungen führen womöglich dazu (nach Entscheidung des SL), dass eine Kreatur andere Möglichkeiten sucht, um sich zu rächen, abhängig von der Art, wie du mit ihr interagiert hast.",
+    "en": "For the duration, you have Advantage on all Charisma checks directed at one creature of your choice that isn't hostile toward you. When the spell ends, the creature realizes that you used magic to influence its mood and becomes hostile. A creature prone to violence might attack you. Different minds and moral outlooks might lead (at the SL's discretion) to a creature seeking other means of revenge, depending on how you interact with it."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": true,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-thorn-whip",
+   "name": {
+    "de": "Dornenpeitsche",
+    "en": "Thorn Whip"
+   },
+   "level": 0,
+   "school": {
+    "en": "Transmutation",
+    "de": "Verwandlung"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Hexenmeister",
+     "Waldläufer"
+    ],
+    "en": [
+     "Druid",
+     "Warlock",
+     "Ranger"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "9 Meter",
+    "en": "30 feet"
+   },
+   "components": {
+    "de": "V, G, M (der Stiel einer Pflanze mit Dornen)",
+    "en": "V, S, M (the stem of a plant with thorns)"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du erschaffst eine lange, rankenartige Peitsche, die mit Dornen bedeckt ist und die auf deinen Befehl hin nach einer Kreatur in Reichweite schlägt. Führe einen Nahkampf-Zauberangriff gegen das Ziel durch. Wenn der Angriff trifft, erleidet die Kreatur 1W6 Stichschaden. Handelt es sich um eine Kreatur der Größenkategorie groß oder kleiner, wird sie zusätzlich 3 Meter in deine Richtung gezogen.\n\nDer Schaden dieses Zaubers steigt jeweils um 1W6 bei Erreichen der 5. (2W6), 11. (3W6) und 17. Stufe (4W6).",
+    "en": "You create a long, vine-like whip covered in thorns that lashes out at your command toward a creature within range. Make a melee spell attack against the target. If the attack hits, the target takes 1d6 Pierce damage. If the target is a creature of Large or smaller size, it is additionally pulled 3 meters toward you.\n\nThe damage of this spell increases by 1d6 each time you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-thunderclap",
+   "name": {
+    "de": "Donnerschlag",
+    "en": "Thunderclap"
+   },
+   "level": 0,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Druide",
+     "Hexenmeister",
+     "Zauberer"
+    ],
+    "en": [
+     "Druid",
+     "Warlock",
+     "Sorcerer"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "1,50 Meter",
+    "en": "5 feet"
+   },
+   "components": {
+    "de": "G",
+    "en": "S"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du erzeugst einen Ausbruch donnernden Klangs, den man bis zu 30 Meter weit hören kann. Jede andere Kreatur innerhalb der Reichweite außer dir muss einen Konstitutionsrettungswurf bestehen oder 1W6 Schallschaden erleiden.\n\nDer Schaden dieses Zaubers steigt jeweils um 1W6 bei Erreichen der 5. (2W6), 11. (3W6) und 17. Stufe (4W6).",
+    "en": "You create a burst of thunderous sound that can be heard up to 30 feet away. Each other creature within range must succeed on a Constitution saving throw or take 1d6 Thunder damage.\n\nThe damage of this spell increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  },
+  {
+   "id": "custom-phb-word-of-radiance",
+   "name": {
+    "de": "Wort der Strahlkraft",
+    "en": "Word of Radiance"
+   },
+   "level": 0,
+   "school": {
+    "en": "Evocation",
+    "de": "Hervorrufung"
+   },
+   "classes": {
+    "de": [
+     "Kleriker"
+    ],
+    "en": [
+     "Cleric"
+    ]
+   },
+   "castingTime": {
+    "de": "1 Aktion",
+    "en": "1 Action"
+   },
+   "range": {
+    "de": "Selbst",
+    "en": "Self"
+   },
+   "components": {
+    "de": "V",
+    "en": "V"
+   },
+   "duration": {
+    "de": "Unmittelbar",
+    "en": "Instantaneous"
+   },
+   "description": {
+    "de": "Du sprichst ein göttliches Wort aus, das strahlende Energie freisetzt. Jede Kreatur deiner Wahl, die du in einem Umkreis von 1,50 Metern um dich herum sehen kannst, muss einen Konstitutionsrettungswurf bestehen oder 1W6 gleißenden Schaden erleiden.\n\nDer Schaden dieses Zaubers steigt jeweils um 1W6 bei Erreichen der 5. (2W6), 11. (3W6) und 17. Stufe (4W6).",
+    "en": "You utter a divine word, radiating energy. Each creature of your choice that you can see within 5 feet of you must succeed on a Constitution saving throw or take 1d6 Radiant damage.\n\nThe damage of this spell increases by 1d6 when you reach levels 5 (2d6), 11 (3d6), and 17 (4d6)."
+   },
+   "higherLevels": {
+    "de": "",
+    "en": ""
+   },
+   "ritual": false,
+   "concentration": false,
+   "source": "PHB",
+   "custom": true
+  }
+ ]
+}
